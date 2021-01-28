@@ -1,7 +1,15 @@
-
+﻿
 body {margin:0 auto;overflow:hidden;}  
 
 /*=============第一页=============*/	
+div {
+
+      -moz-user-select:none;
+
+      -webkit-user-select:none;
+
+      user-select:none;    
+}
 .header{
 	margin:0 auto;
 	width:100%;
