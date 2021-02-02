@@ -9,7 +9,7 @@
     <script src="js/pdf.js"></script>
     <script src="js/pdf.worker.js"></script>
     <script type="text/javascript">
-        var var_filepath = decodeURIComponent("pdf/欺骗的艺术.pdf");//不能跨域
+        var var_filepath = decodeURIComponent("pdf/欺骗的艺术.pdf");
         var var_win_height = $(window).height();
 
         $(document).ready(function () {
@@ -31,7 +31,7 @@
     <div id="tmPlayer" class="tmPlayer" style="height: 557px; width: 100%; height: 100%"></div>
 
     <script type="text/javascript">
-        $('.tmPlayer').html('<iframe frameBorder="0" scrolling="no" src="' +
+       $('.tmPlayer').html('<iframe frameBorder="0" scrolling="no" src="/pdf.html?file=' +
             var_filepath +
             '" style="width:100%; height:100%;"></iframe>');
     </script>
