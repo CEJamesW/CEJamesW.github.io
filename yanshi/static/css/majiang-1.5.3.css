@@ -1,0 +1,2147 @@
+
+.hide {
+  display: none !important;
+}
+.fadeout {
+  opacity: 0 !important;
+}
+textarea {
+  font-size: 100%;
+  font-family: Menlo, Consolas, Courier, monospace;
+}
+input {
+  font-size: 100%;
+  font-family: Menlo, Consolas, Courier, monospace;
+}
+input[type="submit"],
+input[type="reset"] {
+  font-family: Verdana, sans-serif;
+}
+body {
+  transition: opacity 0.2s ease-out;
+  margin-top: 0;
+  -webkit-text-size-adjust: 100%;
+}
+body > .version {
+  display: none;
+  font-size: 12px;
+  font-family: Century, serif;
+  text-align: right;
+}
+#loaderr {
+  background: #ddd;
+  color: #000;
+  border: #666 solid 2px;
+  border-radius: 8px;
+  padding: 4px 1.5em;
+  font-family: Century, serif;
+  font-size: 16px;
+}
+#loaddata {
+  display: none;
+}
+#navi {
+  font-family: Verdana, sans-serif;
+  text-align: right;
+  font-size: 12px;
+}
+#navi a {
+  text-decoration: none;
+}
+.shoupai {
+  display: table;
+}
+.shoupai .bingpai {
+  line-height: 0px;
+}
+.shoupai .fulou {
+  line-height: 0px;
+}
+.shoupai .fulou .mianzi {
+  white-space: nowrap;
+  margin-left: 2px;
+  float: right;
+}
+.shoupai .fulou .mianzi .rotate {
+  display: inline-block;
+  white-space: nowrap;
+  text-align: left;
+  transform-origin: 0% 0%;
+}
+.he div.lizhi {
+  line-height: 0px;
+}
+.he div.dapai {
+  line-height: 0px;
+}
+.he div.dapai .lizhi {
+  display: inline-block;
+  text-align: left;
+  transform: rotate(270deg);
+}
+.he div.dapai .lizhi .pai.dapai {
+  transform: translate(-2px, 4px);
+}
+.he div.dapai .pai.mopai {
+  opacity: 0.8;
+}
+.he div.dapai .pai.dapai {
+  transform: translate(4px, 2px);
+}
+.he div.dapai .pai.dapai.mopai {
+  opacity: 0.6;
+}
+@-moz-keyframes blink {
+  100% {
+    opacity: 0.7;
+  }
+}
+@-webkit-keyframes blink {
+  100% {
+    opacity: 0.7;
+  }
+}
+@-o-keyframes blink {
+  100% {
+    opacity: 0.7;
+  }
+}
+@keyframes blink {
+  100% {
+    opacity: 0.7;
+  }
+}
+@-moz-keyframes blink-text {
+  100% {
+    opacity: 0.2;
+  }
+}
+@-webkit-keyframes blink-text {
+  100% {
+    opacity: 0.2;
+  }
+}
+@-o-keyframes blink-text {
+  100% {
+    opacity: 0.2;
+  }
+}
+@keyframes blink-text {
+  100% {
+    opacity: 0.2;
+  }
+}
+body.title {
+  color: #fff;
+  background: #000;
+}
+body.title a {
+  color: #fff;
+}
+body.title #navi {
+  width: 800px;
+  margin: 0 auto;
+}
+body.title #title {
+  display: block;
+}
+#title {
+  display: none;
+  margin: auto;
+  width: 620px;
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+#title h1 {
+  margin: 0px;
+  height: 150px;
+  text-align: center;
+}
+#title h1 img {
+  width: 600px;
+}
+#title .version {
+  font-size: 24px;
+}
+#title .loading {
+  margin-top: 10px;
+  padding: 4px;
+  color: #666;
+  font-family: Verdana, sans-serif;
+  animation: blink-text 2s infinite;
+}
+#title .start {
+  margin: 0px auto;
+  margin-top: 10px;
+  padding: 4px;
+  width: 120px;
+  background: #999;
+  color: #fff;
+  border-radius: 4px;
+  font-family: Century, serif;
+  cursor: pointer;
+}
+#title .start:hover {
+  background: #ccc;
+}
+body.file {
+  color: #000;
+  background: #fff;
+}
+body.file a {
+  color: #000;
+}
+body.file #file {
+  display: block;
+}
+#file {
+  display: none;
+  font-family: Verdana, sans-serif;
+  font-size: 14px;
+}
+#file h1 {
+  margin-top: 0;
+  border-bottom: solid 2px #000;
+  font-family: Verdana, sans-serif;
+  font-size: 24px;
+}
+#file h1 img {
+  height: 36px;
+  vertical-align: bottom;
+}
+#file .version {
+  margin-top: -3em;
+  font-size: 12px;
+  font-family: Century, serif;
+  text-align: right;
+}
+#file .file {
+  margin: 15px 0px;
+}
+#file .file .row {
+  transition: opacity 0.5s ease-out;
+  border: solid 1px #ccc;
+  margin: 2px 0px;
+  border-radius: 4px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#file .file .row .content {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+#file .file .row .content .title {
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+}
+#file .file .row .content .player {
+  font-family: Century, serif;
+  font-size: 15px;
+}
+#file .file .row .button {
+  display: inline-flex;
+  align-items: flex-start;
+}
+#file .file .row .button a,
+#file .file .row .button span {
+  margin: 2px;
+}
+#file .file a,
+#file .file label {
+  display: inline-block;
+  font-size: 14px;
+  padding: 6px 10px;
+  background: #999;
+  border-radius: 5px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #fff;
+  line-height: 1em;
+  text-decoration: none;
+}
+#file .file a img,
+#file .file label img {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  vertical-align: bottom;
+}
+#file .file a input,
+#file .file label input {
+  display: none;
+}
+#file .file a.next,
+#file .file label.next {
+  background: #00f;
+}
+#file .file a:hover,
+#file .file label:hover {
+  background: #ccc;
+}
+#file .file a.delete:hover,
+#file .file label.delete:hover {
+  background: #f00;
+}
+#file .file .move {
+  display: inline-block;
+  cursor: move;
+}
+#file .file .move img {
+  width: 14px;
+  height: 14px;
+}
+#file .file > .button {
+  float: right;
+  text-align: right;
+}
+#file .file .error {
+  transition: opacity 0.5s;
+  margin: 2px 0px;
+  border-radius: 5px;
+  border: solid 1px #f99;
+  color: #f00;
+  background: #fdd;
+  padding: 4px 1em;
+  font-size: 12px;
+  font-family: Verdana, sans-serif;
+}
+.huledialog {
+  transition: opacity 0.2s ease-out;
+}
+.huledialog .hule .shan {
+  font-family: "DFPLeiSho-SB", "HGP行書体", serif;
+}
+.huledialog .hule .shan img {
+  vertical-align: bottom;
+}
+.huledialog .hule .hupai {
+  font-family: "DFPLeiSho-SB", "HGP行書体", serif;
+  line-height: 1;
+}
+.huledialog .hule .hupai .fanshu {
+  text-align: right;
+  padding-left: 2em;
+}
+.huledialog .hule .jicun {
+  font-family: Georgia, serif;
+}
+.huledialog .pingju {
+  font-family: "DFPLeiSho-SB", "HGP行書体", serif;
+}
+.huledialog .fenpei {
+  font-family: Georgia, serif;
+}
+.huledialog .fenpei .player {
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.huledialog .fenpei .feng,
+.huledialog .fenpei .defen,
+.huledialog .fenpei .diff {
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: right;
+}
+.huledialog .fenpei .plus {
+  color: #0ff;
+}
+.huledialog .fenpei .muinus {
+  color: #f00;
+}
+#game .huledialog {
+  width: 800px;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+}
+#game .huledialog > div {
+  margin: auto 0px;
+}
+#game .huledialog > div > div {
+  display: table;
+  background: rgba(0,0,0,0.8);
+  margin: auto;
+}
+#game .huledialog > div > div .hule .shan.baopai {
+  float: left;
+}
+#game .huledialog > div > div .hule .shan.fubaopai {
+  float: right;
+}
+#game .huledialog > div > div .hule .shoupai {
+  clear: both;
+}
+#game .huledialog > div > div .hule .hupai .r_defen {
+  text-align: right;
+}
+#game .huledialog > div > div .hule .jicun {
+  text-align: center;
+}
+#game .huledialog > div > div .pingju {
+  text-align: center;
+}
+#game .huledialog > div > div .fenpei > * {
+  position: absolute;
+  transform-origin: 0% 0%;
+}
+#game .huledialog > div > div .fenpei > * .player {
+  display: none;
+}
+#game .huledialog > div > div .fenpei > * .defen {
+  float: right;
+}
+#game .huledialog > div > div .fenpei > * .diff {
+  float: right;
+}
+#game .kaiju {
+  position: relative;
+  margin: auto;
+  width: 580px;
+  border: solid 1px #666;
+  background: #111;
+}
+#game .kaiju .title {
+  margin: 40px 20px;
+  text-align: center;
+  font-family: "DFPLeiSho-SB", "HGP行書体", serif;
+  font-size: 32px;
+  line-height: 1;
+}
+#game .kaiju .player {
+  margin: 40px 20px;
+  height: 132px;
+  text-align: center;
+  font-family: Century, serif;
+  font-size: 24px;
+}
+#game .kaiju .player > div {
+  position: absolute;
+  width: 240px;
+  height: 38px;
+  padding: 0px 10px;
+  border-radius: 4px;
+  background: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+#game .kaiju .player > div.main {
+  transform: translate(140px, 96px);
+}
+#game .kaiju .player > div.xiajia {
+  transform: translate(280px, 48px);
+}
+#game .kaiju .player > div.duimian {
+  transform: translate(140px, 0px);
+}
+#game .kaiju .player > div.shangjia {
+  transform: translate(0px, 48px);
+}
+#game .kaiju .player > div:hover {
+  background: #999;
+}
+#game > .summary {
+  width: 800px;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.4s ease-out;
+}
+#game > .summary > div {
+  margin: auto 0px;
+}
+#game > .summary > div > div {
+  margin: auto;
+  background: rgba(0,0,0,0.8);
+}
+#game > .summary > div > div table {
+  margin: auto;
+  font-family: Century, serif;
+  border-collapse: collapse;
+  line-height: 1.5;
+}
+#game > .summary > div > div table thead {
+  font-family: Century, serif;
+  border-bottom: solid 2px;
+}
+#game > .summary > div > div table tfoot {
+  border-top: solid 2px;
+}
+#game > .summary > div > div table .zhuangjia {
+  background: rgba(128,128,128,0.4);
+}
+#game > .summary > div > div table .baojia,
+#game > .summary > div > div table .minus {
+  color: #f00;
+}
+#game > .summary > div > div table .hule,
+#game > .summary > div > div table .guanjun,
+#game > .summary > div > div table .plus {
+  color: #0ff;
+}
+#game > .summary > div > div table .diff,
+#game > .summary > div > div table .defen {
+  font-family: Georgia, serif;
+  padding: 0px 1.2em;
+  text-align: right;
+}
+#game > .summary > div > div table .point {
+  font-family: Georgia, serif;
+  border-top: solid 1px;
+  text-align: center;
+  font-size: 24px;
+}
+#game > .summary.paipu tbody tr:hover {
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+}
+body.game,
+body.analyzer {
+  color: #fff;
+  background: #000;
+}
+body.game a,
+body.analyzer a {
+  color: #fff;
+}
+body.game #navi,
+body.analyzer #navi,
+body.game > .version,
+body.analyzer > .version {
+  display: block;
+  margin: 0 auto;
+}
+body.game #game,
+body.analyzer #game {
+  display: block;
+}
+#game {
+  display: none;
+  background: #036;
+  margin: 0 auto;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+#game > * {
+  position: absolute;
+  transform-origin: 0% 0%;
+}
+#game .chang {
+  background: #111;
+  font-family: Georgia, serif;
+  border-radius: 4px;
+}
+#game .chang .xiaoxi {
+  float: left;
+}
+#game .chang .xiaoxi .jushu {
+  font-family: "DFPLeiSho-SB", "HGP行書体", serif;
+}
+#game .chang .shan {
+  float: right;
+  text-align: right;
+}
+#game .chang .defen {
+  clear: both;
+}
+#game .chang .defen span {
+  display: block;
+  position: absolute;
+}
+#game .chang .defen span.lunban {
+  color: #0ff;
+}
+#game .chang .defen span.main {
+  text-align: center;
+}
+#game .chang .defen span.xiajia {
+  text-align: right;
+}
+#game .chang .defen span.duimian {
+  text-align: center;
+}
+#game .chang .defen span.shangjia {
+  text-align: left;
+}
+#game > .player {
+  font-family: Century, serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: #111;
+}
+#game > .player:hover {
+  background: #999;
+  cursor: pointer;
+}
+#game .say {
+  font-family: Century, serif;
+  color: #fff;
+  text-shadow: 3px 3px 6px #333, -3px 3px 6px #333, -3px -3px 6px #333, 3px -3px 6px #333;
+  transition: opacity 0.4s ease-out;
+}
+#game .say.main {
+  text-align: center;
+}
+#game .say.xiajia {
+  text-align: left;
+}
+#game .say.duimian {
+  text-align: center;
+}
+#game .say.shangjia {
+  text-align: right;
+}
+#game .UI {
+  font-family: Verdana, sans-serif;
+  text-align: right;
+  white-space: nowrap;
+}
+#game .UI span {
+  display: inline-block;
+  background: #000;
+  cursor: pointer;
+}
+#game .controler img {
+  opacity: 0.2;
+}
+#game .controler .speed span {
+  display: inline-block;
+  border-radius: 4px;
+  background: #fff;
+  opacity: 0.1;
+}
+#game .download a {
+  opacity: 0.5;
+  display: inline-block;
+  font-family: Verdana, sans-serif;
+  font-size: 18px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #000;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px;
+}
+#game .download a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+#game .download a:hover {
+  opacity: 1;
+}
+#title {
+  margin-top: 200px;
+}
+body.analyzer #navi,
+body.game #navi,
+body.analyzer > .version,
+body.game > .version {
+  width: 800px;
+}
+#game {
+  width: 800px;
+  height: 680px;
+}
+#game .chang {
+  width: 280px;
+  height: 160px;
+  transform: translate(260px, 260px);
+}
+#game .chang .xiaoxi {
+  height: 68px;
+  padding: 6px;
+}
+#game .chang .xiaoxi .jushu {
+  font-size: 32px;
+}
+#game .chang .xiaoxi .jicun {
+  font-size: 14px;
+  padding: 0px 8px;
+}
+#game .chang .xiaoxi .jicun .choma {
+  width: 60px;
+  height: 8px;
+}
+#game .chang .shan {
+  height: 68px;
+  padding: 6px;
+  font-size: 14px;
+}
+#game .chang .shan .pai {
+  width: 30px;
+  height: 42px;
+}
+#game .chang .defen {
+  font-size: 16px;
+}
+#game .chang .defen span {
+  width: 120px;
+  height: 24px;
+}
+#game .chang .defen span.main {
+  transform: translate(80px, 48px);
+}
+#game .chang .defen span.xiajia {
+  transform: translate(150px, 24px);
+}
+#game .chang .defen span.duimian {
+  transform: translate(80px, 0px);
+}
+#game .chang .defen span.shangjia {
+  transform: translate(10px, 24px);
+}
+#game .he {
+  width: 282px;
+  height: 138px;
+}
+#game .he div.lizhi {
+  width: 180px;
+  height: 12px;
+  text-align: center;
+}
+#game .he div.lizhi .choma {
+  max-width: 108px;
+}
+#game .he div.dapai {
+  height: 126px;
+}
+#game .he div.dapai .lizhi {
+  width: 42px;
+}
+#game .he div.dapai .pai {
+  width: 30px;
+  height: 42px;
+}
+#game .he div.dapai .break {
+  display: block;
+}
+#game .he.main {
+  transform: translate(310px, 420px);
+}
+#game .he.xiajia {
+  transform: translate(540px, 430px) rotate(270deg);
+}
+#game .he.duimian {
+  transform: translate(490px, 260px) rotate(180deg);
+}
+#game .he.shangjia {
+  transform: translate(260px, 250px) rotate(90deg);
+}
+#game .shoupai.main {
+  width: 680px;
+  height: 60px;
+  transform: translate(120px, 620px);
+}
+#game .shoupai.main .bingpai {
+  margin-top: 4px;
+  float: left;
+}
+#game .shoupai.main .bingpai .pai {
+  width: 40px;
+  height: 56px;
+  transition: width 0.2s ease-out;
+}
+#game .shoupai.main .bingpai .pai.deleted {
+  opacity: 0;
+  width: 0px;
+}
+#game .shoupai.main .bingpai .pai.selected {
+  transform: translate(0px, -8px);
+}
+#game .shoupai.main .bingpai .pai.blink {
+  animation: blink 0.5s infinite;
+}
+#game .shoupai.main .bingpai .zimo {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+#game .shoupai.main .fulou {
+  margin-top: 18px;
+  float: right;
+}
+#game .shoupai.main .fulou .rotate {
+  width: 42px;
+  transform: rotate(270deg) translate(-42px, 0px);
+}
+#game .shoupai.main .fulou .pai {
+  width: 30px;
+  height: 42px;
+}
+#game .shoupai.xiajia {
+  width: 560px;
+  height: 60px;
+  transform: translate(740px, 560px) rotate(270deg);
+}
+#game .shoupai.xiajia .bingpai {
+  margin-top: 18px;
+  float: left;
+}
+#game .shoupai.xiajia .bingpai .pai {
+  width: 30px;
+  height: 42px;
+  transition: width 0.2s ease-out;
+}
+#game .shoupai.xiajia .bingpai .pai.deleted {
+  opacity: 0;
+  width: 0px;
+}
+#game .shoupai.xiajia .bingpai .pai.selected {
+  transform: translate(0px, -6px);
+}
+#game .shoupai.xiajia .bingpai .pai.blink {
+  animation: blink 0.5s infinite;
+}
+#game .shoupai.xiajia .bingpai .zimo {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+#game .shoupai.xiajia .fulou {
+  margin-top: 18px;
+  float: right;
+}
+#game .shoupai.xiajia .fulou .rotate {
+  width: 42px;
+  transform: rotate(270deg) translate(-42px, 0px);
+}
+#game .shoupai.xiajia .fulou .pai {
+  width: 30px;
+  height: 42px;
+}
+#game .shoupai.duimian {
+  width: 680px;
+  height: 60px;
+  transform: translate(680px, 60px) rotate(180deg);
+}
+#game .shoupai.duimian .bingpai {
+  margin-top: 18px;
+  float: left;
+}
+#game .shoupai.duimian .bingpai .pai {
+  width: 30px;
+  height: 42px;
+  transition: width 0.2s ease-out;
+}
+#game .shoupai.duimian .bingpai .pai.deleted {
+  opacity: 0;
+  width: 0px;
+}
+#game .shoupai.duimian .bingpai .pai.selected {
+  transform: translate(0px, -6px);
+}
+#game .shoupai.duimian .bingpai .pai.blink {
+  animation: blink 0.5s infinite;
+}
+#game .shoupai.duimian .bingpai .zimo {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+#game .shoupai.duimian .fulou {
+  margin-top: 18px;
+  float: right;
+}
+#game .shoupai.duimian .fulou .rotate {
+  width: 42px;
+  transform: rotate(270deg) translate(-42px, 0px);
+}
+#game .shoupai.duimian .fulou .pai {
+  width: 30px;
+  height: 42px;
+}
+#game .shoupai.shangjia {
+  width: 560px;
+  height: 60px;
+  transform: translate(60px, 120px) rotate(90deg);
+}
+#game .shoupai.shangjia .bingpai {
+  margin-top: 18px;
+  float: left;
+}
+#game .shoupai.shangjia .bingpai .pai {
+  width: 30px;
+  height: 42px;
+  transition: width 0.2s ease-out;
+}
+#game .shoupai.shangjia .bingpai .pai.deleted {
+  opacity: 0;
+  width: 0px;
+}
+#game .shoupai.shangjia .bingpai .pai.selected {
+  transform: translate(0px, -6px);
+}
+#game .shoupai.shangjia .bingpai .pai.blink {
+  animation: blink 0.5s infinite;
+}
+#game .shoupai.shangjia .bingpai .zimo {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+#game .shoupai.shangjia .fulou {
+  margin-top: 18px;
+  float: right;
+}
+#game .shoupai.shangjia .fulou .rotate {
+  width: 42px;
+  transform: rotate(270deg) translate(-42px, 0px);
+}
+#game .shoupai.shangjia .fulou .pai {
+  width: 30px;
+  height: 42px;
+}
+#game > .player {
+  font-size: 20px;
+  width: 160px;
+  height: 30px;
+  border-radius: 12px 0px;
+  padding: 2px 20px;
+}
+#game > .player.main {
+  transform: translate(120px, 580px);
+}
+#game > .player.xiajia {
+  transform: translate(700px, 560px) rotate(270deg);
+}
+#game > .player.duimian {
+  transform: translate(680px, 100px) rotate(180deg);
+}
+#game > .player.shangjia {
+  transform: translate(100px, 120px) rotate(90deg);
+}
+#game .say {
+  width: 200px;
+  height: 100px;
+  font-size: 64px;
+}
+#game .say.main {
+  transform: translate(300px, 520px);
+}
+#game .say.xiajia {
+  transform: translate(600px, 290px);
+}
+#game .say.duimian {
+  transform: translate(300px, 50px);
+}
+#game .say.shangjia {
+  transform: translate(0px, 290px);
+}
+#game .UI {
+  transform: translate(120px, 580px);
+}
+#game .UI span {
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+#game .controler {
+  transform: translate(110px, 110px);
+  padding: 6px;
+  border: solid 4px transparent;
+  border-radius: 6px;
+}
+#game .controler img {
+  width: 20px;
+  height: 20px;
+  margin: 0px 2px;
+}
+#game .controler .speed {
+  text-align: center;
+}
+#game .controler .speed img {
+  width: 16px;
+  height: 16px;
+  margin: 0px 2px;
+}
+#game .controler .speed span {
+  width: 14px;
+  height: 8px;
+  margin: 4px 0px;
+}
+#game .controler:hover {
+  border-color: #333;
+  background: #000;
+}
+#game .controler:hover img {
+  opacity: 0.5;
+}
+#game .controler:hover img:hover {
+  opacity: 1;
+}
+#game .controler:hover .speed span {
+  opacity: 0.3;
+}
+#game .kaiju {
+  transform: translate(0px, 120px);
+}
+#game .huledialog {
+  height: 680px;
+}
+#game .huledialog > div {
+  width: 800px;
+  min-height: 460px;
+  padding: 10px 0px;
+}
+#game .huledialog > div > div {
+  min-width: 460px;
+  padding: 20px;
+}
+#game .huledialog > div > div .hule .shan {
+  font-size: 20px;
+}
+#game .huledialog > div > div .hule .shan .pai {
+  width: 25px;
+  height: 35px;
+}
+#game .huledialog > div > div .hule .shan.baopai {
+  margin-left: 40px;
+}
+#game .huledialog > div > div .hule .shan.fubaopai {
+  margin-right: 40px;
+}
+#game .huledialog > div > div .hule .shoupai {
+  width: auto;
+  height: 70px;
+}
+#game .huledialog > div > div .hule .shoupai .bingpai {
+  margin-top: 21px;
+  float: left;
+}
+#game .huledialog > div > div .hule .shoupai .bingpai .pai {
+  width: 35px;
+  height: 49px;
+  transition: width 0.2s ease-out;
+}
+#game .huledialog > div > div .hule .shoupai .bingpai .pai.deleted {
+  opacity: 0;
+  width: 0px;
+}
+#game .huledialog > div > div .hule .shoupai .bingpai .pai.selected {
+  transform: translate(0px, -7px);
+}
+#game .huledialog > div > div .hule .shoupai .bingpai .pai.blink {
+  animation: blink 0.5s infinite;
+}
+#game .huledialog > div > div .hule .shoupai .bingpai .zimo {
+  margin-left: 3.5px;
+  margin-right: 3.5px;
+}
+#game .huledialog > div > div .hule .shoupai .fulou {
+  margin-top: 21px;
+  float: right;
+}
+#game .huledialog > div > div .hule .shoupai .fulou .rotate {
+  width: 49px;
+  transform: rotate(270deg) translate(-49px, 0px);
+}
+#game .huledialog > div > div .hule .shoupai .fulou .pai {
+  width: 35px;
+  height: 49px;
+}
+#game .huledialog > div > div .hule .hupai {
+  margin: 10px auto;
+  min-width: 280px;
+  font-size: 24px;
+}
+#game .huledialog > div > div .hule .jicun {
+  font-size: 16px;
+}
+#game .huledialog > div > div .hule .jicun .choma {
+  padding-left: 8px;
+  width: 60px;
+  height: 8px;
+}
+#game .huledialog > div > div .pingju {
+  font-size: 48px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+#game .huledialog > div > div .fenpei {
+  width: 380px;
+  height: 80px;
+  margin: 15px auto 0px auto;
+  font-size: 16px;
+  line-height: 16px;
+}
+#game .huledialog > div > div .fenpei > * {
+  width: 88px;
+}
+#game .huledialog > div > div .fenpei > *.main {
+  transform: translate(146px, 48px);
+}
+#game .huledialog > div > div .fenpei > *.xiajia {
+  transform: translate(292px, 24px);
+}
+#game .huledialog > div > div .fenpei > *.duimian {
+  transform: translate(146px, 0px);
+}
+#game .huledialog > div > div .fenpei > *.shangjia {
+  transform: translate(0px, 24px);
+}
+#game .huledialog > div > div .fenpei > * .defen {
+  width: 60px;
+}
+#game .huledialog > div > div .fenpei > * .diff {
+  width: 88px;
+}
+#game > .summary {
+  height: 680px;
+}
+#game > .summary > div {
+  width: 800px;
+  min-height: 560px;
+  padding: 10px 0px;
+}
+#game > .summary > div > div {
+  width: 680px;
+  padding: 18px 0px;
+}
+#game > .summary > div > div table {
+  width: 640px;
+  font-size: 18px;
+}
+#game > .summary > div > div table .player {
+  width: 114px;
+}
+#game > .summary > div > div table .point {
+  font-size: 24px;
+}
+@media screen and (max-height: 720px) {
+  #title {
+    margin-top: 80px;
+  }
+  body.game > .version,
+  body.analyzer > .version {
+    margin-top: 1em;
+    display: none;
+  }
+  #game {
+    height: 450px;
+  }
+  #game .chang {
+    width: 280px;
+    height: 100px;
+    transform: translate(240px, 170px);
+  }
+  #game .chang .xiaoxi {
+    height: 48px;
+    padding: 4px;
+  }
+  #game .chang .xiaoxi .jushu {
+    font-size: 30px;
+    float: left;
+  }
+  #game .chang .xiaoxi .jicun {
+    font-size: 14px;
+    padding-left: 12px;
+    float: left;
+  }
+  #game .chang .xiaoxi .jicun .choma {
+    width: 30px;
+    height: 6px;
+  }
+  #game .chang .shan {
+    height: 48px;
+    padding: 4px;
+    font-size: 14px;
+  }
+  #game .chang .shan .pai {
+    width: 20px;
+    height: 28px;
+  }
+  #game .chang .defen {
+    font-size: 16px;
+    padding: 2px;
+  }
+  #game .chang .defen span {
+    width: 90px;
+    height: 20px;
+  }
+  #game .chang .defen span.main {
+    transform: translate(95px, 15px);
+  }
+  #game .chang .defen span.xiajia {
+    transform: translate(185px, 0px);
+  }
+  #game .chang .defen span.duimian {
+    transform: translate(95px, -15px);
+  }
+  #game .chang .defen span.shangjia {
+    transform: translate(5px, 0px);
+  }
+  #game .he {
+    width: 235px;
+    height: 115px;
+  }
+  #game .he div.lizhi {
+    width: 150px;
+    height: 10px;
+    text-align: center;
+  }
+  #game .he div.lizhi .choma {
+    max-width: 90px;
+  }
+  #game .he div.dapai {
+    height: 105px;
+  }
+  #game .he div.dapai .lizhi {
+    width: 35px;
+  }
+  #game .he div.dapai .pai {
+    width: 25px;
+    height: 35px;
+  }
+  #game .he div.dapai .break {
+    display: block;
+  }
+  #game .he.main {
+    transform: translate(305px, 270px);
+  }
+  #game .he.xiajia {
+    transform: translate(520px, 295px) rotate(270deg);
+  }
+  #game .he.duimian {
+    transform: translate(455px, 170px) rotate(180deg);
+  }
+  #game .he.shangjia {
+    transform: translate(240px, 145px) rotate(90deg);
+  }
+  #game .shoupai.main {
+    width: 604px;
+    height: 60px;
+    transform: translate(78px, 388px);
+  }
+  #game .shoupai.main .bingpai {
+    margin-top: 4px;
+    float: left;
+  }
+  #game .shoupai.main .bingpai .pai {
+    width: 40px;
+    height: 56px;
+    transition: width 0.2s ease-out;
+  }
+  #game .shoupai.main .bingpai .pai.deleted {
+    opacity: 0;
+    width: 0px;
+  }
+  #game .shoupai.main .bingpai .pai.selected {
+    transform: translate(0px, -8px);
+  }
+  #game .shoupai.main .bingpai .pai.blink {
+    animation: blink 0.5s infinite;
+  }
+  #game .shoupai.main .bingpai .zimo {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  #game .shoupai.main .fulou {
+    margin-top: 18px;
+    float: right;
+  }
+  #game .shoupai.main .fulou .rotate {
+    width: 42px;
+    transform: rotate(270deg) translate(-42px, 0px);
+  }
+  #game .shoupai.main .fulou .pai {
+    width: 30px;
+    height: 42px;
+  }
+  #game .shoupai.xiajia {
+    width: 448px;
+    height: 87px;
+    transform: translate(652px, 450px) rotate(270deg);
+  }
+  #game .shoupai.xiajia .bingpai {
+    margin-top: 0px;
+    float: none;
+  }
+  #game .shoupai.xiajia .bingpai .pai {
+    width: 25px;
+    height: 35px;
+    transition: width 0.2s ease-out;
+  }
+  #game .shoupai.xiajia .bingpai .pai.deleted {
+    opacity: 0;
+    width: 0px;
+  }
+  #game .shoupai.xiajia .bingpai .pai.selected {
+    transform: translate(0px, -5px);
+  }
+  #game .shoupai.xiajia .bingpai .pai.blink {
+    animation: blink 0.5s infinite;
+  }
+  #game .shoupai.xiajia .bingpai .zimo {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+  #game .shoupai.xiajia .fulou {
+    margin-top: 17px;
+    float: none;
+  }
+  #game .shoupai.xiajia .fulou .rotate {
+    width: 35px;
+    transform: rotate(270deg) translate(-35px, 0px);
+  }
+  #game .shoupai.xiajia .fulou .pai {
+    width: 25px;
+    height: 35px;
+  }
+  #game .shoupai.xiajia .bingpai {
+    margin-left: 68px;
+  }
+  #game .shoupai.duimian {
+    width: 490px;
+    height: 50px;
+    transform: translate(625px, 52px) rotate(180deg);
+  }
+  #game .shoupai.duimian .bingpai {
+    margin-top: 15px;
+    float: left;
+  }
+  #game .shoupai.duimian .bingpai .pai {
+    width: 25px;
+    height: 35px;
+    transition: width 0.2s ease-out;
+  }
+  #game .shoupai.duimian .bingpai .pai.deleted {
+    opacity: 0;
+    width: 0px;
+  }
+  #game .shoupai.duimian .bingpai .pai.selected {
+    transform: translate(0px, -5px);
+  }
+  #game .shoupai.duimian .bingpai .pai.blink {
+    animation: blink 0.5s infinite;
+  }
+  #game .shoupai.duimian .bingpai .zimo {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+  #game .shoupai.duimian .fulou {
+    margin-top: 15px;
+    float: right;
+  }
+  #game .shoupai.duimian .fulou .rotate {
+    width: 35px;
+    transform: rotate(270deg) translate(-35px, 0px);
+  }
+  #game .shoupai.duimian .fulou .pai {
+    width: 25px;
+    height: 35px;
+  }
+  #game .shoupai.shangjia {
+    width: 448px;
+    height: 87px;
+    transform: translate(108px, 0px) rotate(90deg);
+  }
+  #game .shoupai.shangjia .bingpai {
+    margin-top: 0px;
+    float: none;
+  }
+  #game .shoupai.shangjia .bingpai .pai {
+    width: 25px;
+    height: 35px;
+    transition: width 0.2s ease-out;
+  }
+  #game .shoupai.shangjia .bingpai .pai.deleted {
+    opacity: 0;
+    width: 0px;
+  }
+  #game .shoupai.shangjia .bingpai .pai.selected {
+    transform: translate(0px, -5px);
+  }
+  #game .shoupai.shangjia .bingpai .pai.blink {
+    animation: blink 0.5s infinite;
+  }
+  #game .shoupai.shangjia .bingpai .zimo {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+  #game .shoupai.shangjia .fulou {
+    margin-top: 17px;
+    float: none;
+  }
+  #game .shoupai.shangjia .fulou .rotate {
+    width: 35px;
+    transform: rotate(270deg) translate(-35px, 0px);
+  }
+  #game .shoupai.shangjia .fulou .pai {
+    width: 25px;
+    height: 35px;
+  }
+  #game .shoupai.shangjia .bingpai {
+    margin-left: 20px;
+  }
+  #game > .player {
+    display: flex;
+    align-items: center;
+    white-space: normal;
+    font-size: 16px;
+    width: 80px;
+    height: 48px;
+    border-radius: 4px;
+    padding: 2px 4px;
+  }
+  #game > .player.main {
+    transform: translate(214px, 333px);
+  }
+  #game > .player.xiajia {
+    transform: translate(583px, 386px) rotate(270deg);
+  }
+  #game > .player.duimian {
+    transform: translate(546px, 107px) rotate(180deg);
+  }
+  #game > .player.shangjia {
+    transform: translate(177px, 54px) rotate(90deg);
+  }
+  #game .say.main {
+    transform: translate(280px, 300px);
+  }
+  #game .say.xiajia {
+    transform: translate(520px, 170px);
+  }
+  #game .say.duimian {
+    transform: translate(280px, 40px);
+  }
+  #game .say.shangjia {
+    transform: translate(40px, 170px);
+  }
+  #game .UI {
+    transform: translate(78px, 354px);
+  }
+  #game .controler {
+    width: 40px;
+    padding: 0;
+    margin-top: 32px;
+    transform: translate(760px, 0px);
+    text-align: center;
+    border: none;
+  }
+  #game .controler:hover {
+    background: inherit;
+  }
+  #game .controler img {
+    width: 24px;
+    height: 24px;
+    padding: 2px 8px;
+  }
+  #game .controler img.analyzer {
+    display: none;
+  }
+  #game .controler .speed {
+    margin: 10px 0px;
+  }
+  #game .controler .speed img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 4px auto;
+  }
+  #game .controler .speed span {
+    display: block;
+    width: 24px;
+    height: 8px;
+    margin: 2px auto;
+  }
+  #game .kaiju {
+    transform: translate(0px, 60px);
+    width: 580px;
+  }
+  #game .kaiju .title {
+    margin: 40px 20px;
+    font-size: 32px;
+  }
+  #game .kaiju .player {
+    margin: 40px 20px;
+    height: 132px;
+    font-size: 24px;
+  }
+  #game .kaiju .player > div {
+    width: 240px;
+    height: 38px;
+    padding: 0px 10px;
+    border-radius: 4px;
+  }
+  #game .kaiju .player > div.main {
+    transform: translate(140px, 96px);
+  }
+  #game .kaiju .player > div.xiajia {
+    transform: translate(280px, 48px);
+  }
+  #game .kaiju .player > div.duimian {
+    transform: translate(140px, 0px);
+  }
+  #game .kaiju .player > div.shangjia {
+    transform: translate(0px, 48px);
+  }
+  #game .huledialog {
+    height: 450px;
+  }
+  #game .huledialog > div {
+    width: 760px;
+    min-height: 340px;
+  }
+  #game .huledialog > div > div {
+    min-width: 420px;
+    padding: 12px;
+  }
+  #game .huledialog > div > div .hule .shan {
+    font-size: 16px;
+  }
+  #game .huledialog > div > div .hule .shan .pai {
+    width: 20px;
+    height: 28px;
+  }
+  #game .huledialog > div > div .hule .shan.baopai {
+    margin-left: 40px;
+  }
+  #game .huledialog > div > div .hule .shan.fubaopai {
+    margin-right: 40px;
+  }
+  #game .huledialog > div > div .hule .shoupai {
+    width: auto;
+    height: 60px;
+  }
+  #game .huledialog > div > div .hule .shoupai .bingpai {
+    margin-top: 18px;
+    float: left;
+  }
+  #game .huledialog > div > div .hule .shoupai .bingpai .pai {
+    width: 30px;
+    height: 42px;
+    transition: width 0.2s ease-out;
+  }
+  #game .huledialog > div > div .hule .shoupai .bingpai .pai.deleted {
+    opacity: 0;
+    width: 0px;
+  }
+  #game .huledialog > div > div .hule .shoupai .bingpai .pai.selected {
+    transform: translate(0px, -6px);
+  }
+  #game .huledialog > div > div .hule .shoupai .bingpai .pai.blink {
+    animation: blink 0.5s infinite;
+  }
+  #game .huledialog > div > div .hule .shoupai .bingpai .zimo {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  #game .huledialog > div > div .hule .shoupai .fulou {
+    margin-top: 18px;
+    float: right;
+  }
+  #game .huledialog > div > div .hule .shoupai .fulou .rotate {
+    width: 42px;
+    transform: rotate(270deg) translate(-42px, 0px);
+  }
+  #game .huledialog > div > div .hule .shoupai .fulou .pai {
+    width: 30px;
+    height: 42px;
+  }
+  #game .huledialog > div > div .hule .hupai {
+    margin: 10px auto;
+    min-width: 200px;
+    font-size: 20px;
+  }
+  #game .huledialog > div > div .hule .jicun {
+    font-size: 14px;
+  }
+  #game .huledialog > div > div .hule .jicun .choma {
+    padding-left: 8px;
+    width: 60px;
+    height: 8px;
+  }
+  #game .huledialog > div > div .pingju {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+  #game > .summary {
+    height: 450px;
+  }
+  #game > .summary > div {
+    width: 800px;
+    min-height: 360px;
+  }
+  #game > .summary > div > div table {
+    font-size: 16px;
+  }
+  #game > .summary > div > div table .point {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 821px) and (min-height: 721px) {
+  body.analyzer {
+    width: 1400px;
+    margin: 0 auto;
+  }
+  body.analyzer #navi,
+  body.analyzer > .version {
+    width: 1400px;
+    clear: both;
+  }
+  body.analyzer #game {
+    float: left;
+  }
+  body.analyzer #analyzer {
+    display: block;
+    width: 590px;
+    height: 680px;
+    float: right;
+  }
+}
+@media screen and (max-width: 820px) and (min-height: 721px) {
+  body.analyzer #analyzer {
+    display: block;
+    box-sizing: border-box;
+    margin-top: 5px;
+    width: 800px;
+    height: 360px;
+  }
+}
+@media screen and (max-height: 720px) {
+  body.analyzer {
+    margin: 0 auto;
+    width: 800px;
+    position: relative;
+  }
+  body.analyzer #analyzer {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.4);
+    width: 740px;
+    height: 360px;
+    top: 30px;
+    left: 10px;
+  }
+  body.analyzer #analyzer.active {
+    display: block;
+  }
+  body.analyzer #analyzer .selected {
+    background: rgba(192,192,192,0.6);
+  }
+  body.analyzer #analyzer img {
+    opacity: 0.8;
+  }
+}
+table.status td,
+table.dapai td {
+  white-space: nowrap;
+}
+table.status .xiangting,
+table.dapai .xiangting {
+  padding: 0 1em;
+  text-align: center;
+}
+table.status .eval,
+table.dapai .eval {
+  text-align: right;
+  padding-right: 1em;
+}
+table.status .action,
+table.dapai .action {
+  padding-left: 0.5em;
+}
+table.status .p img,
+table.dapai .p img,
+table.status .tingpai img,
+table.dapai .tingpai img {
+  vertical-align: middle;
+}
+table.status .p span,
+table.dapai .p span,
+table.status .tingpai span,
+table.dapai .tingpai span {
+  padding-left: 0.5em;
+}
+#analyzer {
+  display: none;
+  background: #000;
+  border: solid 1px #fff;
+  border-radius: 6px;
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+  overflow: auto;
+}
+#analyzer .pai {
+  width: 25px;
+  height: 35px;
+}
+#analyzer table {
+  margin: 4px;
+  border-collapse: collapse;
+}
+#analyzer table.status {
+  margin-top: 15px;
+}
+#analyzer table.dapai {
+  margin-top: 10px;
+}
+#analyzer table .shoupai {
+  width: 380px;
+  height: 40px;
+}
+#analyzer table .shoupai .bingpai {
+  margin-top: 5px;
+  float: left;
+}
+#analyzer table .shoupai .bingpai .pai {
+  width: 25px;
+  height: 35px;
+  transition: width 0.2s ease-out;
+}
+#analyzer table .shoupai .bingpai .pai.deleted {
+  opacity: 0;
+  width: 0px;
+}
+#analyzer table .shoupai .bingpai .pai.selected {
+  transform: translate(0px, -5px);
+}
+#analyzer table .shoupai .bingpai .pai.blink {
+  animation: blink 0.5s infinite;
+}
+#analyzer table .shoupai .bingpai .zimo {
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+#analyzer table .shoupai .fulou {
+  margin-top: 12px;
+  float: right;
+}
+#analyzer table .shoupai .fulou .rotate {
+  width: 28px;
+  transform: rotate(270deg) translate(-28px, 0px);
+}
+#analyzer table .shoupai .fulou .pai {
+  width: 20px;
+  height: 28px;
+}
+#analyzer .selected {
+  background: #999;
+}
+#analyzer .tingpai {
+  width: 100%;
+}
+@media print {
+  body {
+    margin-top: 15px;
+  }
+  body.game,
+  body.analyzer {
+    color: #000;
+    background: #fff;
+  }
+  body.game a,
+  body.analyzer a {
+    color: #000;
+  }
+  #stat .button {
+    display: none;
+  }
+  #analyzer {
+    background: inherit;
+    border: none;
+    overflow: visible;
+    margin-top: 20px;
+    height: auto;
+  }
+  #navi {
+    display: none !important;
+  }
+  #game {
+    background: #fff;
+  }
+  #game > .player {
+    border: solid 1px #ccc;
+    background: #fff;
+  }
+  #game .chang {
+    background: #fff;
+    border: solid 1px #666;
+  }
+  #game .chang .defen span.lunban {
+    color: #00f;
+    text-decoration: underline;
+  }
+  #game .he div.lizhi .choma {
+    margin-top: 1px;
+  }
+  #game .he div.dapai .pai.mopai {
+    opacity: 1;
+    border-top: solid 2px #00f;
+  }
+  #game .say {
+    color: #666;
+    text-shadow: none;
+  }
+  #game .controler {
+    display: none;
+  }
+  #game .kaiju {
+    border: solid 1px #666;
+    background: #fff;
+  }
+  #game .kaiju .player > div {
+    border: solid 1px #666;
+    background: #fff;
+  }
+  #game .huledialog > div > div {
+    border: solid 1px #666;
+    border-radius: 4px;
+    background: #fff;
+  }
+  #game .huledialog > div > div .fenpei .plus {
+    color: #00f;
+  }
+  #game > .summary > div > div {
+    border: solid 1px #666;
+    background: #fff;
+  }
+  #game > .summary > div > div table {
+    border-color: #666;
+  }
+  #game > .summary > div > div table .zhuangjia {
+    background: #eee;
+  }
+  #game > .summary > div > div table .hule,
+  #game > .summary > div > div table .guanjun,
+  #game > .summary > div > div table .plus {
+    color: #00f;
+  }
+}
+body.stat {
+  color: #000;
+  background: #fff;
+}
+body.stat a {
+  color: #000;
+}
+body.stat #stat {
+  display: block;
+}
+#stat {
+  display: none;
+}
+#stat h1 {
+  margin-top: 0;
+  border-bottom: solid 2px #000;
+  font-family: Verdana, sans-serif;
+  font-size: 24px;
+}
+#stat h1 img {
+  height: 36px;
+  vertical-align: bottom;
+}
+#stat .version {
+  margin-top: -3em;
+  font-size: 12px;
+  font-family: Century, serif;
+  text-align: right;
+}
+#stat .stat {
+  margin-top: 20px;
+  overflow: auto;
+}
+#stat .stat > div {
+  display: table;
+}
+#stat .stat .button {
+  float: right;
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+}
+#stat .stat .button input[name="n_game"] {
+  width: 2em;
+}
+#stat .stat a.file {
+  margin-left: 10px;
+  display: inline-block;
+  font-family: Verdana, sans-serif;
+  font-size: 14px;
+  padding: 6px 10px;
+  background: #999;
+  border-radius: 5px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #fff;
+  line-height: 1em;
+  text-decoration: none;
+}
+#stat .stat a.file img {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  vertical-align: bottom;
+}
+#stat .stat a.file:hover {
+  background: #ccc;
+}
+#stat h2 {
+  margin: 0px;
+  font-size: 18pt;
+  font-family: "DFPLeiSho-SB", "HGP行書体", serif;
+}
+#stat h2::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+#stat table {
+  margin-top: 1em;
+  border-collapse: collapse;
+  font-size: 16px;
+  white-space: nowrap;
+}
+#stat table thead,
+#stat table tbody {
+  border-bottom: solid 2px #000;
+}
+#stat table thead tr,
+#stat table tbody tr {
+  border-bottom: solid 1px #ccc;
+}
+#stat table th {
+  padding: 2px 10px 2px 8px;
+  font-family: Verdana, sans-serif;
+}
+#stat table th.asc {
+  background: no-repeat right center url("../image/icon-chevron-up.png");
+  background-size: 8px;
+}
+#stat table th.desc {
+  background: no-repeat right center url("../image/icon-chevron-down.png");
+  background-size: 8px;
+}
+#stat table th a {
+  cursor: pointer;
+}
+#stat table td {
+  padding: 2px 1em;
+  font-family: Century, serif;
+}
+#stat table td.num {
+  text-align: right;
+}
+#stat .error {
+  display: none;
+  margin: 10px 0px;
+  border-radius: 5px;
+  border: solid 1px #f99;
+  color: #f00;
+  background: #fdd;
+  padding: 4px 1em;
+  font-size: 12px;
+  font-family: Verdana, sans-serif;
+}
+body.demo {
+  user-select: none;
+  color: #fff;
+  background: #036;
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+}
+body.demo > .version {
+  display: block;
+  float: right;
+}
+body.demo a {
+  color: #fff;
+}
+body.demo form {
+  margin-top: 1em;
+}
+body.demo form div {
+  margin: 2px 0;
+}
+body.demo form span {
+  margin-right: 1em;
+}
+body.demo form input[name="paistr"] {
+  width: 16em;
+}
+body.demo form input[name="baopai"],
+body.demo form input[name="fubaopai"] {
+  text-align: center;
+  width: 2em;
+}
+body.demo .shan {
+  font-size: 20px;
+  font-family: "DFPLeiSho-SB", "HGP行書体", serif;
+}
+body.demo .shan .pai {
+  width: 30px;
+  height: 42px;
+}
+body.demo .shan img {
+  vertical-align: bottom;
+}
+body.demo .shoupai {
+  margin: 10px 0px;
+  width: auto;
+  height: 70px;
+}
+body.demo .shoupai .bingpai {
+  margin-top: 14px;
+  float: left;
+}
+body.demo .shoupai .bingpai .pai {
+  width: 40px;
+  height: 56px;
+  transition: width 0.2s ease-out;
+}
+body.demo .shoupai .bingpai .pai.deleted {
+  opacity: 0;
+  width: 0px;
+}
+body.demo .shoupai .bingpai .pai.selected {
+  transform: translate(0px, -8px);
+}
+body.demo .shoupai .bingpai .pai.blink {
+  animation: blink 0.5s infinite;
+}
+body.demo .shoupai .bingpai .zimo {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+body.demo .shoupai .fulou {
+  margin-top: 14px;
+  float: right;
+}
+body.demo .shoupai .fulou .rotate {
+  width: 56px;
+  transform: rotate(270deg) translate(-56px, 0px);
+}
+body.demo .shoupai .fulou .pai {
+  width: 40px;
+  height: 56px;
+}
+body.demo .he {
+  margin: 10px 0px;
+  width: 680px;
+  height: 54px;
+}
+body.demo .he div.lizhi {
+  width: 180px;
+  height: 12px;
+  text-align: left;
+}
+body.demo .he div.lizhi .choma {
+  max-width: 108px;
+}
+body.demo .he div.dapai {
+  height: 42px;
+}
+body.demo .he div.dapai .lizhi {
+  width: 42px;
+}
+body.demo .he div.dapai .pai {
+  width: 30px;
+  height: 42px;
+}
+body.demo .he div.dapai .break {
+  display: inline-block;
+  width: 3px;
+}
+body.demo .paili img {
+  vertical-align: middle;
+}
+body.demo .paili .pai {
+  width: 25px;
+  height: 35px;
+}
+body.demo .huledialog {
+  margin-top: 20px;
+}
+body.demo .huledialog .hule .shan {
+  float: left;
+  margin-right: 40px;
+  font-size: 20px;
+}
+body.demo .huledialog .hule .shan .pai {
+  width: 25px;
+  height: 35px;
+}
+body.demo .huledialog .hule .shoupai {
+  clear: both;
+  width: auto;
+  height: 70px;
+}
+body.demo .huledialog .hule .shoupai .bingpai {
+  margin-top: 21px;
+  float: left;
+}
+body.demo .huledialog .hule .shoupai .bingpai .pai {
+  width: 35px;
+  height: 49px;
+  transition: width 0.2s ease-out;
+}
+body.demo .huledialog .hule .shoupai .bingpai .pai.deleted {
+  opacity: 0;
+  width: 0px;
+}
+body.demo .huledialog .hule .shoupai .bingpai .pai.selected {
+  transform: translate(0px, -7px);
+}
+body.demo .huledialog .hule .shoupai .bingpai .pai.blink {
+  animation: blink 0.5s infinite;
+}
+body.demo .huledialog .hule .shoupai .bingpai .zimo {
+  margin-left: 3.5px;
+  margin-right: 3.5px;
+}
+body.demo .huledialog .hule .shoupai .fulou {
+  margin-top: 21px;
+  float: right;
+}
+body.demo .huledialog .hule .shoupai .fulou .rotate {
+  width: 49px;
+  transform: rotate(270deg) translate(-49px, 0px);
+}
+body.demo .huledialog .hule .shoupai .fulou .pai {
+  width: 35px;
+  height: 49px;
+}
+body.demo .huledialog .hule .hupai {
+  font-size: 24px;
+}
+#dapai {
+  transition: opacity 0.2s ease-out;
+}
+#dapai table.dapai {
+  margin: 0;
+  margin-top: 20px;
+  font-family: Verdana, sans-serif;
+}
+#dapai table.dapai .pai {
+  width: 25px;
+  height: 35px;
+}
+#dapai table.dapai .xiangting {
+  padding: 0 1em;
+}
+#dapai table.dapai .eval {
+  padding-right: 1em;
+}
+#paiga div {
+  width: 780px;
+  color: #000;
+  background: #fff;
+}
+#paiga div p {
+  margin: 1em;
+}
+textarea.paiga {
+  box-sizing: border-box;
+  width: 780px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+<link rel="stylesheet" type="text/css" href="static/css/amazeui.flat.min.css">
+<link rel="stylesheet" type="text/css" href="static/css/public.css">
+<link rel="shortcut icon" href="https://tool.liumingye.cn/favicon.ico">
+<link rel="apple-touch-icon" href="https://thirdqq.qlogo.cn/g?b=sdk&k=fXJhGbvrIeja8vD6FckWXA&s=640">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<!--[if IE]><script>window.location.href="http://tool.liumingye.cn/support/?referrer="+encodeURIComponent(location.href);</script><![endif]-->  <title>密码生成器 - 刘明野的工具箱</title>
+  <meta name="description" content="随机密码生成器，可根据选择生成不同字符不同长度的随机密码。">
+  <meta name="keywords" content="生成随机密码,密码生成器">
+  <link rel="stylesheet" href="static/css/style1.css">
+</head>
+<body>
+<header class="am-topbar am-topbar-inverse">
+<div class="am-container">
+<p class="am-topbar-brand"><a href="javascript:;" class="am-topbar-logo">密码生成器</a></p>
+<a class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航</span> <span class="am-icon-bars"></span></a>
+<div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+<ul class="am-nav am-nav-pills am-topbar-nav">
+<li><a href="javascript:;">首页</a></li>
+</ul>
+<div class="am-topbar-right">
+<a class="am-btn am-btn-primary am-topbar-btn am-btn-sm" data-am-modal="{target: '#fenxiang'}">分享</a>
+</div>
+</div>
+</div>
+</header>
+<div class="password">
+  <div class="container">
+    <h2 class="title">随机密码生成器</h2>
+    <div class="result">
+      <div class="result__title field-title">产生的密码</div>
+      <div class="result__info right">点击复制</div>
+      <div class="result__info left">已复制</div>
+      <div class="result__viewbox" id="result">单击"生成密码"</div>
+      <button id="copy-btn" style="--x: 0; --y: 0"><i class="am-icon-copy"></i></button>
+    </div>
+    <div class="length range__slider" data-min="4" data-max="32">
+      <div class="length__title field-title" data-length='0'>长度:</div>
+      <input id="slider" type="range" min="4" max="32" value="16">
+    </div>
+    <div class="settings">
+      <span class="settings__title field-title">设定</span>
+      <div class="setting">
+        <input type="checkbox" id="uppercase" checked="">
+        <label for="uppercase">包括大写</label>
+      </div>
+      <div class="setting">
+        <input type="checkbox" id="lowercase" checked="">
+        <label for="lowercase">包括小写</label>
+      </div>
+      <div class="setting">
+        <input type="checkbox" id="number" checked="">
+        <label for="number">包括数字</label>
+      </div>
+      <div class="setting">
+        <input type="checkbox" id="symbol">
+        <label for="symbol">包含符号</label>
+      </div>
+    </div>
+    <button class="btn generate" id="generate">生成密码</button>
+  </div>
+</div>
+
+<script src="static/js/script1.js"></script>
+
+<footer>
+	<div class="am-container">
+		<p><span class="intro-siteinfo">♪(^∇^*) 一言加载中...</span><br>
+		资源来源于网络，如有侵权，请联系本人予以删除！<br>
+		<!-- <span id="busuanzi_container_site_pv">访问量<span id="busuanzi_value_site_pv"></span>次</span>，访客数<span id="busuanzi_value_site_uv"></span>人次<br> -->
+		© 2015 - 2021</p>
+	</div>
+</footer>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/amazeui.min.js"></script>
+<script src="https://tool.liumingye.cn/js/public.js?v=200419"></script>
+</body>
+</html>

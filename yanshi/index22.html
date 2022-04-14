@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+<link rel="stylesheet" type="text/css" href="static/css/amazeui.flat.min.css">
+<link rel="stylesheet" type="text/css" href="static/css/public.css">
+<link rel="shortcut icon" href="https://tool.liumingye.cn/favicon.ico">
+<link rel="apple-touch-icon" href="https://thirdqq.qlogo.cn/g?b=sdk&k=fXJhGbvrIeja8vD6FckWXA&s=640">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<!--[if IE]><script>window.location.href="http://tool.liumingye.cn/support/?referrer="+encodeURIComponent(location.href);</script><![endif]-->  <title>MD5在线加密工具 - 刘明野的工具箱</title>
+  <meta name="keywords" content="MD5,加密,MD5加密工具">
+  <meta name="description" content="本工具可以提供32位,16位等MD5在线加密。">
+</head>
+<body>
+  <header class="am-topbar am-topbar-inverse">
+<div class="am-container">
+<p class="am-topbar-brand"><a href="javascript:;" class="am-topbar-logo">MD5加密</a></p>
+<a class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航</span> <span class="am-icon-bars"></span></a>
+<div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+<ul class="am-nav am-nav-pills am-topbar-nav">
+<li><a href="javascript:;">首页</a></li>
+</ul>
+<div class="am-topbar-right">
+<a class="am-btn am-btn-primary am-topbar-btn am-btn-sm" data-am-modal="{target: '#fenxiang'}">分享</a>
+</div>
+</div>
+</div>
+</header>  <div class="am-container">
+    <div class="logo">MD5加密工具</div>
+	<form method="post" id="str-post" class="am-margin-top">
+		<label>请输入欲加密的字符串：</label>
+		<div class="am-input-group am-input-group-primary">
+			<input type="text" name="q" placeholder="请输入要加密的字符串" autocomplete="off" class="am-form-field">
+			<span class="am-input-group-btn">
+				<button class="am-btn am-btn-primary" type="submit">加密</button>
+			</span>
+		</div>
+		<div class="am-form-group">
+		  <label class="am-radio-inline"><input type="radio" name="t" value="0" data-am-ucheck="" checked="">32位[大]</label>
+		  <label class="am-radio-inline"><input type="radio" name="t" value="1" data-am-ucheck="">32位[小]</label>
+		  <label class="am-radio-inline"><input type="radio" name="t" value="2" data-am-ucheck="">16位[大]</label>
+		  <label class="am-radio-inline"><input type="radio" name="t" value="3" data-am-ucheck="">16位[小]</label>
+		</div>
+	</form>
+	<label>加密结果：</label>
+	<span id="result"><input type="text" autocomplete="off" class="am-form-field md5-result"></span>
+	<div class="am-text-right am-margin-top">
+      <a class="am-btn am-btn-primary am-round" data-am-modal="{target: '#fenxiang'}"><i class="am-icon-share-alt"></i> 分享</a>
+    </div>
+    <div class="am-alert am-alert-secondary">
+      <p>MD5加密是一种知名的不可逆的加密算法，在密码存储领域里被广泛使用</p>
+    </div>
+  </div>
+<footer>
+	<div class="am-container">
+		<p><span class="intro-siteinfo">♪(^∇^*) 一言加载中...</span><br>
+		资源来源于网络，如有侵权，请联系本人予以删除！<br>
+		<!-- <span id="busuanzi_container_site_pv">访问量<span id="busuanzi_value_site_pv"></span>次</span>，访客数<span id="busuanzi_value_site_uv"></span>人次<br> -->
+		© 2015 - 2021</p>
+	</div>
+</footer>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/amazeui.min.js"></script>
+<script src="https://tool.liumingye.cn/js/public.js?v=200419"></script><script src="static/js/md5.js"></script>
+</body>
+</html>
