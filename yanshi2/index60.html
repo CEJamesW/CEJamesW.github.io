@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>在线时间戳(Unix timestamp)批量转换北京时间工具 - 在线工具</title><meta name="baidu_union_verify" content="c7b1ed99149de450b9aa90606afb8b1c"><meta name="description" content="文档中有大量时间戳，需要转换成北京时间，怎么办？交给我吧，我帮你搞定，在线时间戳批量转换，没错，就是我!"><meta name="keywords" content="unix timestamp,时间戳转换,在线时间戳工具,时间戳批量转换,北京时间批量转换"><link rel="shortcut icon" href="http://tools.bugscaner.com/static/images/favicon.ico"><link rel="bookmark" href="http://tools.bugscaner.com/static/images/favicon.ico"><!-- Bootstrap核心文件 --><link rel="stylesheet" href="static/css/bootstrap.min.css"><link rel="stylesheet" href="static/css/main2.css"><link href="static/css/toastr.min.css" rel="stylesheet"><!-- 这里是新增的css文件或者内容 --><!-- 自定义css --><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]--><!-- toastr提示在屏幕居中显示 --><style>
+		.toast-center-center {
+		   top: 40%;
+		   left: 50%;
+		   margin-top: -30px;
+		   margin-left: -150px;
+		}
+	</style></head><body><!-- fixed navbar --><header id="header"><nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div id="top-header">在线工具</div><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html" title="在线工具">在线工具</a></div><div id="navbar" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="index1.html" title="识别类工具">识别类工具</a></li><li><a href="index4.html" title="疯狂加解密">疯狂加解密</a></li><li><a href="index5.html" title="站长工具">站长工具</a></li><li><a href="index6.html" title="SEO工具">SEO工具</a></li><li><a href="index7.html" title="文本字符串处理工具大全">文本/字符串</a></li><li><a href="index8.html">BT/磁力相关</a></li><li><a href="index9.html">其他工具</a></li></ul></div><!--/.nav-collapse --></div></nav><!--/.navbar --></header><!-- 以上为header头部结束 --><div class="container"><div style="margin-top:110px;"><hr><!-- 这里是body内容 --><!-- 广告位预留位置 --><div class="row text-center" style="margin-top:30px;"><div class="col-md-12"><h3>在线时间戳(Unix timestamp)批量转换北京时间工具</h3></div></div><div class="row" style="margin-top:30px;"><div class="col-md-6"><textarea id="shuru" class="form-control" placeholder="这里请输入时间戳或北京时间,一行一个,
+为了保证批量转换与原版文档对应,请尽量不要包含特殊字符！
+理论上不限制转换数量,看你浏览器的极限了
+时间戳的格式为:
+1566802242
+1566802277627
+10位的数字或者是13位的数字
+北京时间转时间戳的格式如下:
+2019-08-26 12:30:00
+2019/08/26 12:30:00
+目前仅支持两种格式的北京时间转时间戳
+" rows="13"></textarea></div><div class="col-md-6"><textarea id="shuchu" class="form-control" placeholder="输出结果显示区,如果觉得好用请按  Ctrl+D 收藏哦！！！！" rows="13"></textarea></div></div><p>请选择您需要输出的格式，如没有特殊需求，可以默认！</p><div class="row"><div class="col-md-3"><div class="btn-group" data-toggle="buttons"><label class="btn btn-primary active" style="margin-right:5px;"><input type="radio" name="options" id="options1" value="1" autocomplete="off" checked="">时间戳转时间
+  </label><label class="btn btn-primary"><input type="radio" name="options" id="options2" value="2" autocomplete="off">时间转时间戳
+  </label></div></div><div class="checkbox col-md-2"><label><input type="checkbox" id="duibi" value="520">
+            开启输出对比 </label></div><div class="col-md-3"><input id="timeformat" type="text" class="form-control" placeholder="自定义日期输出格式,默认采用Y/M/D h:m:s" value="Y-M-D  h:m:s"></div><div class="col-md-1"><button id="tijiao" type="button" class="btn btn-primary">开始转换</button></div><div class="col-md-1"><button type="submit" class="btn btn-primary" id="copy" data-clipboard-target="#shuchu" style="margin-right:5px;">复制结果</button></div><div class="col-md-1"><button type="submit" class="btn btn-primary" id="btn2" style="margin-right:5px;">导出结果</button></div><div class="col-md-1"><button id="exp" type="button" class="btn btn-warning" onclick='document.getElementById("shuru").value = ""'>清空输入</button></div></div><div class="row" style="margin-top:40px;" id="timestamptotime"><div class="col-md-12 text-center"><p style="margin-bottom:30px;">更多天马行空的日期转换格式选择</p><button type="submit" title="默认格式" class="btn btn-danger" onclick='document.getElementById("timeformat").value = "Y-M-D  h:m:s"' style="margin-right:5px;">默认日期</button><button type="submit" title="几几年几月几日日期格式" class="btn btn-danger" onclick='document.getElementById("timeformat").value = "Y年M月D号 h点m分s秒"' style="margin-right:5px;">日期样式1</button><button type="submit" title="随意插入字符样式" class="btn btn-danger" onclick='document.getElementById("timeformat").value = "Y欢迎M使用D在线 h工具m非常s感谢"' style="margin-right:5px;">日期样式2</button><button type="submit" title="只转换年月日" class="btn btn-danger" onclick='document.getElementById("timeformat").value = "Y-M-D"' style="margin-right:5px;">日期样式3</button><button type="submit" title="日月年" title="" class="btn btn-danger" onclick='document.getElementById("timeformat").value = "D-Y-M"' style="margin-right:5px;">日期样式4</button><button type="submit" title="只提取年份" class="btn btn-danger" onclick='document.getElementById("timeformat").value = "Y年"' style="margin-right:5px;">日期样式5</button><button type="submit" title="只提取月份" class="btn btn-danger" onclick='document.getElementById("timeformat").value = "M"' style="margin-right:5px;">日期样式5</button><button type="submit" title="自定义日期输出格式" class="btn btn-danger" onclick='document.getElementById("timeformat").value = "";document.getElementById("timeformat").focus()' style="margin-right:5px;">自定义日期输出格式</button></div></div><a onfocus="this.blur();" download="在线时间戳(Unix timestamp)批量转换北京时间工具.txt" id="createInvote" class="ipt-todo hide">导出结果</a><hr><!-- 广告位置 --><div id="item-box"></div><div class="item-box"><h3>时间戳转北京时间工具介绍</h3><hr><div class="view-box"><p>功能1:可以批量将时间戳转换成北京时间,转换成人类比较容易识别的时间格式</p><p>功能2:可以批量将北京时间转换成时间戳,转换成占用存储空间更小的格式,长度为10位的timestamp</p></div></div><div class="item-box"><h3>时间戳转时间自定义日期输出格式</h3><hr><div class="view-box"><p>为了照顾新手,这里说一下</p><p>Y：代表年,M：代表月,D：代表日, h：代表小时,m：代表分钟,s：代表秒</p><p>YMDhms几个字母你可以随意组合,中间可以穿插自定义字符</p><p>比如常见的时间格式:Y/M/D h:m:s| Y-M-D h:m:s | Y M D h:m:s 你可以随意组合,默认采用Y-M-D  h:m:s</p><p>你还可以怎么组合呢？发挥你的想象,根据你的需求进行组合吧,如下面的天马行空的日期输出组合</p><p>Y年M月D日 h小时m分钟s秒   |   Y在M线D工 h具m分钟s秒  |  hmsYMD  | h----m----s___Y---M----D 等等,意思是YMDhms可以随意组合,中间可以穿插任意字符</p><p>如果不想获取精确的时间,指向获取日期,则只输入YMD,即可</p></div></div><div class="item-box"><h3>北京时间转时间戳识别格式定义</h3><hr><div class="view-box"><p>北京时间转时间戳,目前仅支持两种格式的转换如下:</p><p>2015/03/05  17:59:00 和</p><p>2015-03-05  17:59:00</p><p>以斜杠或者横杠划分的北京时间，其他时间格式暂时不支持,不支持自定义</p></div></div><div class="item-box"><h3>什么是时间戳</h3><hr><div class="view-box"><p>时间戳（timestamp），一个能表示一份数据在某个特定时间之前已经存在的、 完整的、 可验证的数据,通常是一个字符序列，唯一地标识某一刻的时间。</p><p>格式为:1527318891  精确到秒的时间戳长度为10位,精确到毫秒的时间戳,长度为13位</p><p>如果发现转换的日期不正确,请检查您的时间戳位数是否正确</p></div></div><div class="item-box"><h3>更新日志</h3><hr><div class="view-box"><p>2019-8-10号：</p><p>后端django系统时间是格林时间,导致时间戳转换北京时间有偏差</p><p>于是决定从后端的django处理逻辑转移到了前端的js处理,理论上不用再限制转换数量</p><p>由于逻辑问题,当时没考虑到部分用户对毫秒时间戳的需求,增加类似需求</p><p>更灵活的自定义日期生成</p></div></div></div></div><!-- 以上为body结束 --><footer class="tools-footer"><div class="container"><p>相关站点:</p><ul class="tools-footer-links"><li><a href="index38.html" target="_blank" title="whois查询">Whois查询</a></li><li><a href="index14.html" target="_blank" title="CMS指纹识别">CMS指纹识别</a></li><li><a href="index73.html" target="_blank" title="icp备案查询">icp备案查询</a></li><li><a href="index37.html" target="_blank" title="同ip网站查询">同ip网站查询</a></li><li><a href="mailto:bugscaner@qq.com" target="_blank" title="联系我们" rel="nofollow">联系我们</a></li></ul><p>我们的热爱能走多远？直到走别人的路，变成自己的路！</p><p>本项目采用 <a rel="license" href="javascript:;" rel="nofollow" target="_blank" data-toggle="tooltip" title="django,一款极易上手的开源框架,会写python 函数就会开发网站,如果因为本站能激发您对python学习的兴趣,真是荣幸之至！">Django 1.11</a>开源框架开发 Copyright? 2010-2018</p></div></footer><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --><script src="static/js/jquery.min.js"></script><!-- Include all compiled plugins (below), or include individual files as needed --><script src="static/js/bootstrap.min.js"></script><!-- alert组件 --><script src="static/js/toastr.min.js"></script><!-- tooltip 小工具初始化 作为一个公用一个组件 --><script type="text/javascript">$(function () { $("[data-toggle='tooltip']").tooltip(); });toastr.options.positionClass = 'toast-center-center';</script><!-- 这里是新增的js内容 --><script src="static/js/clipboard.min.js"></script><script type="text/javascript">
+function isEmpty(obj){
+	if(typeof obj == "undefined" || obj == null || obj == ""){
+		return true;
+	}else{
+		return false;
+	}
+}
+//时间戳转换成时间函数
+// 格式化日期，如月、日、时、分、秒保证为2位数
+function formatNumber (n) {
+    n = n.toString()
+    return n[1] ? n : '0' + n;
+}
+// 参数number为毫秒时间戳，format为需要转换成的日期格式
+function formatTime (number, format) {
+	
+    var time = new Date(parseInt(number))
+    var newArr = []
+    var formatArr = ['Y', 'M', 'D', 'h', 'm', 's']
+    newArr.push(time.getFullYear())
+    newArr.push(formatNumber(time.getMonth() + 1))
+    newArr.push(formatNumber(time.getDate()))
+
+    newArr.push(formatNumber(time.getHours()))
+    newArr.push(formatNumber(time.getMinutes()))
+    newArr.push(formatNumber(time.getSeconds()))
+
+    for (var i in newArr) {
+        format = format.replace(formatArr[i], newArr[i])
+    }
+    return format;
+}
+function filter(str){
+	//补全字符串
+	if (str.length == 10){
+		return str + "000";
+	}
+	else{
+		return str;
+	}
+}
+
+$(function() {
+	var oktime = [];
+	
+	//监听选择按钮
+	$("#options2").change(function() { 
+		$("#timestamptotime").hide();
+		$("#timeformat").attr("disabled","disabled");
+	})
+	$("#options1").change(function() { 
+		$("#timestamptotime").show();
+		$("#timeformat").removeAttr("disabled");
+	})
+	
+	  $("#btn2").bind("click",
+	  function() {
+	  var daochu = document.getElementById('shuchu').value;
+	  daochu = daochu.replace(/\n/g,"\r\n");
+	if (isEmpty(daochu)) {
+		toastr.warning("没有内容,无法导出");
+		return false
+	}
+	var isIE = (navigator.userAgent.indexOf('MSIE') >= 0);
+	if (isIE) {
+		 var winSave = window.open();
+		 winSave.document.open("text","utf-8");
+		 winSave.document.write(daochu);
+		 winSave.document.execCommand("SaveAs",true,"bugscaner.txt");
+		 winSave.close();
+	} else {
+		 var mimeType =  'text/plain';
+		 $('#createInvote').attr('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(daochu));
+		 document.getElementById('createInvote').click();
+	}
+		return false
+	  });
+	$("#tijiao").bind("click", function () {
+		//获取用户输入
+		oktime = []
+		var shuru = $("#shuru").val();
+		var timeformat = $("#timeformat").val();
+		var xuanze = $('input:radio[name="options"]:checked').val();
+		var duibi = $("input[type='checkbox']").is(':checked');
+		if(isEmpty(shuru)){
+			toastr.warning("您还什么都没有输入呢");
+			return false;
+		}
+		if(isEmpty(timeformat)){
+			toastr.error("请选择一种日期格式,或者手动自定义输入您期望的日期格式");
+			return false;
+		}
+		
+		//对用户输入进行分割遍历
+		var arr = $.trim(shuru).split('\n');
+		if (xuanze == 1){
+			for (j = 0; j < arr.length; j++) {
+				//这里对用户的输入,进行异常验证,以免影响程序下面的计算
+				if(duibi){
+					var prefix =  arr[j]+"\t";
+				}
+				else{
+					var prefix = "";
+				}
+				var changetime = formatTime(filter(arr[j]), timeformat);
+				if (changetime.indexOf("NaN") == -1){
+					oktime.push(prefix+changetime);
+				}
+				else{
+					//如果是空行,给用户自由
+					if(isEmpty(arr[j])){
+						oktime.push(prefix+"");
+					}else{
+						oktime.push(prefix+"--转换失败");
+					}
+				}
+			}
+		}
+		else if(xuanze == 2){
+			for (j = 0; j < arr.length; j++) {
+				if(duibi){
+					var prefix =  arr[j]+"\t";
+				}
+				else{
+					var prefix = "";
+				}
+				var time3 = Date.parse(arr[j].replace(/-/g, "/"));
+				var newtime3 = time3.toString().substring(0,10);
+				if (newtime3.indexOf("NaN") == -1){
+					oktime.push(prefix+newtime3);
+				}
+				else{
+					//如果是空行,给用户自由
+					if(isEmpty(arr[j])){
+						oktime.push(prefix+"");
+					}else{
+						oktime.push(prefix+"--转换失败");
+					}
+				}
+				
+			}
+		}
+		$("#shuchu").html(oktime.join("\n"));
+		toastr.info("恭喜你,转换完毕,共计转换个数为:"+arr.length+"个");
+		});
+		
+		//之前的复制插件过时了,需要flash,更换成这个
+		var clipboard = new ClipboardJS('#copy');
+		clipboard.on('success', function (e) {
+			if (e.text != "") {
+				toastr.success("复制成功");
+			}
+			else {
+				toastr.success("什么都没有,无法复制");
+			}
+		});
+
+		clipboard.on('error', function (e) {
+			toastr.success("复制失败");
+		});
+		
+	});
+</script><div style="display: none;"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?81c5c6d2c74d56c9ab654aec4c11e078";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></div><script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script><script src="static/js/jquery1.11.1.js"></script><!-- 特效 --></body></html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>中文域名批量(Punycode)编码解码 - 在线工具</title><meta name="baidu_union_verify" content="c7b1ed99149de450b9aa90606afb8b1c"><meta name="description" content="在线中文域名批量转换、punycode在线编码批量转换、中文域名批量在线解码编码"><meta name="keywords" content="中文域名批量编码解码,Punycode批量编码解码,Punycode批量转换,在线工具"><link rel="shortcut icon" href="http://tools.bugscaner.com/static/images/favicon.ico"><link rel="bookmark" href="http://tools.bugscaner.com/static/images/favicon.ico"><!-- Bootstrap核心文件 --><link rel="stylesheet" href="static/css/bootstrap.min.css"><link rel="stylesheet" href="static/css/main2.css"><link href="static/css/toastr.min.css" rel="stylesheet"><!-- 这里是新增的css文件或者内容 --><!-- 自定义css --><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]--><!-- toastr提示在屏幕居中显示 --><style>
+		.toast-center-center {
+		   top: 40%;
+		   left: 50%;
+		   margin-top: -30px;
+		   margin-left: -150px;
+		}
+	</style></head><body><!-- fixed navbar --><header id="header"><nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div id="top-header">在线工具</div><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html" title="在线工具">在线工具</a></div><div id="navbar" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="index1.html" title="识别类工具">识别类工具</a></li><li><a href="index4.html" title="疯狂加解密">疯狂加解密</a></li><li><a href="index5.html" title="站长工具">站长工具</a></li><li><a href="index6.html" title="SEO工具">SEO工具</a></li><li><a href="index7.html" title="文本字符串处理工具大全">文本/字符串</a></li><li><a href="index8.html">BT/磁力相关</a></li><li><a href="index9.html">其他工具</a></li></ul></div><!--/.nav-collapse --></div></nav><!--/.navbar --></header><!-- 以上为header头部结束 --><div class="container"><div style="margin-top:110px;"><hr><!-- 这里是body内容 --><!-- 广告位预留位置 --><div class="row text-center" style="margin-top:30px;"><div class="col-md-12"><h3>在线中文域名批量(Punycode)编码解码</h3></div></div><div class="row" style="margin-top:20px;margin-bottom:10px"><div class="col-md-12"><textarea class="form-control" rows="10" id="content" placeholder="请在这里输入您需要批量编码的中文域名或者需要解码的Punycode,一排一行"></textarea></div></div><div class="row" style="margin-top:20px"><div class="row text-center"><button type="submit" class="btn btn-danger" id="btn1" style="margin:5px;">编码</button><button type="submit" class="btn btn-danger" id="btn5" style="margin:5px;">解码</button><button type="submit" class="btn btn-primary" id="btn2" style="margin:5px;">导出文本</button><button type="submit" class="btn btn-primary" id="copy" data-clipboard-target="#shuchu" style="margin:5px;">复制结果</button><button type="submit" class="btn btn-primary" id="btn3" style="margin:5px;">清空结果</button></div></div><div class="row" style="margin-top:20px"><div class="col-md-12"><textarea class="form-control" rows="10" id="shuchu" placeholder="结果区域"></textarea></div></div><a onfocus="this.blur();" download="(Punycode)编码解码.txt" id="createInvote" class="ipt-todo hide">导出结果</a><!-- 广告位置 --><div id="item-box"></div><div class="item-box"><h3>在线工具介绍</h3><hr><div class="view-box"><p>Punycode编码为了解决域名使用多字节字符问题，常见域名由a-z0-9- 等字符组成。</p><p>因为采用字母加数字，不方便用户记忆，为了方便记忆，使用自己文字字符注册域名最简单了。因此推出了中文域名，Punycode编码（IDNA编码)就解决多字节字符与传统31字符直接转换。</p><p>本工具提供在线中文域名转换，如果你配中文域名站点，配置host时候，应该将它转换为对应31字符表示形式。如：在线工具.com => xn--h6qp2l4pgel2b.com ，那么配置主机host可以填写 xn--h6qp2l4pgel2b.com域名了。！</p></div></div><div class="item-box"><h3>应用场景</h3><hr><div class="view-box"><p>中文域名或Punycode需要批量操作的时候,比如批量解析,批量cdn配置等等！Punycode编码的域名可直接在浏览器输入访问!</p></div></div><div class="item-box"><h3>更新日志</h3><hr><div class="view-box"><p>2018年8月6号上线</p></div></div><div class="item-box"><h3>代码参考</h3><hr><div class="view-box"><p>本代码采用js编写,代码来源 <a rel="nofollow" href="javascript:;" target="_blank" title="js编码解码 punyCode">js编码解码 punyCode</a></p></div></div></div></div><!-- 以上为body结束 --><footer class="tools-footer"><div class="container"><p>相关站点:</p><ul class="tools-footer-links"><li><a href="index38.html" target="_blank" title="whois查询">Whois查询</a></li><li><a href="index14.html" target="_blank" title="CMS指纹识别">CMS指纹识别</a></li><li><a href="index73.html" target="_blank" title="icp备案查询">icp备案查询</a></li><li><a href="index37.html" target="_blank" title="同ip网站查询">同ip网站查询</a></li><li><a href="mailto:bugscaner@qq.com" target="_blank" title="联系我们" rel="nofollow">联系我们</a></li></ul><p>我们的热爱能走多远？直到走别人的路，变成自己的路！</p><p>本项目采用 <a rel="license" href="javascript:;" rel="nofollow" target="_blank" data-toggle="tooltip" title="django,一款极易上手的开源框架,会写python 函数就会开发网站,如果因为本站能激发您对python学习的兴趣,真是荣幸之至！">Django 1.11</a>开源框架开发 Copyright? 2010-2018</p></div></footer><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --><script src="static/js/jquery.min.js"></script><!-- Include all compiled plugins (below), or include individual files as needed --><script src="static/js/bootstrap.min.js"></script><!-- alert组件 --><script src="static/js/toastr.min.js"></script><!-- tooltip 小工具初始化 作为一个公用一个组件 --><script type="text/javascript">$(function () { $("[data-toggle='tooltip']").tooltip(); });toastr.options.positionClass = 'toast-center-center';</script><!-- 这里是新增的js内容 --><script src="static/js/clipboard.min.js"></script><script type="text/javascript">
+!function(a){var b=function(){function a(){function j(a){return 10>a-48?a-22:26>a-65?a-65:26>a-97?a-97:d}function k(a,b){return a+22+75*(26>a)-((0!=b)<<5)}function l(a,b,c){var i;for(a=c?Math.floor(a/e):a>>1,a+=Math.floor(a/b),i=0;a>(d-f)*g>>1;i+=d)a=Math.floor(a/(d-f));return Math.floor(i+(d-f+1)*a/(a+h))}function m(a,b){return a-=(26>a-97)<<5,a+((!b&&26>a-65)<<5)}var a,b,c,d,e,f,g,h,i;this.utf16={decode:function(a){for(var e,f,b=[],c=0,d=a.length;d>c;){if(e=a.charCodeAt(c++),55296===(63488&e)){if(f=a.charCodeAt(c++),55296!==(64512&e)||56320!==(64512&f))throw new RangeError("UTF-16(decode): Illegal UTF-16 sequence");e=((1023&e)<<10)+(1023&f)+65536}b.push(e)}return b},encode:function(a){for(var e,b=[],c=0,d=a.length;d>c;){if(e=a[c++],55296===(63488&e))throw new RangeError("UTF-16(encode): Illegal UTF-16 value");e>65535&&(e-=65536,b.push(String.fromCharCode(55296|1023&e>>>10)),e=56320|1023&e),b.push(String.fromCharCode(e))}return b.join("")}},a=128,b=72,c="-",d=36,e=700,f=1,g=26,h=38,i=2147483647,this.decode=function(e,h){var p,t,u,v,w,x,y,z,A,k=[],m=[],n=e.length,o=a,q=0,r=b,s=e.lastIndexOf(c);for(0>s&&(s=0),t=0;s>t;++t){if(h&&(m[k.length]=e.charCodeAt(t)-65<26),e.charCodeAt(t)>=128)throw new RangeError("Illegal input >= 0x80");k.push(e.charCodeAt(t))}for(u=s>0?s+1:0;n>u;){for(v=q,w=1,x=d;;x+=d){if(u>=n)throw RangeError("punycode_bad_input(1)");if(y=j(e.charCodeAt(u++)),y>=d)throw RangeError("punycode_bad_input(2)");if(y>Math.floor((i-q)/w))throw RangeError("punycode_overflow(1)");if(q+=y*w,z=r>=x?f:x>=r+g?g:x-r,z>y)break;if(w>Math.floor(i/(d-z)))throw RangeError("punycode_overflow(2)");w*=d-z}if(p=k.length+1,r=l(q-v,p,0===v),Math.floor(q/p)>i-o)throw RangeError("punycode_overflow(3)");o+=Math.floor(q/p),q%=p,h&&m.splice(q,0,e.charCodeAt(u-1)-65<26),k.splice(q,0,o),q++}if(h)for(q=0,A=k.length;A>q;q++)m[q]&&(k[q]=String.fromCharCode(k[q]).toUpperCase().charCodeAt(0));return this.utf16.encode(k)},this.encode=function(e,h){var j,n,o,p,q,r,s,t,u,v,w,x,y,z;if(h&&(x=this.utf16.decode(e)),e=this.utf16.decode(e.toLowerCase()),y=e.length,h)for(r=0;y>r;r++)x[r]=e[r]!=x[r];for(z=[],j=a,n=0,q=b,r=0;y>r;++r)e[r]<128&&z.push(String.fromCharCode(x?m(e[r],x[r]):e[r]));for(o=p=z.length,p>0&&z.push(c);y>o;){for(s=i,r=0;y>r;++r)w=e[r],w>=j&&s>w&&(s=w);if(s-j>Math.floor((i-n)/(o+1)))throw RangeError("punycode_overflow (1)");for(n+=(s-j)*(o+1),j=s,r=0;y>r;++r){if(w=e[r],j>w&&++n>i)return Error("punycode_overflow(2)");if(w==j){for(t=n,u=d;v=q>=u?f:u>=q+g?g:u-q,!(v>t);u+=d)z.push(String.fromCharCode(k(v+(t-v)%(d-v),0))),t=Math.floor((t-v)/(d-v));z.push(String.fromCharCode(k(t,h&&x[r]?1:0))),q=l(n,o+1,o==p),n=0,++o}}++n,++j}return z.join("")}}this.toASCII=function(b){var f,g,c=new a,d=b.split("."),e=[];for(f=0;f<d.length;++f)g=d[f],e.push(g.match(/[^A-Za-z0-9-]/)?"xn--"+c.encode(g):g);return e.join(".")},this.toUnicode=function(b){var f,g,c=new a,d=b.split("."),e=[];for(f=0;f<d.length;++f)g=d[f],e.push(g.match(/^xn--/)?c.decode(g.slice(4)):g);return e.join(".")}};a.idnMapping=b}(window);
+</script><script type="text/javascript">
+
+function Trim(str)
+ { 
+  return str.replace(/(^\s*)|(\s*$)/g, ""); 
+}
+
+//判断是否为空函数
+function isEmpty(obj){
+    if(typeof obj == "undefined" || obj == null || obj == ""){
+        return true;
+    }else{
+        return false;
+    }
+}
+var idn = new idnMapping();
+$("#btn1").bind("click",
+    function () {
+		//清空输入从新开始
+		var jieguos="";
+		document.getElementById('shuchu').value = "";
+        var inputcontent = document.getElementById('content').value;
+		if(isEmpty(inputcontent)){
+			toastr.error("请随便输入点什么");
+			return;
+		}
+        arr = inputcontent.split('\n');
+        for (j = 0; j < arr.length; j++) {
+			var newstr = "";
+            var trimstr = Trim(arr[j]);
+            //如果为空则添加回车符号
+            if (!isEmpty(trimstr)) {
+				var newstr = idn.toASCII(trimstr);
+				console.log(newstr);
+            } else {
+				newstr = "";
+            }
+			jieguos += newstr+"\r\n";
+        }
+		document.getElementById('shuchu').value = jieguos;
+    });
+
+$("#btn5").bind("click",
+    function () {
+        //清空输入从新开始
+		var jieguos="";
+        document.getElementById('shuchu').value = "";
+        var inputcontent = document.getElementById('content').value;
+		if(isEmpty(inputcontent)){
+			toastr.error("请随便输入点什么");
+			return;
+		}
+        arr = inputcontent.split('\n');
+        for (j = 0; j < arr.length; j++) {
+            var newstr = "";
+            var trimstr = Trim(arr[j]);
+            //如果为空则添加回车符号
+            if (!isEmpty(trimstr)) {
+				var newstr = idn.toUnicode(trimstr);
+            } else {
+                newstr = "";
+            }
+            jieguos += newstr + "\r\n";
+        }
+        document.getElementById('shuchu').value = jieguos;
+    });
+	
+  $("#btn2").bind("click",
+  function() {
+  
+  var daochu = document.getElementById('shuchu').value;
+  
+if (isEmpty(daochu)) {
+	toastr.error("你还没有编码或解码任何东西,无法导出");
+return false
+}
+var isIE = (navigator.userAgent.indexOf('MSIE') >= 0);
+if (isIE) {
+     var strHTML = daochu;
+     var winSave = window.open();
+     winSave.document.open("text","utf-8");
+     winSave.document.write(strHTML);
+     winSave.document.execCommand("SaveAs",true,"bugscaner.txt");
+     winSave.close();
+} else {
+     var elHtml = daochu;
+     var mimeType =  'text/plain';
+     $('#createInvote').attr('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(elHtml));
+     document.getElementById('createInvote').click();
+}
+    return false
+  });
+  $("#btn3").bind("click",
+  function() {
+    document.getElementById('content').value = '';
+    document.getElementById('shuchu').value = '';
+    document.getElementById('content').select();
+    return false
+  });
+//之前的复制插件过时了,需要flash,更换成这个
+var clipboard = new ClipboardJS('#copy');
+clipboard.on('success', function(e) {
+	if (e.text != "") {
+		toastr.success("复制成功");
+	} else {
+		toastr.success("什么都没有,无法复制");
+	}
+});
+
+clipboard.on('error', function(e) {
+	toastr.success("复制失败");
+});
+</script><div style="display: none;"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?81c5c6d2c74d56c9ab654aec4c11e078";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></div><script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script><script src="static/js/jquery1.11.1.js"></script><!-- 特效 --></body></html>

@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url(../font/cj2hunsrbhwmspr9ks589-lrc4du4e_yftj8ol60xk0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Serif Regular'), local('DroidSerif-Regular'), url(../font/0aksp294htd-nvjgucytaj0eavxt0g0bientp43qt6e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(../font/zhcz-_wihjsqc0ohj9tcyc3usbnsvpkopqaur-2r7iu.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(../font/iqhow_feyldc4gzy_m8fcver6hm6rms0v1dtxsgir4g.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round Regular'), local('VarelaRound-Regular'), url(../font/aph4jr0usos5wiut5cpjronf5ufddttmlvmwujdhhgs.ttf) format('truetype');
+}

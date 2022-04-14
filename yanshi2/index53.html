@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>DES批量加密解密 - 在线工具</title><meta name="baidu_union_verify" content="c7b1ed99149de450b9aa90606afb8b1c"><meta name="description" content="在线批量加密或者解密DES,可以输入密钥后进行加密和解密,支持可逆加密解密,支持导出文本!"><meta name="keywords" content="DES批量加密,DES批量解密,DES加解密,在线工具"><link rel="shortcut icon" href="http://tools.bugscaner.com/static/images/favicon.ico"><link rel="bookmark" href="http://tools.bugscaner.com/static/images/favicon.ico"><!-- Bootstrap核心文件 --><link rel="stylesheet" href="static/css/bootstrap.min.css"><link rel="stylesheet" href="static/css/main2.css"><link href="static/css/toastr.min.css" rel="stylesheet"><!-- 这里是新增的css文件或者内容 --><!-- 自定义css --><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]--><!-- toastr提示在屏幕居中显示 --><style>
+		.toast-center-center {
+		   top: 40%;
+		   left: 50%;
+		   margin-top: -30px;
+		   margin-left: -150px;
+		}
+	</style></head><body><!-- fixed navbar --><header id="header"><nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div id="top-header">在线工具</div><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html" title="在线工具">在线工具</a></div><div id="navbar" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="index1.html" title="识别类工具">识别类工具</a></li><li><a href="index4.html" title="疯狂加解密">疯狂加解密</a></li><li><a href="index5.html" title="站长工具">站长工具</a></li><li><a href="index6.html" title="SEO工具">SEO工具</a></li><li><a href="index7.html" title="文本字符串处理工具大全">文本/字符串</a></li><li><a href="index8.html">BT/磁力相关</a></li><li><a href="index9.html">其他工具</a></li></ul></div><!--/.nav-collapse --></div></nav><!--/.navbar --></header><!-- 以上为header头部结束 --><div class="container"><div style="margin-top:110px;"><hr><!-- 这里是body内容 --><!-- 广告位预留位置 --><div class="row text-center" style="margin-top:30px;margin-bottom:20px;"><div class="col-md-12"><h3>DES批量加密解密</h3></div></div><div class="row"><div class="col-md-12"><ul class="nav nav-tabs"><li role="presentation"><a href="index52.html">AES批量加密解密</a></li><li class="active" role="presentation"><a href="">DES批量加密解密</a></li><li role="presentation"><a href="index51.html">SHA1批量加密</a></li><li role="presentation"><a href="javascript:;">SHA224批量加密</a></li><li role="presentation"><a href="javascript:;">SHA256批量加密</a></li><li role="presentation"><a href="javascript:;">SHA384批量加密</a></li><li role="presentation"><a href="javascript:;">SHA512批量加密</a></li><li role="presentation"><a href="index4.html">更多..</a></li></ul></div></div><div class="row" style="margin-top:20px"><div class="col-md-12"><textarea class="form-control" rows="10" id="descontent" placeholder="请在这里输入您需要des批量加密或解密的数据
+			
+行模式是一行一行的加密或解密
+
+整体模式是把所有的输入当成一个字符串加密或解密"></textarea></div></div><div class="row" style="margin-top:20px"><div class="col-md-12 text-center"><label class="form-inline" style="margin:5px;"></label>
+                        模式：
+                        <select style="width:100px;" class="form-control" id="moshi"><option value="1" selected="selected">行模式</option><option value="2">整体模式</option></select><label class="form-inline" style="margin:5px;"></label>
+                        填充：
+                        <select style="width:170px;" class="form-control" id="padding"><option value="1" selected="selected">ZeroPadding</option><option value="2">Pkcs5Padding</option><option value="3">Pkcs7Padding</option><option value="4">iso10126Padding</option><option value="5">ansix923Padding</option><option value="6">iso97971Padding</option></select><label class="form-inline" style="margin:5px;"></label>
+密匙：<input type="text" id="pwd" placeholder="在这里输入密匙" style="width:250px;" class="form-control"><button class="btn btn-danger" style="margin:5px;">des加密</button><button class="btn btn-danger" style="margin:5px;">des解密</button><button class="btn btn-primary" onclick="javascript:exporttotxt();" style="margin:5px;">导出文本</button><button type="submit" class="btn btn-primary" id="copy" data-clipboard-target="#shuchu" style="margin:5px;">复制结果</button><button class="btn btn-primary" onclick="javascript:clearinput();" style="margin:5px;">清空表单</button></div></div><div class="row" style="margin-top:20px"><div class="col-md-12"><textarea class="form-control" rows="10" id="shuchu" placeholder="结果区域"></textarea></div></div><a onfocus="this.blur();" download="在线工具des结果导出.txt" id="createInvote" class="ipt-todo hide">导出结果</a><!-- 广告位置 --><div id="item-box"></div><div class="item-box"><h3>DES批量加密解密在线工具介绍</h3><hr><div class="view-box"><p>DES是对称性加密里面常见一种，全称为Data Encryption Standard，即数据加密标准，是一种使用密钥加密的块算法。密钥长度是64位(bit)，超过位数密钥被忽略。所谓对称性加密，加密和解密密钥相同。对称性加密一般会按照固定长度，把待加密字符串分成块。不足一整块或者刚好最后有特殊填充字符。往往跨语言做DES加密解密，经常会出现问题。往往是填充方式不对、或者编码不一致、或者选择加密解密模式(ECB,CBC,CTR,OFB,CFB,NCFB,NOFB)没有对应上造成。常见的填充模式有： 'pkcs5','pkcs7','iso10126','ansix923','zero' 类型，包括DES-ECB,DES-CBC,DES-CTR,DES-OFB,DES-CFB。</p></div></div><div class="item-box"><h3>应用场景</h3><hr><div class="view-box"><p>批量DES加密或者解密,以每一行的数据为依据,逐行加密！解密亦然！</p></div></div><div class="item-box"><h3>注意：</h3><hr><div class="view-box"><p>des批量加解密采用ecb模式 支持 'ZeroPadding' 'pkcs5','pkcs7','iso10126','ansix923','iso97971'填充方式加解密！</p><p>Pkcs5是Pkcs7在块大小为8时特殊情况，本质上是一样的</p></div></div><div class="item-box"><h3>更新日志</h3><hr><div class="view-box"><p>2018年8月5号上线</p><p>2021年7月24号,增加了'pkcs5','pkcs7','iso10126','ansix923','iso97971'填充方式</p></div></div></div></div><!-- 以上为body结束 --><footer class="tools-footer"><div class="container"><p>相关站点:</p><ul class="tools-footer-links"><li><a href="index38.html" target="_blank" title="whois查询">Whois查询</a></li><li><a href="index14.html" target="_blank" title="CMS指纹识别">CMS指纹识别</a></li><li><a href="index73.html" target="_blank" title="icp备案查询">icp备案查询</a></li><li><a href="index37.html" target="_blank" title="同ip网站查询">同ip网站查询</a></li><li><a href="mailto:bugscaner@qq.com" target="_blank" title="联系我们" rel="nofollow">联系我们</a></li></ul><p>我们的热爱能走多远？直到走别人的路，变成自己的路！</p><p>本项目采用 <a rel="license" href="javascript:;" rel="nofollow" target="_blank" data-toggle="tooltip" title="django,一款极易上手的开源框架,会写python 函数就会开发网站,如果因为本站能激发您对python学习的兴趣,真是荣幸之至！">Django 1.11</a>开源框架开发 Copyright? 2010-2018</p></div></footer><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --><script src="static/js/jquery.min.js"></script><!-- Include all compiled plugins (below), or include individual files as needed --><script src="static/js/bootstrap.min.js"></script><!-- alert组件 --><script src="static/js/toastr.min.js"></script><!-- tooltip 小工具初始化 作为一个公用一个组件 --><script type="text/javascript">$(function () { $("[data-toggle='tooltip']").tooltip(); });toastr.options.positionClass = 'toast-center-center';</script><!-- 这里是新增的js内容 --><script src="static/js/tripledes.js"></script><script src="static/js/mode-ecb.js"></script><script src="static/js/pad-zeropadding-min.js"></script><script src="static/js/pad-ansix923-min.js"></script><script src="static/js/pad-iso10126-min.js"></script><script src="static/js/pad-iso97971-min.js"></script><script src="static/js/clipboard.min.js"></script><script type='text/javascript'>
+    $(function() {
+        $(".btn-danger").click(function(){
+            //判断点击了哪个按钮
+            eval("encodeanddecodeaes('"+$(this).html()+"')");
+        });
+    });
+    function Trim(str)
+     { 
+      return str.replace(/(^\s*)|(\s*$)/g, ""); 
+    }
+
+    //判断是否为空函数
+    function isEmpty(obj){
+        if(typeof obj == "undefined" || obj == null || obj == ""){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    function clearinput(){
+        document.getElementById('descontent').value = '';
+        document.getElementById('shuchu').value = '';
+        return false;
+    }
+	function encryptByDES(message, key,des_padding) {
+			//默认是常用的ZeroPadding
+			var function_padding = CryptoJS.pad.ZeroPadding;
+			if(des_padding == 2 || des_padding == 3){
+				function_padding = CryptoJS.pad.Pkcs7;
+			}
+			else if(des_padding == 5){
+				function_padding = CryptoJS.pad.AnsiX923;
+			}
+			else if(des_padding == 4 ){
+				function_padding = CryptoJS.pad.Iso10126;
+			}
+			else if(des_padding == 6){
+				function_padding = CryptoJS.pad.Iso97971;
+			}
+			var keyHex = CryptoJS.enc.Utf8.parse(key);
+			var encrypted = CryptoJS.DES.encrypt(message, keyHex, {
+				mode: CryptoJS.mode.ECB,
+				padding:function_padding
+			});
+			return encrypted.toString();
+		}
+	//Pkcs5是Pkcs7在块大小为8时特殊情况，本质上是一样的
+	function decryptByDES(ciphertext, key,des_padding) {
+		//默认是常用的ZeroPadding
+		var function_padding = CryptoJS.pad.ZeroPadding;
+		if(des_padding == 2 || des_padding == 3){
+			function_padding = CryptoJS.pad.Pkcs7;
+		}
+		else if(des_padding == 5){
+			function_padding = CryptoJS.pad.AnsiX923;
+		}
+		else if(des_padding == 4 ){
+			function_padding = CryptoJS.pad.Iso10126;
+		}
+		else if(des_padding == 6){
+			function_padding = CryptoJS.pad.Iso97971;
+		}
+		var keyHex = CryptoJS.enc.Utf8.parse(key);
+		var decrypted = CryptoJS.DES.decrypt({
+			ciphertext: CryptoJS.enc.Base64.parse(ciphertext)
+		}, keyHex, {
+			mode: CryptoJS.mode.ECB,
+			padding:function_padding
+		});
+		var return_info = "";
+		try
+		{
+		   return_info = decrypted.toString(CryptoJS.enc.Utf8);
+		}
+		catch(err)
+		{
+		   return_info = "--->解密失败,原因:"+err.message;
+		}
+		return return_info;
+	}
+    function encodeanddecodeaes(type){
+        var jieguos="";
+        var inputcontent = document.getElementById('descontent').value;
+        var inputpwd = document.getElementById('pwd').value;
+		//获取模式
+		var moshi = $("#moshi").val();
+		//获取填充方式
+		var des_padding = $("#padding").val();
+        if (isEmpty(inputpwd)){
+            toastr.error("请先输入密匙。");
+            return false;
+        }
+		inputcontent = Trim(inputcontent);
+        if (isEmpty(inputcontent)){
+			toastr.error("请随便输入点什么");
+            return false;
+        }
+		if(moshi == "2"){
+			var zhengti_jieguo = "";
+			if (type == "des加密"){
+				zhengti_jieguo = encryptByDES(inputcontent,inputpwd,des_padding);
+			}else{
+				zhengti_jieguo = decryptByDES(inputcontent, inputpwd,des_padding);
+				if (isEmpty(zhengti_jieguo)) {
+					zhengti_jieguo = inputcontent+"----->解密失败";
+				}
+			}
+			document.getElementById('shuchu').value = zhengti_jieguo;
+			return;
+		}
+        arr = inputcontent.split('\n');
+        for (j = 0; j < arr.length; j++) {
+			var newstr = "";
+            var trimstr = Trim(arr[j]);
+            //如果为空则添加回车符号
+            if (!isEmpty(trimstr)) {
+                if (type == "des加密"){
+                    newstr = encryptByDES(trimstr,inputpwd,des_padding);
+                }else{
+                    newstr = decryptByDES(trimstr, inputpwd,des_padding);
+                    if (isEmpty(newstr)) {
+                        newstr = trimstr+"----->解密失败";
+                    }
+                }
+            } else {
+				newstr = "";
+            }
+			jieguos += newstr+"\r\n";
+        }
+		document.getElementById('shuchu').value = jieguos;
+        return false;
+    }
+    function exporttotxt(){
+		var daochu = document.getElementById('shuchu').value;
+		daochu = daochu.replace(/\n/g, "\r\n");
+        if (isEmpty(daochu)) {
+			toastr.error("你还没有加密任何东西,无法导出!");
+            return false
+        }else{
+            var isIE = (navigator.userAgent.indexOf('MSIE') >= 0);
+            if (isIE) {
+                 var strHTML = daochu;
+                 var winSave = window.open();
+                 winSave.document.open("text","utf-8");
+                 winSave.document.write(strHTML);
+                 winSave.document.execCommand("SaveAs",true,"在线工具.txt");
+                 winSave.close();
+            } else {
+                 var elHtml = daochu;
+                 var mimeType =  'text/plain';
+                 $('#createInvote').attr('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(elHtml));
+                 document.getElementById('createInvote').click();
+            }
+                return false;
+        }
+    }
+	//之前的复制插件过时了,需要flash,更换成这个
+	var clipboard = new ClipboardJS('#copy');
+	clipboard.on('success', function(e) {
+		if (e.text != "") {
+			toastr.success("复制成功");
+		} else {
+			toastr.success("什么都没有,无法复制");
+		}
+	});
+
+	clipboard.on('error', function(e) {
+		toastr.success("复制失败");
+	});
+</script><div style="display: none;"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?81c5c6d2c74d56c9ab654aec4c11e078";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></div><script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script><script src="static/js/jquery1.11.1.js"></script><!-- 特效 --></body></html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>在线百万级手机号归属地批量查询- 在线工具</title><meta name="baidu_union_verify" content="c7b1ed99149de450b9aa90606afb8b1c"><meta name="description" content="批量查手机号码归属地,每次可查询百万级别的手机号归属地,是您快速查询大批量的手机号的最佳选择！"><meta name="keywords" content="批量查手机号码归属地,手机号归属地批量查询,手机号归属地网站,电话号码归属地批量查询"><link rel="shortcut icon" href="http://tools.bugscaner.com/static/images/favicon.ico"><link rel="bookmark" href="http://tools.bugscaner.com/static/images/favicon.ico"><!-- Bootstrap核心文件 --><link rel="stylesheet" href="static/css/bootstrap.min.css"><link rel="stylesheet" href="static/css/main2.css"><link href="static/css/toastr.min.css" rel="stylesheet"><!-- 这里是新增的css文件或者内容 --><!-- 自定义css --><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]--><!-- toastr提示在屏幕居中显示 --><style>
+		.toast-center-center {
+		   top: 40%;
+		   left: 50%;
+		   margin-top: -30px;
+		   margin-left: -150px;
+		}
+	</style></head><body><!-- fixed navbar --><header id="header"><nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div id="top-header">在线工具</div><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html" title="在线工具">在线工具</a></div><div id="navbar" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="index1.html" title="识别类工具">识别类工具</a></li><li><a href="index4.html" title="疯狂加解密">疯狂加解密</a></li><li><a href="index5.html" title="站长工具">站长工具</a></li><li><a href="index6.html" title="SEO工具">SEO工具</a></li><li><a href="index7.html" title="文本字符串处理工具大全">文本/字符串</a></li><li><a href="index8.html">BT/磁力相关</a></li><li><a href="index9.html">其他工具</a></li></ul></div><!--/.nav-collapse --></div></nav><!--/.navbar --></header><!-- 以上为header头部结束 --><div class="container"><div style="margin-top:110px;"><hr><!-- 这里是body内容 --><!-- 广告位预留位置 --><div class="row text-center" style="margin-top:30px;margin-bottom:20px;"><div class="col-md-12"><h3>在线百万级手机号归属地批量查询</h3></div></div><div class="row" style="margin-bottom:20px"><div class="col-md-12"><ul class="nav nav-tabs"><li role="presentation"><a href="shoujihaofenlei.html" title="手机号批量分类导出">手机号批量分类导出</a></li><li class="active" role="presentation"><a href="" title="手机号归属地批量查询">手机号归属地批量查询</a></li><li role="presentation"><a href="mobile2vcf.html" title="手机号转通讯录格式">手机号转通讯录格式</a></li><li role="presentation"><a href="text2phone.html" title="字符串手机号提取">字符串手机号提取</a></li><li role="presentation"><a href="index34.html" title="手机号去重">手机号去重</a></li><li role="presentation"><a href="groupby.html" title="重复订单合并">重复订单合并</a></li></ul></div></div><div class="row"><div class="col-md-12"><textarea id="shuru" class="form-control" placeholder="请在这里输入手机号,一行一个
+
+全新的代码重构,查询数量有了一个质的飞越。
+
+理论上不再限制查询数量
+
+可一次查询百万级别甚至千万级别数量的手机号归属地
+
+畅享丝滑般感受.从收藏本工具开始。" rows="13"></textarea></div></div><br><p>请选择您需要输出的格式，如没有特殊需求，可以默认！</p><div class="row"><div class="col-md-1"><label><input type="checkbox" name="info" checked="checked" id="1" value="province">省份
+
+			
+			</label></div><div class="col-md-1"><label><input type="checkbox" name="info" checked="checked" id="2" value="city">城市
+
+			
+			</label></div><div class="col-md-1"><label><input type="checkbox" name="info" checked="checked" id="3" value="phone_type">营运商
+
+			
+			</label></div><div class="col-md-1"><label><input type="checkbox" name="info" checked="checked" id="5" value="area_code">区号
+
+			
+			</label></div><div class="col-md-1"><label><input type="checkbox" name="info" checked="checked" id="4" value="zip_code">邮编
+
+			
+			</label></div><div class="col-md-2"><input id="fengefu" type="text" class="form-control" placeholder="自定义分隔符默认为制表符"></div><div class="col-md-1"><button id="tijiao" type="button" class="btn btn-primary">开始查询</button></div><div class="col-md-1"><button id="copy" type="button" class="btn btn-success" data-clipboard-target="#shuchu">复制结果</button></div><div class="col-md-1"><button type="button" class="btn btn-success" id="btn2">导出文本</button></div><div class="col-md-1"><button type="button" class="btn btn-success" id="clear">清空</button></div></div><div class="row" style="margin-top:30px;"><div class="col-md-12"><textarea id="shuchu" class="form-control" placeholder="查询结果区" rows="13"></textarea></div></div><a onfocus="this.blur();" download="在线手机号归属地批量查询.txt" id="createInvote" class="ipt-todo hide">导出结果</a><hr><!-- 广告位置 --><div id="item-box"></div><div class="item-box"><h3>在线百万级手机号归属地批量查询</h3><hr><div class="view-box"><p>手机号归属地批量查询,可以快速的查询出手机号的省份 城市 营运 商区号 邮编</p><p>可自定义查询输出格式</p><p>每次可以查询无限数量的手机号归属地,100万行手机号归属地查询,在理想条件下仅需300毫秒(0.3秒)</p><p>默认分隔符设置为制表符,方便直接复制粘贴到excel表格中,excel会自动分列</p></div></div><div class="item-box"><h3>关于隐私</h3><hr><div class="view-box"><p>该工具使用前端js所写,与服务器完全无交互,意味着页面加载完毕后,即使断网,您也可以使用本工具进行归属地查询</p><p>本站不会获取您输入的任何内容</p></div></div><div class="item-box"><h3>使用建议</h3><hr><div class="view-box"><p>该工具是在谷歌浏览器下开发,支持大部分主流浏览器,如果体验不佳,请使用谷歌浏览器,或者火狐等</p></div></div><div class="item-box"><h3>更新日志</h3><hr><div class="view-box"><p>2018.8.15号 上线</p><p>2021.9.16号 : 进行了代码重构,将查询数量提升了一个质的飞跃,一次可查询无限数量的手机号归属地。</p></div></div><div class="row modal fade" id="loadingModal" data-backdrop="static" tableindex="-1"><div class="col-lg-12" style="margin-left:20%;width: 60%;height:140px;top:40%;position: absolute;text-align: center;"><div class="progress progress-striped active"><div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="00" aria-valuemin="0" aria-valuemax="100" style="width: 00%;" id="jindutiao"><span class="sr-only">0% 完成</span></div></div><h5>工具正在初始化中...</h5></div></div></div></div><!-- 以上为body结束 --><footer class="tools-footer"><div class="container"><p>相关站点:</p><ul class="tools-footer-links"><li><a href="index38.html" target="_blank" title="whois查询">Whois查询</a></li><li><a href="index14.html" target="_blank" title="CMS指纹识别">CMS指纹识别</a></li><li><a href="index73.html" target="_blank" title="icp备案查询">icp备案查询</a></li><li><a href="index37.html" target="_blank" title="同ip网站查询">同ip网站查询</a></li><li><a href="mailto:bugscaner@qq.com" target="_blank" title="联系我们" rel="nofollow">联系我们</a></li></ul><p>我们的热爱能走多远？直到走别人的路，变成自己的路！</p><p>本项目采用 <a rel="license" href="javascript:;" rel="nofollow" target="_blank" data-toggle="tooltip" title="django,一款极易上手的开源框架,会写python 函数就会开发网站,如果因为本站能激发您对python学习的兴趣,真是荣幸之至！">Django 1.11</a>开源框架开发 Copyright? 2010-2018</p></div></footer><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --><script src="static/js/jquery.min.js"></script><!-- Include all compiled plugins (below), or include individual files as needed --><script src="static/js/bootstrap.min.js"></script><!-- alert组件 --><script src="static/js/toastr.min.js"></script><!-- tooltip 小工具初始化 作为一个公用一个组件 --><script type="text/javascript">$(function () { $("[data-toggle='tooltip']").tooltip(); });toastr.options.positionClass = 'toast-center-center';</script><!-- 这里是新增的js内容 --><script language="javascript" src="static/js/clipboard.min.js"></script><script language="javascript" src="static/js/dbcore.js"></script><script language="javascript" src="static/js/lzma.js"></script><script type="text/javascript">
+	//显示
+	$("#loadingModal").modal({
+		show: true,
+		backdrop: 'static',
+		keyboard: false
+	});
+
+	var db_info = [];
+	function Trim(str) {
+		return str.replace(/(^\s*)|(\s*$)/g, "");
+	}
+	//判断是否为空函数
+	function isEmpty(obj) {
+		if (typeof obj == "undefined" || obj == null || obj == "") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	function logs(text) {
+		$("#shuru").val($("#shuru").val() + text + "\n");
+	}
+	function guishudichaxun(arr, id_array, fengefu) {
+		let jieguoArr = [];
+		let hash = arr.reduce(((hash,a,index)=>{
+			let zz = (a.substring(1, 7) - 300000 + 2) * 8;
+			let temp_phone_search = [a];
+			if (zz < 1 || isNaN(zz)) {
+				console.log("无此号段");
+				temp_phone_search.push("未收录此号段");
+				jieguoArr.push(temp_phone_search.join(fengefu));
+				return;
+			}
+			let test = db_info.slice(zz, zz + 8);
+			test = Array.from(test, x=>((x & 0xff)).toString(16));
+			if (test[0] == "5a") {
+				temp_phone_search.push("未收录此号段");
+			} else {
+				let sheng = db_sheng[test[4]];
+				let shi = db_shi[parseInt(test[5] + test[6])];
+				let quhao = db_quhao[parseInt(test[0] + test[1])];
+				let youbian = db_youbian[parseInt(test[2] + test[3])];
+				let yunyingshang = db_yunyingshang[test[7]];
+				for (var i = 0; i < id_array.length; i++) {
+					temp_phone_search.push(eval(id_array[i]));
+				}
+			}
+			jieguoArr.push(temp_phone_search.join(fengefu));
+			return hash
+		}
+		), {})
+		return jieguoArr;
+	}
+	my_lzma = new LZMA("/static/js/lzma_worker.js");
+	function decompress(data) {
+		my_lzma.decompress(data, function on_decompress_complete(result) {
+			db_info = result;
+			toastr.info("工具初始化完成,可以愉快的查询了!");
+			//隐藏
+			$("#loadingModal").modal('hide');
+		}, function on_decompress_progress_update(percent) {
+			$("#jindutiao").css("width", (percent * 100) + "%").text("工具初始化中,请稍等...");
+		});
+	}
+	//这里下载预设数据库初始化
+	var ajax = new XMLHttpRequest();
+	ajax.open("GET", "/static/all.db", true);
+	ajax.responseType = "arraybuffer";
+	ajax.onload = function() {
+		decompress(new Uint8Array(ajax.response));
+	}
+	;
+	ajax.send();
+
+	$("#tijiao").bind("click", function() {
+		var phones = $("#shuru").val();
+		var fengefu = $("#fengefu").val();
+		if (isEmpty(fengefu)) {
+			fengefu = "\t";
+		}
+		if (isEmpty(phones)) {
+			toastr.error("您还什么都没有输入,无法进行查询");
+			return;
+		}
+		phones = Trim(phones);
+		var id_array = new Array();
+		$('input[name="info"]:checked').each(function() {
+			let id = $(this).attr('id');
+			if (id == "1") {
+				id_array.push("sheng");
+			} else if (id == "2") {
+				id_array.push("shi");
+			} else if (id == "3") {
+				id_array.push("yunyingshang");
+			} else if (id == "4") {
+				id_array.push("youbian");
+			} else if (id == "5") {
+				id_array.push("quhao");
+			} else {
+				toastr.error("没有该选项,请确认");
+				return;
+			}
+			//向数组中添加元素  
+		});
+		if (id_array.length == 0) {
+			toastr.error("请选择一个查询项,比如：省份,城市,运营商等等");
+			return;
+		}
+		$("#shuchu").val("正在查询中。 请稍等！");
+		var arr_phones = phones.split('\n');
+		if (arr_phones.length > 500000) {
+			toastr.warning("您本次输入行数超过50W行,浏览器可能有段时间卡顿,请耐心等待!");
+		}
+		let jieguo = guishudichaxun(arr_phones, id_array, fengefu);
+		$("#shuchu").val(jieguo.join("\n"));
+	});
+
+	$("#clear").bind("click", function() {
+		document.getElementById("shuru").value = "";
+		document.getElementById("shuchu").value = "";
+	});
+
+	$("#btn2").bind("click", function() {
+		var daochu = document.getElementById('shuchu').value;
+		daochu = daochu.replace(/\n/g, "\r\n");
+		if (isEmpty(daochu)) {
+			toastr.warning("没有内容,无法导出");
+			return false
+		}
+		var isIE = (navigator.userAgent.indexOf('MSIE') >= 0);
+		if (isIE) {
+			var winSave = window.open();
+			winSave.document.open("text", "utf-8");
+			winSave.document.write(daochu);
+			winSave.document.execCommand("SaveAs", true, "bugscaner.txt");
+			winSave.close();
+		} else {
+			var mimeType = 'text/plain';
+			$('#createInvote').attr('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(daochu));
+			document.getElementById('createInvote').click();
+		}
+		return false
+	});
+	//之前的复制插件过时了,需要flash,更换成这个
+	var clipboard = new ClipboardJS('#copy');
+	clipboard.on('success', function(e) {
+		if (e.text != "") {
+			toastr.success("复制成功");
+		} else {
+			toastr.success("还未查询,无法复制");
+		}
+	});
+
+	clipboard.on('error', function(e) {
+		toastr.success("复制失败");
+	});
+</script><div style="display: none;"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?81c5c6d2c74d56c9ab654aec4c11e078";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></div><script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script><script src="static/js/jquery1.11.1.js"></script><!-- 特效 --></body></html>

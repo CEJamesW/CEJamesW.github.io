@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>seay源代码全自动在线审计系统,PHP源代码缺陷自动审计平台-在线工具</title><meta name="baidu_union_verify" content="c7b1ed99149de450b9aa90606afb8b1c"><meta name="description" content="在源代码的静态安全审计中，使用自动化工具代替人工漏洞挖掘，可以显著提高审计工作的效率。学会利用自动化代码审计工具，是每一个代码审计人员必备的能力。"><meta name="keywords" content="PHP代码审计,PHP代码缺陷挖掘,PHP系统Oday挖掘,自动代码审计,PHP如何挖漏洞,PHP漏洞大全"><link rel="shortcut icon" href="http://tools.bugscaner.com/static/images/favicon.ico"><link rel="bookmark" href="http://tools.bugscaner.com/static/images/favicon.ico"><!-- Bootstrap核心文件 --><link rel="stylesheet" href="static/css/bootstrap.min.css"><link rel="stylesheet" href="static/css/main2.css"><link href="static/css/toastr.min.css" rel="stylesheet"><!-- 这里是新增的css文件或者内容 --><link href="static/css/fileinput.min.css" rel="stylesheet"><!-- 自定义css --><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]--><!-- toastr提示在屏幕居中显示 --><style>
+		.toast-center-center {
+		   top: 40%;
+		   left: 50%;
+		   margin-top: -30px;
+		   margin-left: -150px;
+		}
+	</style></head><body><!-- fixed navbar --><header id="header"><nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div id="top-header">在线工具</div><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html" title="在线工具">在线工具</a></div><div id="navbar" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="index1.html" title="识别类工具">识别类工具</a></li><li><a href="index4.html" title="疯狂加解密">疯狂加解密</a></li><li><a href="index5.html" title="站长工具">站长工具</a></li><li><a href="index6.html" title="SEO工具">SEO工具</a></li><li><a href="index7.html" title="文本字符串处理工具大全">文本/字符串</a></li><li><a href="index8.html">BT/磁力相关</a></li><li><a href="index9.html">其他工具</a></li></ul></div><!--/.nav-collapse --></div></nav><!--/.navbar --></header><!-- 以上为header头部结束 --><div class="container"><div style="margin-top:110px;"><hr><!-- 这里是body内容 --><!-- 广告位预留位置 --><div class="row"><div class="col-md-12 text-center"><h3>在线seay源代码审计系统-加强版</h3></div></div><div class="row"><div class="col-md-5 col-xs-offset-3"><label class="control-label">请选择需要审计的php文件或标准zip压缩包(允许上传最大2M)：</label><input id="yishuru" type="file" class="file" name="seay" data-show-preview="false" data-allowed-file-extensions='["php","zip"]'></div></div><br><br><div id="seaybugcode"></div><hr><!-- 广告位置 --><div id="item-box"></div><div class="item-box"><h3>在线工具源代码审计系统介绍</h3><hr><div class="view-box"><p>php代码审计如字面意思，对php源代码进行审查，理解代码的逻辑，发现其中的安全漏洞。如审计代码中是否存在sql注入，则检查代码中sql语句到数据库的传输 和调用过程。还有一些危险的系统函数,上传,执行函数 等</p></div></div><div class="item-box"><h3>使用注意</h3><hr><div class="view-box"><p>上传的代码如果出现停止状态,不能审计,说明文件编码问题出现了问题,编码一直是个头疼的问题,请先用notepad+转成UTF-8再审计!</p><p>后期会解决这个问题</p></div></div><div class="item-box"><h3>支持审计的漏洞如下:</h3><hr><div class="view-box"><p>1：文件包含函数中存在变量,可能存在文件包含漏洞</p><p>2：preg_replace的/e模式，且有可控变量，可能存在代码执行漏洞</p><p>3：phpinfo()函数，可能存在敏感信息泄露漏洞</p><p>4：call_user_func函数参数包含变量，可能存在代码执行漏洞</p><p>5：读取文件函数中存在变量，可能存在任意文件读取漏洞</p><p>6：命令执行函数中存在变量，可能存在任意命令执行漏洞</p><p>7：parse_str函数中存在变量,可能存在变量覆盖漏洞</p><p>8：双$$符号可能存在变量覆盖漏洞</p><p>9：获取IP地址方式可伪造，HTTP_REFERER可伪造，常见引发SQL注入等漏洞</p><p>10：文件操作函数中存在变量，可能存在任意文件读取/删除/修改/写入等漏洞</p><p>11：extract函数中存在变量，可能存在变量覆盖漏洞</p><p>12：检测常见代码执行和后门</p><p>13：urldecode绕过GPC,stripslashes会取消GPC转义字符</p><p>14：``反引号中包含变量，变量可控会导致命令执行漏洞</p><p>15：array_map参数包含变量，变量可控可能会导致代码执行漏洞</p><p>16：SQL语句select中条件变量无单引号保护，可能存在SQL注入漏洞</p><p>17：SQL语句delete中条件变量无单引号保护，可能存在SQL注入漏洞</p><p>18：SQL语句insert中插入变量无单引号保护，可能存在SQL注入漏洞</p><p>19：SQL语句delete中条件变量无单引号保护，可能存在SQL注入漏洞</p><p>20：eval或者assertc函数中存在变量，可能存在代码执行漏洞</p><p>21：echo等输出中存在可控变量，可能存在XSS漏洞</p><p>22：header函数或者js location有可控参数，存在任意跳转或http头污染漏洞</p><p>23：存在文件上传，注意上传类型是否可控</p></div></div><div class="item-box"><h3>相关工具</h3><hr><p><a role="button" class="btn btn-default btn-lg active" target="_blank" href="index12.html">在线webshell查杀</a></p></div></div></div><!-- 以上为body结束 --><footer class="tools-footer"><div class="container"><p>相关站点:</p><ul class="tools-footer-links"><li><a href="index38.html" target="_blank" title="whois查询">Whois查询</a></li><li><a href="index14.html" target="_blank" title="CMS指纹识别">CMS指纹识别</a></li><li><a href="index73.html" target="_blank" title="icp备案查询">icp备案查询</a></li><li><a href="index37.html" target="_blank" title="同ip网站查询">同ip网站查询</a></li><li><a href="mailto:bugscaner@qq.com" target="_blank" title="联系我们" rel="nofollow">联系我们</a></li></ul><p>我们的热爱能走多远？直到走别人的路，变成自己的路！</p><p>本项目采用 <a rel="license" href="javascript:;" rel="nofollow" target="_blank" data-toggle="tooltip" title="django,一款极易上手的开源框架,会写python 函数就会开发网站,如果因为本站能激发您对python学习的兴趣,真是荣幸之至！">Django 1.11</a>开源框架开发 Copyright? 2010-2018</p></div></footer><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --><script src="static/js/jquery.min.js"></script><!-- Include all compiled plugins (below), or include individual files as needed --><script src="static/js/bootstrap.min.js"></script><!-- alert组件 --><script src="static/js/toastr.min.js"></script><!-- tooltip 小工具初始化 作为一个公用一个组件 --><script type="text/javascript">$(function () { $("[data-toggle='tooltip']").tooltip(); });toastr.options.positionClass = 'toast-center-center';</script><!-- 这里是新增的js内容 --><script src="static/js/fileinput.min.js"></script><script>
+    $("#yishuru").fileinput({
+        language:'zh',
+        uploadAsync:true,
+		showUpload:false,
+        uploadUrl:'/api/bugcode/',
+        maxFileCount: 1,
+        showPreview: true,
+		showClose:false,
+        allowedFileExtensions : ['php','zip'],
+    }).on("filebatchselected", function(event, files) {
+    $("#seaybugcode").html("<div class=\"well well-sm text-center\">正在检测中,你只管抽烟喝茶泡妞看小说,剩下的交给我吧！</div>");
+            $(this).fileinput("upload");
+        }).on("fileuploaded", function(event, data) {
+        if(data.response.length)
+        {
+			$("#seaybugcode").html("<div class=\"well well-sm text-center\">警告警告！！！貌似发现"+data.response.length+"个洞？！如果误报，你别打我</div>");//去掉初始化数据
+			var table = $("<table class=\"table table-bordered\"><thead><tr><th>文件路径</th><th>代码行数</th><th>漏洞代码</th><th>漏洞描述</th></tr></thead>");
+			table.appendTo(($("#seaybugcode")));  
+			                    for(var i=0;i<data.response.length;i++){
+                        var tr=$("<tr></tr>");  
+                            tr.appendTo(table);
+							var td=$("<td class=\"info\">" + data.response[i].path + "</td>"); 
+							var td1=$("<td class=\"info\">" + data.response[i].hang + "</td>"); 
+							var td2=$("<td class=\"success\">" + data.response[i].code + "</td>"); 
+							var td3=$("<td class=\"warning\">" + data.response[i].miaoshu + "</td>"); 
+							td.appendTo(tr);  
+							td1.appendTo(tr);  
+							td2.appendTo(tr);  
+							td3.appendTo(tr);
+                    }  
+        }
+        else{
+			$("#seaybugcode").html("<div class=\"well well-sm text-center\">您的代码非常完美,没有发现bug,可以关机去约妹子了！</div>");}
+    });
+</script><div style="display: none;"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?81c5c6d2c74d56c9ab654aec4c11e078";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></div><script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script><script src="static/js/jquery1.11.1.js"></script><!-- 特效 --></body></html>

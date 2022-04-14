@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="本平台提供微信域名拦截（停止访问）监测接口服务，我们的监控系统能快速及时地把已被拦截的域名通知对方，为了灵活性地与第三方平台无缝对接特别地提供专业API接口实时监控着域名的状态，贵平台可通过此接口回调数据快速切换有效域名，大大减少人力物理给平台正常运转带来好福音，堪称微信分享平台的好助手，欢迎使用！">
+<meta name="keywords" content="微信停止访问，微信域名检测api，已停止访问该网页，分享被举报，域名被微信拦截检测，QQ管家网址检测，微信拦截，域名安全检测">
+<title>微信域名检测接口-域名停止访问检测-域名安全检测工具</title>
+<meta name="author" content="Sockt">
+<link rel="shortcut icon" href="http://weixin.bugscaner.com/static/weixin.ico">
+<link rel="stylesheet" type="text/css" href="static/css/main1.css">
+<link href="static/css/icomoon.css" rel="stylesheet">
+<link href="static/css/live-2.css" rel="stylesheet">
+<!--[if lt IE 9]> <script src="js/html5shiv.min.js"></script> <script src="js/respond.min.js"></script> <![endif]-->
+<script src="static/js/modernizr.js"></script>
+</head>
+<body data-home="/" id="home">
+<header id="main-header" class="the-header the-origin-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12"> <a href="" class="logo"><img src="static/picture/logosockt.png" alt="Sockt"></a>
+        <div id="nav-menu-trigger" class="menu-toggle pull-right all-caps">Menu<span class="icon-menu5"></span></div>
+      </div>
+    </div>
+  </div>
+</header>
+<nav id="nav-wrapper"><a class="nav-close" href="#nav"><span class="icon-cross2"></span></a>
+  <ul id="main-nav" class="main-nav all-caps">
+    <li><a href="#">登陆</a></li>
+    <li><a href="#">注册</a></li>
+  </ul>
+  <ul class="secondary-nav">
+    <li><a href="">域名检测</a></li>
+    <li><a href="javascript:;">常见拦截状态</a></li>
+    <li><a href="javascript:;">行业资讯</a></li>
+    <li><a href="javascript:;">收费标准</a></li>
+    <li><a href="javascript:;">平台介绍</a></li>
+    <li><a href="javascript:;">API开发文档</a></li>
+    <li><a class="contact-trigger">联系我们</a></li>
+  </ul>
+</nav>
+<main id="main-content" class="hero-search-layout" style="margin-bottom: 184px;">
+  <section id="hero" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
+    <div class="container">
+      <div class="vertical-center-wrapper">
+        <div class="vertical-center-table">
+          <div class="vertical-center-content">
+            <div class="hero-content row centered">
+              <div class="col-lg-offset-1 col-lg-10 col-md-12">
+                <h1 class="all-caps text-shadow-medium" data-sr="enter top over 1s and move 50px wait 0.3s">在线微信域名黑名单检测</h1>
+                <div class="row">
+                  <div class="hero-search-wrapper col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                    <form id="hero-search" class="the-company-search-form" data-sr="enter bottom over .5s and move 10px wait 0.3s">
+                      <div class="input-group">
+                        <input type="text" name="url" id="inputurls" class="form-control" placeholder="http://weixin.bugscaner.com/" required="">
+                        <span class="input-group-btn">
+                        <button class="btn btn-company-search" id="header-subscribe" type="submit">检测</button>
+                        </span> </div>
+                    </form>
+                  </div>
+                </div>
+                <div id="jindu"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="company">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-12">
+          <article class="post post-with-sidebar">
+            <div class="post-content">
+              <div class="entry-content">
+			  <h3>下线通知-您依然可以使用在线检测</h3>
+			  <p>本站已不承接微信域名拦截业务,请使用web端登录微信,保持登录,抓取cookie,即可自己实现接口,祝君好运<a href="javascript:;" target="_blank" title="详情">详情点我</a></p>
+                <h3>本站微信域名拦截检测优势</h3>
+                <p>采用官方接口,检测准确度达到99.99%,提供针对不同的客户,开发不同的应用程序!</p>
+                <h3>自动检测域名是否被微信拦截，及时邮件或微信或短信获取通知消息</h3>
+                <p>api不行了？你可以尝试用监控，监控可以实现api的一切功能！</p>
+                <p>喜讯，本站全新推出新功能服务【微信域名监控】，亮点一：全自动检测，亮点二：全自动替换，亮点三：无人值守24小时监控，亮点四：独立服务器且性价比更高。</p>
+                <p>域名监控可以实现以下功能： 1、你方提供接收域名的接口（软件可自定义回调地址），监控软件发现拦截把域名沿着接口返回去给你程序处理，例如你提供的接口是"weixin.bugscaner.com/index.php?keyi=" ，假设软件发现www.a.com 被拦截 ，然后就会执行 weixin.bugscaner.com/index.php?keyi=www.a.com 2、域名监控+自动切换方案，可以实现以下效果: aaa.cn随机跳转到(bbb.com、ccc.com、dd.com)括号里面是你要监控的域名。软件发现拦截自动剔除，域名可以自行删除重新添加，为了扩展此功能的灵活性，我们提供了接口获取正常或者被拦截的域名数组 3、邮件通知、可扩展短信通知</p>
+                <h3>使用说明</h3>
+                <p>针对微信转发分享链接等过程中，您宝贵的域名被QQ管家云安全过滤拦截而无法正常浏览，例如该网页包含诱导分享内容，被多人投诉等。 本平台提供微信域名拦截（停止访问）监测接口服务，我们的监控系统能快速及时地把已被拦截的域名通知对方，为了灵活性地与第三方平台无缝对接特别地提供专业API接口实时监控着域名的状态，贵平台可通过此接口回调数据快速切换有效域名，大大减少人力物理给平台正常运转带来好福音，堪称微信分享平台的好助手，欢迎使用！ </p>
+                <h3>域名监控方式对比传统api优势有哪些？</h3>
+                <p>一、稳定性强；二、准确性高，高达99%；三、扩展性强，新增回调地址，拦截时监控程序会第一时间请求该地址，该地址可自定义（如：扩展短信通知，你需预先把短信接口设计好，然后把接口绑定到回掉地址则轻松完成对接）；四、可自定义邮箱通知（支持多邮箱通知）；五、管理方便，后台批量添加域名进行监控，根据需求可通过接口获取正常域名或者已拦截的域名。 </p>
+                <h5>API接口和域名监控的区别：</h5>
+                <p>1、API接口：是对外部开放的应用程序编程接口，方便与第三方平台对接，通常请求以回调数据的形式进行自身程序的业务调整，接口只能单个域名检测。api接口优势：流程简单方便调用，实时性强可以毫秒检测；劣势：因weixin策略经常改变，导致接口不稳定且准确率低，维护成本高影响价格偏高 </p>
+                <p>2、域名监控：是把域名大批量域名添加到后台进行24小时轮询检测，发现有被拦截的域名立刻把域名消除，可通过专用的接口获取正常或者已拦截的域名。域名监控优势：稳定且准确率高，价格相对api要低30%；劣势：流程稍微复杂，需要你提供一个微信号用于登录PC版微信（需要你帮忙扫一下二维码登录即可），如果需要邮箱通知你提供一个139邮箱账号和密码，用于发邮件。 </p>
+                <h3>资费说明</h3>
+                <p>10元试用1000个实时检测查询，本接口采用官方接口，准确率99.99%。</p>
+                <h3>联系我们</h3>
+                <p><a target="_blank" href="javascript:;"><img border="0" src="static/picture/pa.jpg" alt="欢迎前来洽谈！" title="欢迎前来洽谈！"></a></p>
+                <h3>搜索关键词</h3>
+                <p>
+                <h5>微信域名检测 api,微信域名黑名单检测工具,微信域名屏蔽检测api,停止访问检测工具,微信新版域名过滤,php 判断微信屏蔽域名,微信可信域名查询, 微信域名拦截检测,微信域名URL访问被封查询工具</h5>
+                
+                <h3>微信域名黑名单检测应用场景</h3>
+                <h5>微信分享</h5>
+                <p>做微信转发的朋友都知道,花了大价钱去推广自己的产品,没有想到的是在半路被微信拦截,导致之前所有的投入全部付之东流!应用本工具,可以实时有效的帮您检测域名是否被微信屏蔽,一旦屏蔽会自动切换域名,还可以通过短信通知您,还可以选择通过微信即使通知你,可以帮助您省去人工手动去检测,省时,省力,高效！</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-3">
+          <aside class="sidebar">
+            <div class="widget widget-search">
+              <h5 class="widget-title"><span>联系我们</span></h5>QQ：
+			  <a target="_blank" href="javascript:;"><img border="0" src="static/picture/pa.jpg" alt="欢迎前来洽谈！" title="欢迎前来洽谈！"></a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer id="main-footer">
+  <div class="container">
+    <div class="row">
+      <ul class="footer-nav all-caps">
+        <li><a href="">域名检测</a></li>
+        <li><a href="javascript:;">常见拦截状态</a></li>
+        <li><a href="javascript:;">行业资讯</a></li>
+        <li><a href="javascript:;">收费标准</a></li>
+        <li><a href="javascript:;">平台介绍</a></li>
+        <li><a href="javascript:;">API开发文档</a></li>
+        <li><a class="contact-trigger">联系我们</a></li>
+      </ul>
+      <div class="copyright">
+        <p>&copy;2017 BugScaner. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<a id="to-top"><span class="icon-chevron-thin-up"></span></a>
+<div class="contact-overlay overlay-scale"><a class="overlay-close">Close</a>
+  <div class="container">
+    <div class="row">
+      <div class="contact-content col-lg-10 col-lg-offset-1 centered">
+        <h2 class="all-caps">联系我们</h2>
+        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+          <form class="contact-form" id="contact-form" method="post">
+            <input type="hidden" name="cpage" value="#">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="required-field">
+                  <input name="fname" id="fname" class="contact-input" type="text" placeholder="称呼">
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <input name="lname" id="lname" class="contact-input" type="text" placeholder="电话">
+              </div>
+              <div class="col-lg-12 col-md-12">
+                <div class="required-field">
+                  <input name="email" id="email" class="contact-input" type="email" placeholder="邮箱">
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12">
+                <div class="required-field dropselect">
+                  <select class="contact-input" name="defined-subject" id="defined-subject">
+                    <option value="">请选择</option>
+                    <option value="2">我想使用微信域名黑名单监控软件</option>
+                    <option value="1">请问微信域名黑名单检测是怎么收费的？</option>
+                    <option value="3">微信域名黑名单检测提供api吗？</option>
+                    <option value="4">我想业务合作</option>
+                  </select>
+                </div>
+                <p id="select-message"></p>
+                <div class="required-field">
+                  <input name="subject" id="subject" class="contact-input" type="text" placeholder="Subject">
+                </div>
+                <div class="required-field">
+                  <input name="url" id="url" class="contact-input" type="text" placeholder="Removal URL">
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 message-row">
+                <div class="required-field">
+                  <textarea name="message" id="message" rows="9" placeholder="Message"></textarea>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 reason-row">
+                <div class="required-field">
+                  <textarea name="reason" id="reason" rows="9" placeholder="Reason"></textarea>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 all-caps centered">
+                <button id="submit" type="submit" class="submit-btn">Submit</button>
+              </div>
+              <div class="col-lg-12 col-md-12 all-caps centered contact-loading">
+                <div class="spinner icon-spinner2"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="total-loading"></div>
+<div id="error-notification" class="notif-box"><span class="icon-bullhorn notif-icon"></span>
+  <p></p>
+  <a class="notification-close">Close</a></div>
+<div id="success-notification" class="notif-box"><span class="icon-checkmark notif-icon"></span>
+  <p></p>
+  <a class="notification-close">Close</a></div>
+<script src="static/js/live-2.js"></script> 
+<script type="text/javascript">
+function url2domain(url){
+	return url.toLowerCase().replace("http://", "").replace("https://", "").split("/")[0].split("?")[0].replace(/\s/g, "");
+}
+function isDomain(value){
+	var tmp_arr = value.split("."),
+		tmp_len = tmp_arr.length;
+	return !!tmp_arr[tmp_len - 1].match(/[0-9]/) ? false : !! value.match(/^[A-Za-z0-9_-]+(\.[A-Za-z0-9_-]+)+$/);
+}
+	$("#header-subscribe").bind("click", function (){
+		var obj = document.getElementById('inputurls');
+		url = url2domain(obj.value);
+	if (url){
+		$("#jindu").html("<div class=\"spinner icon-spinner9\" style=\"font-size:100px;\"></div>");
+	  $.ajax({
+          url:"http://api.bugscaner.com/weixinurlsafe.py",
+          data:{url:url},
+			  type:"POST",
+			  dataType:"json",
+			  error:function(){
+			  $("#jindu").html("服务器出了点小问题,稍后再来吧！");
+			  },
+			  success:function(json){
+				if(json["status"] == 555){
+					$("#jindu").html("您今天的50次查询已用完,请明天再来,感谢您的使用！");
+				}
+				else if(json["status"] == 406){
+					$("#jindu").html("出现未知问题,请重试");
+				}
+				else if(json["status"] == 200){
+					$("#jindu").html("恭喜域名："+url+"在微信访问正常");
+				}
+				else if(json["status"] == 3){
+					$("#jindu").html("真不幸哦域名："+url+"已被微信拦截");
+				}
+				else{
+					$("#jindu").html(json["status"]);
+					}
+		  }
+      }
+	  );
+	  }
+	  else{
+	  	alert('请输入要检测的域名');
+		obj.focus();
+	  };
+	return false;
+});
+</script>
+<div style="display: none;">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?194db19d397188923f912d6b46a58227";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</body>
+</html>
