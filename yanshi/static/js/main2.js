@@ -1,1 +1,0 @@
-$("#str-post").submit(function(){$("#result").html('<input type="text" autocomplete="off" class="am-form-field" value="查询中...">');$("#result").load('?'+$("#str-post").serialize());return false;})

@@ -1,1 +1,0 @@
-new_element=document.createElement("style"),new_element.innerHTML=".footer p:nth-child(3),.footer p:nth-child(4) a:last-child,.footer p:nth-child(5),ul.navbar-nav li:nth-child(2).nav-item,ul.navbar-nav li:nth-child(3).nav-item{display:none}",document.body.appendChild(new_element);
