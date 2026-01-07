@@ -1,6 +1,11 @@
 @font-face {
     font-family: "Pacifico-Regular";
-    src: url('../font/Pacifico-Regular.ttf') format('truetype');
+    src: url('../font/fang.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "BarlowCondensed";
+    src: url('../font/BarlowCondensed.ttf') format('truetype');
 }
 
 @font-face {

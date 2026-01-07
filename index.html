@@ -11,7 +11,7 @@
     <meta name="description" content="暮云叆叇的个人主页">
     <meta name="keywords" content="暮云叆叇,个人主页">
     <meta name="author" content="暮云叆叇">
-    <title>暮云叆叇</title>
+    <title>暮云叆叇的主页</title>
     <!-- jQuery -->
     <script src="./js/jquery.min.js"></script>
     <!-- 引入样式 -->
@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="./css/loading.css">
     <link rel="stylesheet" type="text/css" href="./css/animation.css">
     <link rel="stylesheet" type="text/css" href="./css/cursor.css">
-    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/icon/favicon.ico">
     <link rel="apple-touch-icon" href="./img/icon/apple-touch-icon.png">
     <!-- Izitoast -->
     <link rel="stylesheet" href="./css/iziToast.min.css">
@@ -79,22 +79,40 @@
                                 <img src="./img/icon/logo.png" alt="img">
                                 <div class="img-title">
                                     <span class="img-title">暮云叆叇</span>
-                                    <span class="img-text">w.91svip.icu</span>
+									<br>
+                                    <span class="img-text">&nbsp;&nbsp;&nbsp;&nbsp;cejames&nbsp;~&nbsp;CEJamesW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w.91svip.icu</span>
                                 </div>
                             </div>
                             <!--介绍信息-->
                             <div class="message cards" id="switchmore">
                                 <div class="des" id="des"><i class="iconfont icon-yinhao-copy-copy"></i>
                                     <div class="des-title"><span id="change">Hello&nbsp;World&nbsp;!</span><br /><span
-                                            id="change1">一个建立于 21 世纪的小站，织音博客分享</span></div>
+                                            id="change1">暮云叆叇的主页</span></div>
                                     <i class="iconfont icon-yinhao-copy"></i>
                                 </div>
                             </div>
                             <!--社交链接-->
                             <div class="social" id="social">
-                                <a href="#" class="link" id="github" target="_blank">
-                                    <i class="iconfont icon-github"></i>
+                                <a href="https://github.com/CEJamesW" class="link" id="github" target="_blank">
+                                    <i class="iconfont icon-github1"></i>
                                 </a>
+								<a href="#" class="link"
+                                    id="weixin" target="_blank">
+                                    <i class="iconfont icon-weixin"></i>
+                                </a>
+<script>
+const weixinLink = document.getElementById('weixin');
+const wechatId = 'muyunad';
+weixinLink.addEventListener('click', async function(e) {
+    e.preventDefault();
+    try {
+        await navigator.clipboard.writeText(wechatId);
+        alert(`微信号 ${wechatId} 复制成功！\n快去微信添加吧 ～`);
+    } catch (err) {
+        alert(`复制失败，请手动复制微信号：${wechatId}`);
+    }
+});
+</script>
                                 <a href="http://wpa.qq.com/msgrd?v=3&uin=2668380582&site=qq&menu=yes" class="link"
                                     id="qq" target="_blank">
                                     <i class="iconfont icon-QQ"></i>
@@ -102,15 +120,19 @@
                                 <a href="mailto:cejames@163.com" class="link" id="email">
                                     <i class="iconfont icon-youxiang"></i>
                                 </a>
-								<a href="mailto:6@nulladev.cn" class="link" id="email">
+								<a href="mailto:6@nulladev.cn" class="link" id="email"">
                                     <i class="iconfont icon-youxiang"></i>
                                 </a>
+								&nbsp;&nbsp;
+								<a href="https://space.bilibili.com/527159143" class="link" id="bilibili" target="_blank">
+                                    <img class="icon" src="./img/icon/bilibili.png" height="24">
+                                </a>
+								
+								<!--
                                 <a href="https://www.itzhiyin.cn" class="link" id="telegram" target="_blank">
                                     <i class="iconfont icon-telegram"></i>
                                 </a>
-                                <a href="https://www.itzhiyin.cn" class="link" id="twitter" target="_blank">
-                                    <i class="iconfont icon-twitter"></i>
-                                </a>
+								-->
                                 <a id="link-text">通过这里联系我</a>
                             </div>
                         </div>
@@ -175,6 +197,8 @@
                                             2000&nbsp;年&nbsp;0&nbsp;月&nbsp;00&nbsp;日&nbsp;<span
                                                 class="weekday">星期一</span><br><span class="time-text">00:00:00</span>
                                         </div>
+										<span id="city_text">-----------------------------</span>
+										<!--
                                         <div class="weather">
                                             <span id="city_text">天气</span>&nbsp;
                                             <span id="wea_text">加载失败</span>&nbsp;
@@ -182,6 +206,7 @@
                                             <span id="tem_day"></span>°C
                                             <span id="win_text"></span>
                                             <span id="win_speed"></span>
+											-->
                                         </div>
                                     </div>
                                 </div>
@@ -194,39 +219,44 @@
                             <!--网站链接-->
                             <div class="link">
                                 <!--第一组-->
+								<!--
                                 <div class="row">
                                     <div class="col">
-                                        <a href="https://www.zhiyinidc.com" target="_blank">
+                                        <a href="" target="_blank">
                                             <div class="link-card cards">
                                                 <i class="iconfont icon-blog-solid"></i>
-                                                <span class="link-name">织音云</span>
+                                                <span class="link-name">1</span>
                                             </div>
                                         </a>
                                     </div>
+									-->
+									<!--
                                     <div class="col 2">
-                                        <a href="https://www.itzhiyin.cn" target="_blank">
+                                        <a href="" target="_blank">
                                             <div class="link-card cards">
                                                 <i class="iconfont icon-cloud"></i>
-                                                <span class="link-name">织音博客</span>
+                                                <span class="link-name">2</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a href="https://jq.qq.com/?_wv=1027&k=5TJU1YTq" target="_blank">
+                                        <a href="" target="_blank">
                                             <div class="link-card cards">
                                                 <i class="iconfont icon-music-list"></i>
-                                                <span class="link-name">聊天群</span>
+                                                <span class="link-name">3</span>
                                             </div>
                                         </a>
                                     </div>
+									-->
                                 </div>
-                                <!--第二组-->
+								<!--
+                                
                                 <div class="row" style="margin-top: 1.5rem;">
                                     <div class="col">
-                                        <a href="https://jq.qq.com/?_wv=1027&k=dV6PYLdP" target="_blank">
+                                        <a href="" target="_blank">
                                             <div class="link-card cards">
                                                 <i class="iconfont icon-a-daohangzhiyindingwei-05"></i>
-                                                <span class="link-name">织音云用户交流群</span>
+                                                <span class="link-name">4</span>
                                             </div>
                                         </a>
                                     </div>
@@ -234,7 +264,7 @@
                                         <a href="#" target="_blank">
                                             <div class="link-card cards">
                                                 <i class="iconfont icon-z_shangpinheji"></i>
-                                                <span class="link-name">网址集</span>
+                                                <span class="link-name">5</span>
                                             </div>
                                         </a>
                                     </div>
@@ -242,11 +272,12 @@
                                         <a href="#" target="_blank">
                                             <div class="link-card cards">
                                                 <i class="iconfont icon-lab"></i>
-                                                <span class="link-name">实验室</span>
+                                                <span class="link-name">6</span>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
+								-->
                             </div>
                         </div>
                     </div>
@@ -292,12 +323,15 @@
                             </div>
                         </div>
                     </div>
+					<!--
                     <div class="line">
                         <i class="iconfont icon-right-copy"></i>
                         <span class="line-text">杂七杂八</span>
                         <i class="iconfont icon-right"></i>
                     </div>
+					-->
                     <!--网站链接-->
+					<!--
                     <div class="row">
                         <div class="col">
                             <a href="https://www.itzhiyin.cn/" target="_blank">
@@ -343,6 +377,7 @@
                                 </div>
                             </a>
                         </div>
+						-->
                     </div>
                 </div>
                 <!--更多页面-->
@@ -446,7 +481,7 @@
                 <script>
                     document.write(' - ' + (new Date()).getFullYear())
                 </script>&nbsp;&amp;&nbsp;
-                Made&nbsp;by&nbsp;<a href="https://github.com/imsyy" target="_blank">imsyy</a>
+                Powered&nbsp;by&nbsp;<a href="https://github.com/imsyy" target="_blank">imsyy</a>
             </div>
             <!-- 歌词显示 -->
             <div id="lrc"></div>

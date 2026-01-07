@@ -35,7 +35,7 @@ window.addEventListener('load', function () {
 }, false)
 
 setTimeout(function () {
-    $('#loading-text').html("字体及文件加载可能需要一定时间")
+    $('#loading-text').html("字体及图片加载可能需要一定时间")
 }, 3000);
 
 //延迟加载音乐播放器
@@ -177,8 +177,19 @@ $("#twitter").mouseover(function () {
 }).mouseout(function () {
     $("#link-text").html("通过这里联系我");
 });
+$("#weixin").mouseover(function () {
+    $("#link-text").html("微信联系我");
+}).mouseout(function () {
+    $("#link-text").html("通过这里联系我");
+});
+$("#bilibili").mouseover(function () {
+    $("#link-text").html("(゜-゜)つロ 干杯~");
+}).mouseout(function () {
+    $("#link-text").html("通过这里联系我");
+});
 
 //更多页面切换
+/*
 var shoemore = false;
 $('#switchmore').on('click', function () {
     shoemore = !shoemore;
@@ -192,6 +203,7 @@ $('#switchmore').on('click', function () {
         $("#change1").html("一个建立于 21 世纪的小站，存活于互联网的边缘");
     }
 });
+*/
 
 //更多页面关闭按钮
 $('#close').on('click', function () {
