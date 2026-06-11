@@ -1,0 +1,306 @@
+[
+  {
+    "name": "QiaQia",
+    "artist": "本地音乐",
+    "url": "./music/28s%20QiaQia.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 28
+  },
+  {
+    "name": "Larg",
+    "artist": "本地音乐",
+    "url": "./music/33s%20Larg.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 33
+  },
+  {
+    "name": "You Know I will Go Get",
+    "artist": "本地音乐",
+    "url": "./music/35s%20You%20Know%20I%20will%20Go%20Get.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 35
+  },
+  {
+    "name": "PARADISE GOGO",
+    "artist": "本地音乐",
+    "url": "./music/51s%20PARADISE%20GOGO.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 51
+  },
+  {
+    "name": "Game Mode",
+    "artist": "本地音乐",
+    "url": "./music/54s%20Game%20Mode.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 54
+  },
+  {
+    "name": "Astronomia",
+    "artist": "本地音乐",
+    "url": "./music/58s%20Astronomia.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 58
+  },
+  {
+    "name": "Saber Horse",
+    "artist": "本地音乐",
+    "url": "./music/60s%20Saber%20Horse.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 60
+  },
+  {
+    "name": "First Sight",
+    "artist": "本地音乐",
+    "url": "./music/62s%20First%20Sight.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 62
+  },
+  {
+    "name": "Your Story",
+    "artist": "本地音乐",
+    "url": "./music/63s%20Your%20Story.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 63
+  },
+  {
+    "name": "Heights",
+    "artist": "本地音乐",
+    "url": "./music/64s%20Heights.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 64
+  },
+  {
+    "name": "Here We Are Again",
+    "artist": "本地音乐",
+    "url": "./music/64s%20Here%20We%20Are%20Again.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 64
+  },
+  {
+    "name": "Island",
+    "artist": "本地音乐",
+    "url": "./music/64s%20Island.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 64
+  },
+  {
+    "name": "Neuropathy",
+    "artist": "本地音乐",
+    "url": "./music/64s%20Neuropathy.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 64
+  },
+  {
+    "name": "The xx Intro",
+    "artist": "本地音乐",
+    "url": "./music/65s%20The%20xx%20Intro.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 65
+  },
+  {
+    "name": "Aloha Kakahiaka",
+    "artist": "本地音乐",
+    "url": "./music/69s%20Aloha%20Kakahiaka.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 69
+  },
+  {
+    "name": "Last Reunion",
+    "artist": "本地音乐",
+    "url": "./music/70s%20Last%20Reunion.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 70
+  },
+  {
+    "name": "Voyage",
+    "artist": "本地音乐",
+    "url": "./music/75s%20Voyage.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 75
+  },
+  {
+    "name": "Last Seconds Of Summer",
+    "artist": "本地音乐",
+    "url": "./music/81s%20Last%20Seconds%20Of%20Summer.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 81
+  },
+  {
+    "name": "Stories",
+    "artist": "本地音乐",
+    "url": "./music/82s%20Stories.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 82
+  },
+  {
+    "name": "Blue Sky",
+    "artist": "本地音乐",
+    "url": "./music/84s%20Blue%20Sky.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 84
+  },
+  {
+    "name": "Merry",
+    "artist": "本地音乐",
+    "url": "./music/84s%20Merry.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 84
+  },
+  {
+    "name": "Time",
+    "artist": "本地音乐",
+    "url": "./music/86s%20Time.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 86
+  },
+  {
+    "name": "Balloon",
+    "artist": "本地音乐",
+    "url": "./music/88s%20Balloon.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 88
+  },
+  {
+    "name": "Wake Up",
+    "artist": "本地音乐",
+    "url": "./music/88s%20Wake%20Up.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 88
+  },
+  {
+    "name": "Changes",
+    "artist": "本地音乐",
+    "url": "./music/90s%20Changes.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 90
+  },
+  {
+    "name": "Found You",
+    "artist": "本地音乐",
+    "url": "./music/90s%20Found%20You.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 90
+  },
+  {
+    "name": "Reflect",
+    "artist": "本地音乐",
+    "url": "./music/91s%20Reflect.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 91
+  },
+  {
+    "name": "Skyhigh",
+    "artist": "本地音乐",
+    "url": "./music/92s%20Skyhigh.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 92
+  },
+  {
+    "name": "Feel Free",
+    "artist": "本地音乐",
+    "url": "./music/93s%20Feel%20Free.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 93
+  },
+  {
+    "name": "Alive",
+    "artist": "本地音乐",
+    "url": "./music/94s%20Alive.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 94
+  },
+  {
+    "name": "Roses",
+    "artist": "本地音乐",
+    "url": "./music/94s%20Roses.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 94
+  },
+  {
+    "name": "Look Up",
+    "artist": "本地音乐",
+    "url": "./music/97s%20Look%20Up.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 97
+  },
+  {
+    "name": "Moments",
+    "artist": "本地音乐",
+    "url": "./music/99s%20Moments.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 99
+  },
+  {
+    "name": "Sunset",
+    "artist": "本地音乐",
+    "url": "./music/102s%20Sunset.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 102
+  },
+  {
+    "name": "Sunrise",
+    "artist": "本地音乐",
+    "url": "./music/103s%20Sunrise.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 103
+  },
+  {
+    "name": "Daylight",
+    "artist": "本地音乐",
+    "url": "./music/107s%20Daylight.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 107
+  },
+  {
+    "name": "Another Way",
+    "artist": "本地音乐",
+    "url": "./music/110s%20Another%20Way.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 110
+  },
+  {
+    "name": "Paradise",
+    "artist": "本地音乐",
+    "url": "./music/116s%20Paradise.mp3",
+    "cover": "./img/icon/logo.png",
+    "theme": "#171513",
+    "duration": 116
+  }
+]

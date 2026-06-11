@@ -939,6 +939,196 @@ footer {
     background-size: 8px !important;
 }
 
+/*互动区*/
+.community-entry-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.community-entry {
+    border: none;
+    cursor: pointer;
+}
+
+.community-entry-grid button {
+    font: inherit;
+    width: 100%;
+}
+
+.community-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2100;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    animation: fade 0.3s;
+}
+
+.community-modal.active {
+    display: flex;
+}
+
+.community-wrapper {
+    position: relative;
+    width: min(760px, 100%);
+    max-height: 82vh;
+    padding: 24px;
+    border-radius: 8px;
+    background: rgb(255 255 255 / 24%);
+    box-shadow: 0 16px 60px rgb(0 0 0 / 20%);
+    display: flex;
+    flex-direction: column;
+}
+
+.community-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.community-close:hover {
+    transform: scale(1.15);
+}
+
+.community-header {
+    display: flex;
+    gap: 10px;
+    padding-right: 34px;
+}
+
+.community-tab {
+    border: 1px solid rgb(255 255 255 / 20%);
+    background: rgb(0 0 0 / 16%);
+    color: #efefef;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.community-tab.active,
+.community-tab:hover {
+    background: rgb(255 255 255 / 22%);
+}
+
+.community-body {
+    margin-top: 18px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.community-panel {
+    display: none;
+}
+
+.community-panel.active {
+    display: block;
+}
+
+.community-form {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.community-form input,
+.community-form textarea {
+    width: 100%;
+    border: 1px solid rgb(255 255 255 / 18%);
+    border-radius: 8px;
+    background: rgb(0 0 0 / 20%);
+    color: #efefef;
+    padding: 10px 12px;
+    outline: none;
+    resize: vertical;
+    user-select: text;
+}
+
+.community-form input:focus,
+.community-form textarea:focus {
+    border-color: rgb(255 255 255 / 60%);
+}
+
+.community-form button {
+    justify-self: end;
+    border: none;
+    border-radius: 8px;
+    background: rgb(255 255 255 / 22%);
+    color: #efefef;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.community-form button:hover {
+    background: rgb(255 255 255 / 32%);
+}
+
+.guestbook-list,
+.friends-list {
+    display: grid;
+    gap: 10px;
+}
+
+.guestbook-card,
+.friend-card,
+.community-empty {
+    border-radius: 8px;
+    background: rgb(0 0 0 / 18%);
+    padding: 14px;
+}
+
+.guestbook-card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.guestbook-card-header span {
+    color: rgb(255 255 255 / 70%);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.guestbook-card p {
+    margin: 0;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-break: break-word;
+    user-select: text;
+}
+
+.guestbook-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: rgb(255 255 255 / 70%);
+    font-size: 0.9rem;
+}
+
+.friend-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.friend-card:hover {
+    background: rgb(0 0 0 / 30%);
+}
+
+.friend-card span {
+    color: rgb(255 255 255 / 76%);
+    line-height: 1.5;
+}
+
 /*滚动条样式*/
 ::-webkit-scrollbar {
     width: 6px;

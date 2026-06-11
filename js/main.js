@@ -41,7 +41,7 @@ setTimeout(function () {
 //延迟加载音乐播放器
 function downloadJSAtOnload() {
     var element = document.createElement("script");
-    element.src = "./js/music.js";
+    element.src = "./js/music.js?v=20260611";
     document.body.appendChild(element);
 }
 if (window.addEventListener)
@@ -65,7 +65,8 @@ document.body.appendChild(new_element);
 */
 
 //火狐浏览器独立样式
-if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) {
+var isFirefox = navigator.userAgent.indexOf("Firefox") > 0;
+if (isFirefox) {
     var head = document.getElementsByTagName('head')[0];
     var link = document.createElement('link');
     link.href = './css/firefox.css';
@@ -167,6 +168,22 @@ $("#email").mouseover(function () {
 }).mouseout(function () {
     $("#link-text").html("通过这里联系我");
 });
+
+$("#weixin").on("click", function (event) {
+    var wechatId = "muyunad";
+
+    event.preventDefault();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(wechatId).then(function () {
+            alert("微信号 " + wechatId + " 复制成功！\n快去微信添加吧 ～");
+        }).catch(function () {
+            alert("复制失败，请手动复制微信号：" + wechatId);
+        });
+    } else {
+        alert("请手动复制微信号：" + wechatId);
+    }
+});
+
 $("#telegram").mouseover(function () {
     $("#link-text").html("发封电报吧");
 }).mouseout(function () {

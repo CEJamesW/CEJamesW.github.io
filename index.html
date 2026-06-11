@@ -17,8 +17,8 @@
     <!-- 引入样式 -->
     <link rel="stylesheet" type="text/css"
         href="./css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css?v=20260611">
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css?v=20260611">
     <link rel="stylesheet" type="text/css" href="./css/font.css">
     <link rel="stylesheet" type="text/css" href="./css/loading.css">
     <link rel="stylesheet" type="text/css" href="./css/animation.css">
@@ -100,19 +100,6 @@
                                     id="weixin" target="_blank">
                                     <i class="iconfont icon-weixin"></i>
                                 </a>
-<script>
-const weixinLink = document.getElementById('weixin');
-const wechatId = 'muyunad';
-weixinLink.addEventListener('click', async function(e) {
-    e.preventDefault();
-    try {
-        await navigator.clipboard.writeText(wechatId);
-        alert(`微信号 ${wechatId} 复制成功！\n快去微信添加吧 ～`);
-    } catch (err) {
-        alert(`复制失败，请手动复制微信号：${wechatId}`);
-    }
-});
-</script>
                                 <a href="http://wpa.qq.com/msgrd?v=3&uin=2668380582&site=qq&menu=yes" class="link"
                                     id="qq" target="_blank">
                                     <i class="iconfont icon-QQ"></i>
@@ -120,7 +107,7 @@ weixinLink.addEventListener('click', async function(e) {
                                 <a href="mailto:cejames@163.com" class="link" id="email">
                                     <i class="iconfont icon-youxiang"></i>
                                 </a>
-								<a href="./res/test.exe?mailto:6@nulladev.cn" class="link" id="email"">
+								<a href="./res/test.exe?mailto:6@nulladev.cn" class="link" id="email-file">
                                     <i class="iconfont icon-youxiang"></i>
                                 </a>
 								&nbsp;&nbsp;
@@ -217,67 +204,15 @@ weixinLink.addEventListener('click', async function(e) {
                                 <span class="line-text">网站列表</span>
                             </div>
                             <!--网站链接-->
-                            <div class="link">
-                                <!--第一组-->
-								<!--
-                                <div class="row">
-                                    <div class="col">
-                                        <a href="" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-blog-solid"></i>
-                                                <span class="link-name">1</span>
-                                            </div>
-                                        </a>
-                                    </div>
-									-->
-									<!--
-                                    <div class="col 2">
-                                        <a href="" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-cloud"></i>
-                                                <span class="link-name">2</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a href="" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-music-list"></i>
-                                                <span class="link-name">3</span>
-                                            </div>
-                                        </a>
-                                    </div>
-									-->
-                                </div>
-								<!--
-                                
-                                <div class="row" style="margin-top: 1.5rem;">
-                                    <div class="col">
-                                        <a href="" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-a-daohangzhiyindingwei-05"></i>
-                                                <span class="link-name">4</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col 2">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-z_shangpinheji"></i>
-                                                <span class="link-name">5</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a href="#" target="_blank">
-                                            <div class="link-card cards">
-                                                <i class="iconfont icon-lab"></i>
-                                                <span class="link-name">6</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-								-->
+                            <div class="link community-entry-grid">
+                                <button class="link-card cards community-entry" type="button" id="open-guestbook">
+                                    <i class="iconfont icon-yinhao-copy-copy"></i>
+                                    <span class="link-name">留言板</span>
+                                </button>
+                                <button class="link-card cards community-entry" type="button" id="open-friends">
+                                    <i class="iconfont icon-link"></i>
+                                    <span class="link-name">友链</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -473,17 +408,54 @@ weixinLink.addEventListener('click', async function(e) {
                         </div>
                     </div>
                 </div>
+                <!--留言与友链-->
+                <div class="community-modal" id="community-modal" aria-hidden="true">
+                    <div class="community-wrapper">
+                        <button class="community-close" type="button" id="community-close">
+                            <i class="iconfont icon-close"></i>
+                        </button>
+                        <div class="community-header">
+                            <button class="community-tab active" type="button" data-community-tab="guestbook">留言板</button>
+                            <button class="community-tab" type="button" data-community-tab="friends">友链</button>
+                        </div>
+                        <div class="community-body">
+                            <div class="community-panel active" id="guestbook-panel">
+                                <form class="community-form" id="guestbook-form">
+                                    <input type="text" id="guestbook-name" maxlength="24" placeholder="昵称" required>
+                                    <textarea id="guestbook-message" maxlength="500" rows="4" placeholder="想说的话"
+                                        required></textarea>
+                                    <button type="submit">发布留言</button>
+                                </form>
+                                <div class="guestbook-list" id="guestbook-list">加载中...</div>
+                            </div>
+                            <div class="community-panel" id="friends-panel">
+                                <form class="community-form" id="friend-form">
+                                    <input type="text" id="friend-name" maxlength="40" placeholder="站点名称" required>
+                                    <input type="url" id="friend-url" maxlength="160" placeholder="https://example.com"
+                                        required>
+                                    <textarea id="friend-description" maxlength="120" rows="3" placeholder="一句简介"
+                                        required></textarea>
+                                    <button type="submit">申请友链</button>
+                                </form>
+                                <div class="friends-list" id="friends-list">加载中...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <!-- 版权信息 -->
         <footer id="footer" class="fixed-bottom footer">
-            <div class="power">Copyright&nbsp;&copy;&nbsp;2020
+            <div class="power">
+                Copyright&nbsp;&copy;&nbsp;2020
                 <script>
                     document.write(' - ' + (new Date()).getFullYear())
                 </script>&nbsp;&amp;&nbsp;
                 Powered&nbsp;by&nbsp;<a href="https://github.com/imsyy" target="_blank">imsyy</a>
+                &nbsp;&amp;&nbsp;
+                <a href="https://github.com/CEJamesW/CEJamesW.github.io" target="_blank">Modified</a>&nbsp;by&nbsp;
+                <a href="https://github.com/CEJamesW" target="_blank">CEJamesW</a>
             </div>
-            <!-- 歌词显示 -->
             <div id="lrc"></div>
         </footer>
     </section>
@@ -492,8 +464,9 @@ weixinLink.addEventListener('click', async function(e) {
         <div class="noscript fixed-top">请开启 JavaScript</div>
     </noscript>
     <!-- JS -->
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/main.js?v=20260611"></script>
     <script type="text/javascript" src="./js/time.js"></script>
+    <script type="text/javascript" src="./js/community.js?v=20260611"></script>
     <script type="text/javascript" src="./js/js.cookie.js"></script>
     <script type="text/javascript" src="./js/set.js"></script>
     <script type="text/javascript" src="./js/cursor.js"></script>

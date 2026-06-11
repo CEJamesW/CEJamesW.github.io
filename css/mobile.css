@@ -240,6 +240,28 @@
         background: transparent !important;
     }
 
+    .community-modal {
+        padding: 14px;
+    }
+
+    .community-entry-grid {
+        gap: 14px;
+    }
+
+    .community-wrapper {
+        max-height: 86vh;
+        padding: 18px;
+    }
+
+    .community-header {
+        gap: 8px;
+    }
+
+    .community-tab,
+    .community-form button {
+        padding: 7px 12px;
+    }
+
 }
 
 /*小于390px时*/

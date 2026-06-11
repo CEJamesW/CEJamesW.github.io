@@ -1,0 +1,40 @@
+name: Update music list
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "music/**/*.mp3"
+      - "scan-music.js"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-music-list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate music list
+        run: node scan-music.js
+
+      - name: Commit generated list
+        run: |
+          if git diff --quiet -- music/music-list.json; then
+            echo "music/music-list.json is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add music/music-list.json
+          git commit -m "chore: update music list"
+          git push
