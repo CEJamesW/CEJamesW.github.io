@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高考志愿填报管理系统 · 网页答辩演示</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="web-presentation/styles.css">
+</head>
+<body>
+  <div class="deck-viewport" aria-label="高考志愿填报管理系统网页答辩演示">
+    <main class="deck-stage" id="deckStage">
+      <section class="slide cover active visible" data-title="封面">
+        <div class="slide-mark reveal">ADMISSION LEDGER</div>
+        <div class="cover-grid">
+          <div class="cover-main">
+            <p class="kicker reveal">Java 高级编程与应用大作业</p>
+            <h1 class="reveal">高考志愿填报管理系统</h1>
+            <p class="lead reveal">基于 Java 控制台、SQLite 数据库与分层架构的平行志愿录取管理系统。</p>
+            <a class="cover-repo-link reveal" href="https://w.91svip.icu/gaokao-admission-console.mhtml" target="_blank">CEJamesW/gaokao-admission-console</a>
+            <div class="badge-row reveal" aria-label="项目技术栈">
+              <a href="https://www.oracle.com/java/"><img src="web-presentation/badges/java-26.svg" alt="Java 26"></a>
+              <a href="https://www.oracle.com/java/"><img src="web-presentation/badges/jdk-openjdk-26.svg" alt="Oracle OpenJDK 26.0.1"></a>
+              <a href="https://maven.apache.org/"><img src="web-presentation/badges/maven.svg" alt="Maven"></a>
+              <a href="https://www.sqlite.org/"><img src="web-presentation/badges/sqlite.svg" alt="SQLite"></a>
+              <a href="run.bat"><img src="web-presentation/badges/run-bat.svg" alt="Windows BAT"></a>
+              <a href="https://www.jetbrains.com/idea/"><img src="web-presentation/badges/intellij.svg" alt="IntelliJ IDEA 2026.1.4"></a>
+              <a href="#"><img src="web-presentation/badges/console-app.svg" alt="Console App"></a>
+            </div>
+          </div>
+          <aside class="cover-side reveal">
+            <span>答辩人</span>
+            <strong>王斯民</strong>
+            <em>20242081177</em>
+            <span class="member-label">组员</span>
+            <p>杜雨金 / 刘铭哲 / 王一诺 / 程驰越 / 霍禹名 / 贾奇东 / 吴翔 / 刘子强 / 顾秀饶</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="slide agenda" data-title="答辩目录">
+        <p class="kicker reveal">Presentation Flow</p>
+        <h2 class="reveal">答辩目录</h2>
+        <div class="agenda-list">
+          <article class="reveal"><b>01</b><strong>项目背景</strong><span>课程要求、系统边界、核心对象</span></article>
+          <article class="reveal"><b>02</b><strong>功能闭环</strong><span>学生、学校、志愿、录取、查询</span></article>
+          <article class="reveal"><b>03</b><strong>录取规则</strong><span>成绩优先、遵循志愿、兴趣匹配、专业调剂</span></article>
+          <article class="reveal"><b>04</b><strong>协作证据</strong><span>成员分工、开发时间线、GitHub 项目记录</span></article>
+          <article class="reveal"><b>05</b><strong>工程实现</strong><span>分层架构、数据库设计、控制台交互</span></article>
+          <article class="reveal"><b>06</b><strong>运行展示</strong><span>真实截图、结果验证、项目总结</span></article>
+        </div>
+      </section>
+
+      <section class="slide team-table" data-title="成员分工">
+        <p class="kicker reveal">Team Responsibility</p>
+        <h2 class="reveal">小组成员与模块分工</h2>
+        <table class="team-grid reveal">
+          <thead><tr><th>姓名</th><th>学号</th><th>主要分工</th></tr></thead>
+          <tbody>
+            <tr><td>王斯民</td><td>20242081177</td><td>主程序、核心服务、录取算法</td></tr>
+            <tr><td>杜雨金</td><td>20242081137</td><td>实体模型设计</td></tr>
+            <tr><td>刘铭哲</td><td>20242081432</td><td>DAO 数据访问层</td></tr>
+            <tr><td>王一诺</td><td>20242081462</td><td>学生信息管理</td></tr>
+            <tr><td>程驰越</td><td>20242081652</td><td>大学院系专业管理</td></tr>
+            <tr><td>霍禹名</td><td>20242081234</td><td>志愿填报管理</td></tr>
+            <tr><td>贾奇东</td><td>20242081639</td><td>数据库初始化</td></tr>
+            <tr><td>吴翔</td><td>20242081333</td><td>录取结果查询统计</td></tr>
+            <tr><td>刘子强</td><td>20242081318</td><td>输入工具和校验</td></tr>
+            <tr><td>顾秀饶</td><td>20242081156</td><td>文档辅助和展示输出</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="slide intro" data-title="项目简介">
+        <p class="kicker reveal">Project Scope</p>
+        <h2 class="reveal">项目简介</h2>
+        <div class="ledger-layout">
+          <div class="statement reveal">
+            <p>本系统围绕“高考志愿填报管理系统”场景设计，实现学生信息、班级信息、兴趣课程、大学、院系、专业、学生志愿和录取结果的统一管理。</p>
+            <p>程序仅使用控制台进行交互，使用 <code>Maven</code> 管理依赖，<code>SQLite</code> 进行数据持久化，分层架构组织代码。</p>
+          </div>
+          <div class="fact-column reveal">
+            <div><b>MAIN</b><span>aidai.muyun.gaokao.Main</span></div>
+            <div><b>RUN</b><span>run.bat</span></div>
+            <div><b>ARCH</b><span>ui / service / dao / entity</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide goals" data-title="建设目标">
+        <p class="kicker reveal">System Goals</p>
+        <h2 class="reveal">建设目标</h2>
+        <div class="number-board">
+          <article class="reveal"><b>10</b><span>每名学生最多填报大学</span></article>
+          <article class="reveal"><b>3</b><span>每所大学最多选择专业</span></article>
+          <article class="reveal"><b>5</b><span>每门兴趣匹配课程加分</span></article>
+          <article class="reveal"><b>1</b><span>一次录取生成结果</span></article>
+        </div>
+        <p class="bottom-line reveal">系统设计围绕题目要求展开：覆盖学生信息、大学院系专业、平行志愿填报、录取分配和结果查询，确保每个要求都能在控制台中完成演示。</p>
+      </section>
+
+      <section class="slide features" data-title="核心功能">
+        <p class="kicker reveal">Functional Modules</p>
+        <h2 class="reveal">核心功能</h2>
+        <div class="module-map">
+          <article class="reveal"><b>学生</b><strong>基本信息管理</strong><span>新增、修改、删除、查询学生，维护学号、姓名、性别、成绩和班级。</span></article>
+          <article class="reveal"><b>学校</b><strong>院系专业管理</strong><span>管理大学、院系、专业、容量和专业关联兴趣课程。</span></article>
+          <article class="reveal"><b>志愿</b><strong>平行志愿填报</strong><span>限制大学数量、专业数量，并记录是否服从专业调剂。</span></article>
+          <article class="reveal"><b>录取</b><strong>自动分配与查询</strong><span>按规则生成录取结果，支持学校和学生双向查询。</span></article>
+          <article class="reveal wide"><b>演示</b><strong>初始化与重置</strong><span>首次运行自动创建数据库，答辩时可一键恢复演示数据。</span></article>
+        </div>
+      </section>
+
+      <section class="slide algorithm" data-title="录取算法">
+        <p class="kicker reveal">Admission Algorithm</p>
+        <h2 class="reveal">录取算法核心思想</h2>
+        <div class="formula reveal">
+          <span>综合录取分</span>
+          <strong>高考成绩 + 兴趣课程匹配数 × 5</strong>
+        </div>
+        <div class="rule-flow">
+          <article class="reveal"><b>排序</b><span>综合分降序，同分按学号升序。</span></article>
+          <article class="reveal"><b>志愿</b><span>按学生填报顺序尝试大学。</span></article>
+          <article class="reveal"><b>容量</b><span>学校与专业均需要有剩余名额。</span></article>
+          <article class="reveal"><b>调剂</b><span>所选专业满额时，服从调剂进入同校其他专业。</span></article>
+        </div>
+        <p class="bottom-line reveal">录取算法模拟真实场景，兼顾 <code>高考成绩</code> 与 <code>兴趣课程</code>。</p>
+      </section>
+
+      <section class="slide github-overview" data-title="GitHub 总览">
+        <p class="kicker reveal">Repository Overview</p>
+        <h2 class="reveal">GitHub 项目总览</h2>
+        <div class="github-shot-frame reveal">
+          <img src="assets/collaboration/总览.png" alt="GitHub 仓库项目总览截图">
+        </div>
+      </section>
+
+      <section class="slide readme-showcase" data-title="README 展示">
+        <p class="kicker reveal">Documentation</p>
+        <h2 class="reveal">README 与答辩材料组织</h2>
+        <div class="readme-layout">
+          <div class="readme-page readme-screenshot reveal">
+            <img src="assets/collaboration/readme快照.png" alt="README 顶部真实截图">
+          </div>
+          <aside class="readme-zoom reveal">
+            <b>文档设计重点</b>
+            <span>README 作为项目对外说明入口，把“怎么运行、怎么设计、怎么录取、怎么分工”放在固定位置，便于答辩时快速定位，也便于仓库访问者复现项目。</span>
+            <a class="repo-action-primary" href="https://w.91svip.icu/gaokao-admission-console.mhtml" target="_blank">访问 GitHub 仓库</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="slide collaboration" data-title="提交历史">
+        <p class="kicker reveal">Collaboration Evidence</p>
+        <h2 class="reveal">小组协作：GitHub 提交历史</h2>
+        <div class="commit-board reveal">
+          <div class="commit-summary">
+            <span><b>main</b> branch</span>
+            <span><b>24+</b> commits</span>
+            <span><b>Java</b> console project</span>
+          </div>
+          <ol class="commit-list">
+            <li><time>07/07</time><code>b3b0155</code><strong>chore: 添加答辩演示</strong><span>答辩材料与网页演示稿整理</span></li>
+            <li><time>07/06</time><code>6602ced</code><strong>chore: 内置 SQLite JDBC 运行依赖</strong><span>保证下载仓库后可直接运行</span></li>
+            <li><time>07/06</time><code>e4bce18</code><strong>feat: 完善兴趣课录取和控制台展示</strong><span>兴趣课程参与综合录取计算</span></li>
+            <li><time>07/06</time><code>3cc45a4</code><strong>feat: 添加录取分配说明菜单</strong><span>补充算法说明与答辩演示入口</span></li>
+            <li><time>07/06</time><code>605f6ac</code><strong>docs: 补充运行环境徽章和脚本提示</strong><span>完善 README、运行方式和项目说明</span></li>
+            <li><time>07/06</time><code>2304d48</code><strong>chore: 随机化演示学生学号</strong><span>更新演示数据，更贴近真实记录</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="slide workflow" data-title="工作流程">
+        <p class="kicker reveal">Workflow</p>
+        <h2 class="reveal">从需求到答辩的工作流</h2>
+        <div class="process-line">
+          <article class="reveal"><b>需求分析</b><span>梳理课程约束</span></article>
+          <article class="reveal"><b>数据建模</b><span>学生、学校、志愿、录取</span></article>
+          <article class="reveal"><b>分层编码</b><span>ui / service / dao / entity</span></article>
+          <article class="reveal"><b>规则验证</b><span>数量限制、容量、调剂</span></article>
+          <article class="reveal"><b>答辩材料</b><span>README / 截图 / PPT / 网页演示</span></article>
+        </div>
+      </section>
+
+      <section class="slide timeline" data-title="开发时间线">
+        <p class="kicker reveal">Development Timeline</p>
+        <h2 class="reveal">开发时间线</h2>
+        <div class="timeline-line">
+          <article class="reveal"><b>07/05</b><span>需求分析、实体模型、项目结构</span></article>
+          <article class="reveal"><b>07/06</b><span>SQLite 表结构、初始化、DAO</span></article>
+          <article class="reveal"><b>07/07</b><span>学生/学校管理、输入校验</span></article>
+          <article class="reveal"><b>07/08</b><span>志愿规则、录取分配算法</span></article>
+          <article class="reveal"><b>07/09</b><span>控制台菜单、查询展示</span></article>
+          <article class="reveal"><b>07/10</b><span>运行脚本、README、答辩材料</span></article>
+        </div>
+      </section>
+
+      <section class="slide architecture" data-title="架构设计">
+        <p class="kicker reveal">Architecture</p>
+        <h2 class="reveal">分层架构与技术选型</h2>
+        <div class="stack-diagram">
+          <article class="reveal"><b>ui</b><strong>控制台菜单层</strong><span>菜单、输入、彩色文本、表格输出</span></article>
+          <article class="reveal"><b>service</b><strong>业务逻辑层</strong><span>规则校验、志愿限制、录取算法</span></article>
+          <article class="reveal"><b>dao</b><strong>数据访问层</strong><span>SQLite SQL、CRUD、查询映射</span></article>
+          <article class="reveal"><b>entity</b><strong>实体模型层</strong><span>学生、大学、专业、志愿、录取结果</span></article>
+        </div>
+      </section>
+
+      <section class="slide console-design" data-title="控制台交互">
+        <p class="kicker reveal">Console Interaction</p>
+        <h2 class="reveal">控制台菜单的交互设计</h2>
+        <div class="console-layout">
+          <div class="console-canvas reveal" aria-label="控制台菜单结构示意">
+            <figure class="console-shot">
+              <img src="assets/runtime_screenshots/run.png" alt="控制台菜单真实运行截图">
+            </figure>
+            <div class="callout callout-menu"><b>功能分区</b><span>同类操作集中在同一菜单块</span></div>
+            <div class="callout callout-refresh"><b>菜单块重绘</b><span>进入下级菜单后替换当前内容区</span></div>
+            <div class="callout callout-status"><b>状态反馈区</b><span>成功、失败、提示单行显示</span></div>
+            <div class="callout callout-input"><b>输入焦点</b><span>当前只暴露一个输入目标</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide database" data-title="数据库设计">
+        <p class="kicker reveal">Database & Calculation</p>
+        <h2 class="reveal">数据库与录取计算</h2>
+        <div class="db-board">
+          <article class="reveal"><b>核心数据表</b><span>students / classes / interest_courses / universities / departments / majors / volunteers / admission_results</span></article>
+          <article class="reveal"><b>关键规则</b><span>成绩排序、同分学号、学校容量、专业容量、专业调剂。</span></article>
+          <article class="reveal"><b>兴趣课程</b><span>学生兴趣课与专业关联课程匹配后参与综合排序。</span></article>
+        </div>
+        <div class="mini-flow reveal"><span>学生志愿</span><i></i><span>录取分配</span><i></i><span>结果查询</span></div>
+      </section>
+
+      <section class="slide runtime runtime-one" data-title="运行截图">
+        <p class="kicker reveal">Runtime Screenshot</p>
+        <h2 class="reveal">运行演示：录取结果</h2>
+        <figure class="terminal-frame reveal">
+          <img src="assets/runtime_screenshots/02_all_admission_results.png" alt="录取结果终端截图">
+        </figure>
+        <p class="caption reveal">初始化演示数据 -> 执行录取分配 -> 录取结果查询 -> 查看全部录取结果</p>
+      </section>
+
+      <section class="slide runtime runtime-two" data-title="查询与规则截图">
+        <p class="kicker reveal">Runtime Screenshot</p>
+        <h2 class="reveal">运行演示：学生查询与规则说明</h2>
+        <div class="dual-shot">
+          <figure class="reveal"><img src="assets/runtime_screenshots/03_student_result_courses.png" alt="学生录取查询截图"></figure>
+          <figure class="reveal"><img src="assets/runtime_screenshots/04_algorithm_help.png" alt="录取分配说明截图"></figure>
+        </div>
+        <div class="two-notes reveal">
+          <span>学生查询联动展示录取结果与兴趣课程</span>
+          <span>算法说明列出综合分、志愿顺序、容量和调剂规则</span>
+        </div>
+      </section>
+
+      <section class="slide live-demo" data-title="实机演示">
+        <p class="kicker reveal">Live Demo</p>
+        <h2 class="reveal">运行演示：实机演示</h2>
+        <div class="demo-board">
+          <article class="reveal"><b>01</b><strong>启动系统</strong><span>运行 <code>run.bat</code>，进入中文控制台主菜单。</span></article>
+          <article class="reveal"><b>02</b><strong>准备数据</strong><span>重置演示数据，展示学生、学校、专业和兴趣课程。</span></article>
+          <article class="reveal"><b>03</b><strong>执行录取</strong><span>按综合录取分、志愿顺序、容量和调剂规则生成结果。</span></article>
+          <article class="reveal"><b>04</b><strong>现场查询</strong><span>按学校查询录取学生，再按学生查询录取学校、专业和课程。</span></article>
+        </div>
+        <p class="bottom-line reveal">答辩现场将直接运行系统，完整演示“录入、填报、分配、查询”的业务闭环。</p>
+      </section>
+
+      <section class="slide summary" data-title="项目总结">
+        <p class="kicker reveal">Summary</p>
+        <h2 class="reveal">项目总结</h2>
+        <div class="summary-grid">
+          <article class="reveal"><b>功能覆盖</b><span>学生、班级、兴趣课、大学、院系、专业、志愿、录取结果。</span></article>
+          <article class="reveal"><b>工程完整</b><span>首次运行自动建表和初始化，支持菜单重置演示数据。</span></article>
+          <article class="reveal"><b>规则清晰</b><span>志愿数量、专业数量、容量、调剂和兴趣匹配均参与处理。</span></article>
+          <article class="reveal"><b>展示友好</b><span>控制台菜单、彩色输出、表格、README、PPT 与网页演示稿。</span></article>
+        </div>
+      </section>
+
+      <section class="slide thanks" data-title="结束页">
+        <div class="final-lockup reveal">
+          <span>gaokao-admission-console</span>
+          <h2>谢谢</h2>
+          <p>高考志愿填报管理系统</p>
+        </div>
+        <div class="thanks-meta reveal">
+          <span>答辩人：王斯民 20242081177</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <nav class="deck-controls" aria-label="演示控制">
+    <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+    <span id="pageIndicator">1 / 20</span>
+  </nav>
+
+  <div class="overview-panel" id="overviewPanel" aria-hidden="true">
+    <div class="overview-card">
+      <strong>页面总览</strong>
+      <div class="overview-grid" id="overviewGrid"></div>
+    </div>
+  </div>
+
+  <script src="web-presentation/slides.js"></script>
+</body>
+</html>
