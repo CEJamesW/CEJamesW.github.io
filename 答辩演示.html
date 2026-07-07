@@ -210,15 +210,17 @@
         <p class="kicker reveal">Console Interaction</p>
         <h2 class="reveal">控制台菜单的交互设计</h2>
         <div class="console-layout">
-          <div class="console-canvas reveal" aria-label="控制台菜单结构示意">
+          <div class="console-canvas reveal" aria-label="控制台菜单结构示意图占位">
             <figure class="console-shot">
               <img src="assets/runtime_screenshots/run.png" alt="控制台菜单真实运行截图">
             </figure>
-            <div class="callout callout-menu"><b>功能分区</b><span>同类操作集中在同一菜单块</span></div>
-            <div class="callout callout-refresh"><b>菜单块重绘</b><span>进入下级菜单后替换当前内容区</span></div>
-            <div class="callout callout-status"><b>状态反馈区</b><span>成功、失败、提示单行显示</span></div>
-            <div class="callout callout-input"><b>输入焦点</b><span>当前只暴露一个输入目标</span></div>
           </div>
+          <aside class="console-explain reveal">
+            <article><b>01</b><strong>区域化信息结构</strong><span>把系统标题、反馈提示、菜单表格、输入焦点拆成稳定区域，答辩时更容易解释控制台交互逻辑。</span></article>
+            <article><b>02</b><strong>状态反馈固定</strong><span>新增成功、操作失败、录取完成等提示保持单行显示，减少滚屏后找不到结果的问题。</span></article>
+            <article><b>03</b><strong>菜单块刷新</strong><span>进入下级菜单时重绘当前菜单块，形成类似页面切换的体验，而不是让历史内容一直向下堆叠。</span></article>
+            <article><b>04</b><strong>单点输入焦点</strong><span>每一步只暴露一个明确输入目标，配合表格边框和彩色文本降低误操作概率。</span></article>
+          </aside>
         </div>
       </section>
 

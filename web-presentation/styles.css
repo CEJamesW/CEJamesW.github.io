@@ -611,9 +611,7 @@ code {
 .repo-shell,
 .commit-board,
 .readme-page,
-.readme-zoom,
-.console-menu,
-.interaction-map article {
+.readme-zoom {
   border: 1px solid var(--line);
   background: rgba(255, 250, 240, 0.9);
   box-shadow: var(--shadow);
@@ -1009,25 +1007,25 @@ code {
 
 /* === Console Interaction Design === */
 .console-layout {
-  display: block;
-  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1080px 1fr;
+  gap: 36px;
+  align-items: start;
+  margin-top: 22px;
 }
 
 .console-canvas {
-  position: relative;
-  width: 1500px;
-  height: 690px;
+  width: 1080px;
+  height: 608px;
 }
 
 .console-shot {
-  position: absolute;
-  left: 418px;
-  top: 0;
-  width: 610px;
-  height: 690px;
+  width: 100%;
+  height: 100%;
   margin: 0;
   overflow: hidden;
-  border: 10px solid #fffaf0;
+  border: 10px solid rgba(255, 250, 240, 0.92);
+  border-radius: 8px;
   background: #0b1220;
   box-shadow: var(--shadow);
 }
@@ -1040,233 +1038,44 @@ code {
   background: #0b1220;
 }
 
-.console-window {
-  position: absolute;
-  left: 34px;
-  top: 28px;
-  width: 670px;
-  padding: 26px 28px 28px;
-  color: #dbeafe;
-  background: #0b1220;
-  border: 10px solid #fffaf0;
-  box-shadow: var(--shadow);
-  font-family: var(--font-mono);
-}
-
-.console-title {
+.console-explain {
   display: grid;
-  gap: 2px;
-  color: #7dd3fc;
-  text-align: center;
-  font: 700 23px/1.25 var(--font-mono);
+  gap: 12px;
+  transform: translateY(-30px);
 }
 
-.console-title strong {
-  color: #fef3c7;
-  font-weight: 900;
-}
-
-.console-status {
-  margin-top: 20px;
-  min-height: 36px;
-  color: #86efac;
-  font: 800 22px/1.35 var(--font-display);
-}
-
-.console-section {
-  margin-top: 14px;
-  color: #fbbf24;
-  font: 900 24px/1 var(--font-display);
-}
-
-.console-table {
-  display: grid;
-  grid-template-columns: 108px 1fr;
-  margin-top: 14px;
-  border-top: 2px solid #64748b;
-  border-left: 2px solid #64748b;
-  font: 21px/1.2 var(--font-mono);
-}
-
-.console-table div {
-  min-height: 42px;
-  padding: 9px 14px;
-  border-right: 2px solid #64748b;
-  border-bottom: 2px solid #64748b;
-}
-
-.console-table .th {
-  color: #fff7ed;
-  background: #1e293b;
-  font-weight: 900;
-}
-
-.console-table .key {
-  color: #5eead4;
-  text-align: center;
-  font-weight: 900;
-}
-
-.console-table .zero {
-  color: #fca5a5;
-}
-
-.console-input {
-  margin-top: 16px;
-  color: #f8fafc;
-  font: 900 24px/1.2 var(--font-display);
-}
-
-.console-input span {
-  color: #fbbf24;
-}
-
-.callout {
-  position: absolute;
-  width: 235px;
-  padding: 16px 18px;
-  color: var(--ink);
-  background: rgba(255, 250, 240, 0.96);
+.console-explain article {
+  min-height: 118px;
+  padding: 18px 20px;
   border: 1px solid var(--line);
-  border-top: 7px solid var(--teal);
-  box-shadow: 0 18px 42px rgba(16, 35, 63, 0.16);
+  border-top: 8px solid var(--teal);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.9);
+  box-shadow: var(--shadow);
 }
 
-.callout b {
+.console-explain article:nth-child(2) { border-top-color: var(--gold); }
+.console-explain article:nth-child(3) { border-top-color: var(--navy); }
+.console-explain article:nth-child(4) { border-top-color: #334155; }
+
+.console-explain b {
   display: block;
-  color: var(--navy);
-  font: 900 23px/1.12 var(--font-display);
+  color: var(--gold);
+  font: 900 24px/1 var(--font-mono);
 }
 
-.callout span {
+.console-explain strong {
+  display: block;
+  margin-top: 10px;
+  color: var(--ink);
+  font: 900 26px/1.12 var(--font-display);
+}
+
+.console-explain span {
   display: block;
   margin-top: 8px;
   color: var(--ink-soft);
-  font: 21px/1.32 var(--font-song);
-}
-
-.callout::after {
-  content: "";
-  position: absolute;
-  width: 82px;
-  height: 3px;
-  background: var(--gold);
-  transform-origin: left center;
-}
-
-.callout::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--gold);
-}
-
-.callout-status {
-  left: 74px;
-  top: 176px;
-  border-top-color: #22c55e;
-}
-
-.callout-status::after {
-  left: 228px;
-  top: 50px;
-  width: 138px;
-}
-
-.callout-status::before {
-  left: 361px;
-  top: 46px;
-}
-
-.callout-menu {
-  right: 118px;
-  top: 250px;
-}
-
-.callout-menu::after {
-  right: 229px;
-  top: 46px;
-  width: 148px;
-  transform: rotate(180deg);
-}
-
-.callout-menu::before {
-  right: 374px;
-  top: 43px;
-}
-
-.callout-refresh {
-  right: 122px;
-  top: 42px;
-  border-top-color: var(--gold);
-}
-
-.callout-refresh::after {
-  right: 225px;
-  top: 62px;
-  width: 168px;
-  transform: rotate(170deg);
-}
-
-.callout-refresh::before {
-  right: 390px;
-  top: 71px;
-}
-
-.callout-input {
-  right: 124px;
-  bottom: 38px;
-  border-top-color: #334155;
-}
-
-.callout-input::after {
-  right: 228px;
-  top: 88px;
-  width: 156px;
-  transform: rotate(180deg);
-}
-
-.callout-input::before {
-  right: 382px;
-  top: 86px;
-}
-
-.interaction-map {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
-}
-
-.interaction-map article {
-  min-height: 236px;
-  padding: 30px;
-  border-top: 8px solid var(--teal);
-}
-
-.interaction-map article:nth-child(2) { border-top-color: var(--gold); }
-.interaction-map article:nth-child(3) { border-top-color: var(--navy); }
-.interaction-map article:nth-child(4) { border-top-color: #334155; }
-
-.interaction-map b {
-  display: block;
-  color: var(--gold);
-  font: 900 34px/1 var(--font-mono);
-}
-
-.interaction-map strong {
-  display: block;
-  margin-top: 18px;
-  color: var(--ink);
-  font: 900 32px/1.16 var(--font-display);
-}
-
-.interaction-map span {
-  display: block;
-  margin-top: 16px;
-  color: var(--ink-soft);
-  font: 25px/1.42 var(--font-song);
+  font: 19px/1.3 var(--font-song);
 }
 
 /* === Architecture And Database === */
