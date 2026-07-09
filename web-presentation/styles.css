@@ -607,6 +607,55 @@ code {
   background: rgba(242, 232, 216, 0.68);
 }
 
+.cooperation-layout {
+  display: grid;
+  grid-template-columns: 1240px 1fr;
+  gap: 44px;
+  align-items: start;
+  margin-top: 34px;
+}
+
+.cooperation-shot {
+  height: 640px;
+  margin: 0;
+  overflow: hidden;
+  border: 10px solid rgba(255, 250, 240, 0.94);
+  border-radius: 8px;
+  background: #0b1220;
+  box-shadow: var(--shadow);
+}
+
+.cooperation-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #0b1220;
+}
+
+.cooperation-note {
+  min-height: 640px;
+  padding: 42px 38px;
+  border: 1px solid var(--line);
+  border-top: 10px solid var(--teal);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.cooperation-note b {
+  display: block;
+  color: var(--navy);
+  font: 900 46px/1.12 var(--font-display);
+}
+
+.cooperation-note span {
+  display: block;
+  margin-top: 30px;
+  color: var(--ink-soft);
+  font: 30px/1.5 var(--font-song);
+}
+
 /* === GitHub, README, Evidence And Timeline === */
 .repo-shell,
 .commit-board,
