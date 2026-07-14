@@ -48,7 +48,7 @@
       minute: "2-digit",
       hour12: false,
     });
-    var label = "CST " + formatter.format(now);
+    var label = "UTC+8 " + formatter.format(now);
 
     clocks.forEach(function (clock) {
       clock.textContent = label;

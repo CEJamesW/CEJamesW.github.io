@@ -211,7 +211,7 @@ a {
   text-transform: uppercase;
 }
 
-.header-meta time::before {
+.header-meta [data-clock]::before {
   margin-right: 0.55rem;
   color: rgb(248 250 252 / 32%);
   content: "/";
