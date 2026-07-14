@@ -1,478 +1,441 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-
-<head>
-    <!-- 基础信息 -->
-    <meta charset="utf-8">
-    <meta name="renderer" content="webkit" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="force-rendering" content="webkit" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="暮云叆叇的个人主页">
-    <meta name="keywords" content="暮云叆叇,个人主页">
-    <meta name="author" content="暮云叆叇">
-    <title>暮云叆叇的主页</title>
-    <!-- jQuery -->
-    <script src="./js/jquery.min.js"></script>
-    <!-- 引入样式 -->
-    <link rel="stylesheet" type="text/css"
-        href="./css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css?v=20260611">
-    <link rel="stylesheet" type="text/css" href="./css/mobile.css?v=20260611">
-    <link rel="stylesheet" type="text/css" href="./css/font.css">
-    <link rel="stylesheet" type="text/css" href="./css/loading.css">
-    <link rel="stylesheet" type="text/css" href="./css/animation.css">
-    <link rel="stylesheet" type="text/css" href="./css/cursor.css">
-    <link rel="icon" href="./img/icon/favicon.ico">
-    <link rel="apple-touch-icon" href="./img/icon/apple-touch-icon.png">
-    <!-- Izitoast -->
-    <link rel="stylesheet" href="./css/iziToast.min.css">
-    <script type="text/javascript"
-        src="./js/iziToast.min.js">
-    </script>
-    <!-- Aplayer -->
-    <link rel="stylesheet" href="./css/APlayer.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="./js/APlayer.min.js" crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script>
-    <!-- IE Out -->
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8" />
     <script>
-        if ( /*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href =
-            "/upgrade-your-browser/index.html?referrer=" + encodeURIComponent(window.location.href);
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
     </script>
-    <!-- 统计 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080b0f" />
+    <meta
+      name="description"
+      content="王斯民（CEJamesW）的个人主页，记录 AI Agent 与开发工具、OpenGL/OpenCV 可视化和 CTF 安全实践。"
+    />
+    <meta
+      name="keywords"
+      content="王斯民,CEJamesW,AI Agent,Codex Skill,OpenGL,OpenCV,CTF,个人主页"
+    />
+    <meta name="author" content="王斯民 / Wang Simin" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content="王斯民 / CEJamesW — AI Agent、图形可视化与 CTF" />
+    <meta
+      property="og:description"
+      content="在代码、图形与安全之间，构建可见、可用的系统。"
+    />
+    <meta property="og:url" content="https://w.91svip.icu/" />
+    <meta
+      property="og:image"
+      content="https://w.91svip.icu/assets/home/hero-cejamesw.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://w.91svip.icu/" />
+    <link rel="icon" href="./img/icon/favicon.ico" />
+    <link rel="apple-touch-icon" href="./img/icon/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      href="./assets/home/hero-cejamesw.webp"
+      as="image"
+      type="image/webp"
+    />
+    <link rel="stylesheet" href="./css/home.css?v=20260714" />
+    <title>王斯民 / CEJamesW — AI Agent、图形可视化与 CTF</title>
 
-</head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "王斯民",
+        "alternateName": ["Wang Simin", "CEJamesW"],
+        "url": "https://w.91svip.icu/",
+        "email": "mailto:cejames@163.com",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Dalian University of Technology"
+        },
+        "sameAs": [
+          "https://github.com/CEJamesW",
+          "https://space.bilibili.com/527159143"
+        ]
+      }
+    </script>
+  </head>
 
-<body>
-    <!--加载动画-->
-    <div id="loading-box">
-        <div class="loading-left-bg"></div>
-        <div class="loading-right-bg"></div>
-        <div class="spinner-box">
-            <div class="loader">
-                <div class="inner one"></div>
-                <div class="inner two"></div>
-                <div class="inner three"></div>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="返回首页顶部">
+        <span class="brand-mark" aria-hidden="true">CEJ</span>
+        <span class="brand-name">王斯民 / CEJamesW</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        data-nav-toggle
+      >
+        <span>菜单</span>
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="主导航" data-nav>
+        <a href="#work"><span>01</span> 项目</a>
+        <a href="#focus"><span>02</span> 方向</a>
+        <a href="#about"><span>03</span> 关于</a>
+        <a href="#contact"><span>04</span> 联系</a>
+      </nav>
+
+      <div class="header-meta" role="group" aria-label="所在地与时间">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>大连</span>
+        <span data-clock>UTC+8</span>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Computer Science · Dalian</p>
+          <h1 id="hero-title" class="reveal">
+            让复杂系统，<br />变得<span>可见、可用。</span>
+          </h1>
+          <p class="hero-lede reveal">
+            我是王斯民（CEJamesW），大连理工大学计算机科学方向开发者。关注 AI Agent
+            与开发工具、图形可视化，以及 CTF 安全实践。
+          </p>
+          <div class="hero-actions reveal">
+            <a class="button button-primary" href="#work">查看代表项目</a>
+            <a
+              class="text-link"
+              href="https://github.com/CEJamesW"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <dl class="hero-disciplines reveal">
+            <div>
+              <dt>AI Agent</dt>
+              <dd>工具编排与开发体验</dd>
             </div>
-            <div class="loading-word">
-                <p class="loading-title">暮云叆叇</p>
-                <span id="loading-text">加载中</span>
+            <div>
+              <dt>Graphics</dt>
+              <dd>OpenGL / OpenCV</dd>
             </div>
+            <div>
+              <dt>Security</dt>
+              <dd>CTF 实践与整理</dd>
+            </div>
+          </dl>
         </div>
-    </div>
-    <section id="section" class="section">
-        <!-- 背景图片 -->
-        <div class="bg-all">
-            <img id="bg" onerror="this.classList.add('error');"></img>
-            <div class="cover"></div>
+
+        <figure class="hero-visual reveal">
+          <img
+            src="./assets/home/hero-cejamesw.webp"
+            alt="由几何迷宫、发光路径和结构节点组成的抽象技术场景"
+            width="1672"
+            height="941"
+          />
+          <figcaption>
+            <span>Plan</span>
+            <span>Render</span>
+            <span>Verify</span>
+          </figcaption>
+        </figure>
+
+        <a class="scroll-cue" href="#work">
+          <span>向下浏览</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+      </section>
+
+      <section class="work-section section" id="work" aria-labelledby="work-title">
+        <div class="section-heading reveal">
+          <p class="section-index">01 / SELECTED WORK</p>
+          <div>
+            <h2 id="work-title">把想法做成<br />可以运行的东西。</h2>
+            <p>从自然语言驱动的系统，到可交互的三维空间与面向实践的知识工具。</p>
+          </div>
         </div>
-        <!--主体内容-->
-        <main id="main" class="main">
-            <div class="container" id="container">
-                <div class="row" id="row">
-                    <div class="col left">
-                        <!--基本信息-->
-                        <div class="main-left">
-                            <!--Logo-->
-                            <div class="main-img">
-                                <img src="./img/icon/logo.png" alt="img">
-                                <div class="img-title">
-                                    <span class="img-title">暮云叆叇</span>
-									<br>
-                                    <span class="img-text">&nbsp;&nbsp;&nbsp;&nbsp;cejames&nbsp;~&nbsp;CEJamesW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w.91svip.icu</span>
-                                </div>
-                            </div>
-                            <!--介绍信息-->
-                            <div class="message cards" id="switchmore">
-                                <div class="des" id="des"><i class="iconfont icon-yinhao-copy-copy"></i>
-                                    <div class="des-title"><span id="change">Hello&nbsp;World&nbsp;!</span><br /><span
-                                            id="change1">暮云叆叇的主页</span></div>
-                                    <i class="iconfont icon-yinhao-copy"></i>
-                                </div>
-                            </div>
-                            <!--社交链接-->
-                            <div class="social" id="social">
-                                <a href="https://github.com/CEJamesW" class="link" id="github" target="_blank">
-                                    <i class="iconfont icon-github1"></i>
-                                </a>
-								<a href="#" class="link"
-                                    id="weixin" target="_blank">
-                                    <i class="iconfont icon-weixin"></i>
-                                </a>
-                                <a href="http://wpa.qq.com/msgrd?v=3&uin=2668380582&site=qq&menu=yes" class="link"
-                                    id="qq" target="_blank">
-                                    <i class="iconfont icon-QQ"></i>
-                                </a>
-                                <a href="mailto:cejames@163.com" class="link" id="email">
-                                    <i class="iconfont icon-youxiang"></i>
-                                </a>
-								<a href="./res/1.zip?mailto:6@nulladev.cn" class="link" id="email-file">
-                                    <i class="iconfont icon-youxiang"></i>
-                                </a>
-								&nbsp;&nbsp;
-								<a href="https://space.bilibili.com/527159143" class="link" id="bilibili" target="_blank">
-                                    <img class="icon" src="./img/icon/bilibili.png" height="24">
-                                </a>
-								
-								<!--
-                                <a href="https://www.itzhiyin.cn" class="link" id="telegram" target="_blank">
-                                    <i class="iconfont icon-telegram"></i>
-                                </a>
-								-->
-                                <a id="link-text">通过这里联系我</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--第二屏 Logo-->
-                    <div class="logo cards" style="display: none" id="changemore">
-                        <a class="logo-text">www.itzhiyin.cn</a>
-                    </div>
-                    <div class="col right">
-                        <div class="main-right">
-                            <!--功能区-->
-                            <div class="row rightone" id="rightone">
-                                <div class="col hitokotos">
-                                    <!--一言-->
-                                    <div class="hitokoto cards" id="hitokoto">
-                                        <!--切换音乐-->
-                                        <div class="open-music fixed-top" id="open-music">
-                                            <i class="iconfont icon-music"></i>
-                                            <span>&nbsp;打开音乐播放器</span>
-                                        </div>
-                                        <!--切换音乐结束-->
-                                        <div class="hitokoto-all">
-                                            <div class="hitokoto-text"><span id="hitokoto_text">每一个人都应该明确自己的方向和位置</span>
-                                            </div>
-                                            <div class="hitokoto-from">-「&nbsp;<span id="from_text">织音</span>&nbsp;」
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--音乐-->
-                                    <div class="music cards" id="music">
-                                        <div class="music-all">
-                                            <div class="music-button">
-                                                <div id="music-open">音乐列表</div>
-                                                <div id="music-close">回到一言</div>
-                                            </div>
-                                            <div class="music-control">
-                                                <i class="iconfont icon-next-one-copy" id="last"></i>
-                                                <div id="play">
-                                                    <i class="iconfont icon-play"></i>
-                                                </div>
-                                                <i class="iconfont icon-next-one" id="next"></i>
-                                            </div>
-                                            <div class="music-menu">
-                                                <div class="music-text">
-                                                    <span id="music-name">未播放音乐</span>
-                                                </div>
-                                                <div class="music-volume" style="display: none;">
-                                                    <div id="volume-ico">
-                                                        <i class="iconfont icon-volume-1"></i>
-                                                    </div>
-                                                    <input type="range" min="0" max="1" step="0.01" id="volume"
-                                                        oninput="changevolume()">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col times">
-                                    <!--时间-->
-                                    <div class="time cards">
-                                        <div class="timeshow" id="time">
-                                            2000&nbsp;年&nbsp;0&nbsp;月&nbsp;00&nbsp;日&nbsp;<span
-                                                class="weekday">星期一</span><br><span class="time-text">00:00:00</span>
-                                        </div>
-										<span id="city_text">-----------------------------</span>
-										<!--
-                                        <div class="weather">
-                                            <span id="city_text">天气</span>&nbsp;
-                                            <span id="wea_text">加载失败</span>&nbsp;
-                                            <span id="tem_night"></span>°C~
-                                            <span id="tem_day"></span>°C
-                                            <span id="win_text"></span>
-                                            <span id="win_speed"></span>
-											-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--分隔线-->
-                            <div class="line">
-                                <i class="iconfont icon-link"></i>
-                                <span class="line-text">网站列表</span>
-                            </div>
-                            <!--网站链接-->
-                            <div class="link community-entry-grid">
-                                <button class="link-card cards community-entry" type="button" id="open-guestbook">
-                                    <i class="iconfont icon-yinhao-copy-copy"></i>
-                                    <span class="link-name">留言板</span>
-                                </button>
-                                <button class="link-card cards community-entry" type="button" id="open-friends">
-                                    <i class="iconfont icon-link"></i>
-                                    <span class="link-name">友链</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--展开菜单按钮-->
-                <div class="menu" id="switchmenu">
-                    <a class="munu-button cards" id="menu"><i class="iconfont icon-bars"></i></a>
-                </div>
-                <!--更多内容-->
-                <div class="more" id="more">
-                    <!--关闭按钮-->
-                    <div class="close fixed-top" id="close">
-                        <i class="iconfont icon-close"></i>
-                    </div>
-                    <div class="line" style="margin-top: 1rem;">
-                        <i class="iconfont icon-right-copy"></i>
-                        <span class="line-text">时间胶囊</span>
-                        <i class="iconfont icon-right"></i>
-                    </div>
-                    <div class="date" id="date">
-                        <div class="item" id="dayProgress">
-                            <div class="date-text" style="margin-top: 0rem;">今日已经度过了&nbsp;<span></span>&nbsp;小时</div>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
-                        <div class="item" id="weekProgress">
-                            <div class="date-text">本周已经度过了&nbsp;<span></span>&nbsp;天</div>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
-                        <div class="item" id="monthProgress">
-                            <div class="date-text">本月已经度过了&nbsp;<span></span>&nbsp;天</div>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
-                        <div class="item" id="yearProgress">
-                            <div class="date-text">今年已经度过了&nbsp;<span></span>&nbsp;个月</div>
-                            <div class="progress">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-					<!--
-                    <div class="line">
-                        <i class="iconfont icon-right-copy"></i>
-                        <span class="line-text">杂七杂八</span>
-                        <i class="iconfont icon-right"></i>
-                    </div>
-					-->
-                    <!--网站链接-->
-					<!--
-                    <div class="row">
-                        <div class="col">
-                            <a href="https://www.itzhiyin.cn/" target="_blank">
-                                <div class="link-card cards">
-                                    <span class="link-name">站点监测</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col 2">
-                            <a href="https://www.itzhiyin.cn/" target="_blank">
-                                <div class="link-card cards">
-                                    <span class="link-name">播放器</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a href="https://www.itzhiyin.cn/" target="_blank">
-                                <div class="link-card cards">
-                                    <span class="link-name">编辑器</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row" style="margin-top: 1.5rem;">
-                        <div class="col">
-                            <a href="https://www.itzhiyin.cn/" target="_blank">
-                                <div class="link-card cards">
-                                    <span class="link-name">时光相册</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col 2">
-                            <a href="https://www.itzhiyin.cn/" target="_blank">
-                                <div class="link-card cards">
-                                    <span class="link-name">文件库</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a id="openmore">
-                                <div class="link-card cards">
-                                    <span class="link-name">更多</span>
-                                </div>
-                            </a>
-                        </div>
-						-->
-                    </div>
-                </div>
-                <!--更多页面-->
-                <div class="box" id="box" style="display: none">
-                    <div class="box-wrapper">
-                        <!--关闭按钮-->
-                        <div class="closebox fixed-top" id="closemore">
-                            <i class="iconfont icon-close"></i>
-                        </div>
-                        <!--左侧内容-->
-                        <div class="box-left">
-                            <div class="img-title">
-                                <span class="img-title">imsyy</span>
-                                <span class="img-text">.top</span><br />
-                                <span class="img-text">&nbsp;&nbsp;v&nbsp;2.2</span>
-                                <a href="https://www.itzhiyin.cn/" target="_blank"><i
-                                        class="iconfont icon-github1"></i></a>
-                            </div>
-                            <!--更多内容-->
-                            <div class="accordion" id="accordion">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                            壁纸设置
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordion">
-                                        <div class="accordion-body">
-                                            <div class="set">
-                                                <div class="wallpaper" id="wallpaper">
-                                                    <div class="form-radio">
-                                                        <input type="radio" class="set-wallpaper" style="display: none;"
-                                                            id="radio1" value="1" name="wallpaper-type">
-                                                        <label for="radio1">默认壁纸</label>
-                                                    </div>
-                                                    <div class="form-radio">
-                                                        <input type="radio" class="set-wallpaper" style="display: none;"
-                                                            id="radio2" value="2" name="wallpaper-type">
-                                                        <label for="radio2">每日一图</label>
-                                                    </div>
-                                                    <div class="form-radio">
-                                                        <input type="radio" class="set-wallpaper" style="display: none;"
-                                                            id="radio3" value="3" name="wallpaper-type">
-                                                        <label for="radio3">随机风景</label>
-                                                    </div>
-                                                    <div class="form-radio">
-                                                        <input type="radio" class="set-wallpaper" style="display: none;"
-                                                            id="radio4" value="4" name="wallpaper-type">
-                                                        <label for="radio4">随机动漫</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--更新日志-->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            更新日志
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-bs-parent="#accordion">
-                                        <div class="accordion-body">
-                                            <div class="upnote">
-                                                <span class="uptext"><i
-                                                        class="iconfont icon-plus"></i>&nbsp;壁纸个性化设置</span>
-                                                <span class="uptext"><i
-                                                        class="iconfont icon-plus"></i>&nbsp;音乐播放器支持音量控制</span>
-                                                <span class="uptext"><i class="iconfont icon-wrench-fill"></i>&nbsp;修复
-                                                    CDN 加载缓慢</span>
-                                                <span class="uptext"><i
-                                                        class="iconfont icon-wrench-fill"></i>&nbsp;时光胶囊显示错误</span>
-                                                <span class="uptext"><i
-                                                        class="iconfont icon-wrench-fill"></i>&nbsp;移动端动画及细节</span>
-                                                <span class="uptext"><i
-                                                        class="iconfont icon-wrench-fill"></i>&nbsp;优化部分动画及细节</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Aplayer-->
-                        <div class="box-right">
-                            <div id="aplayer"></div>
-                        </div>
-                    </div>
-                </div>
-                <!--留言与友链-->
-                <div class="community-modal" id="community-modal" aria-hidden="true">
-                    <div class="community-wrapper">
-                        <button class="community-close" type="button" id="community-close">
-                            <i class="iconfont icon-close"></i>
-                        </button>
-                        <div class="community-header">
-                            <button class="community-tab active" type="button" data-community-tab="guestbook">留言板</button>
-                            <button class="community-tab" type="button" data-community-tab="friends">友链</button>
-                        </div>
-                        <div class="community-body">
-                            <div class="community-panel active" id="guestbook-panel">
-                                <form class="community-form" id="guestbook-form">
-                                    <input type="text" id="guestbook-name" maxlength="24" placeholder="昵称" required>
-                                    <textarea id="guestbook-message" maxlength="500" rows="4" placeholder="想说的话"
-                                        required></textarea>
-                                    <button type="submit">发布留言</button>
-                                </form>
-                                <div class="guestbook-list" id="guestbook-list">加载中...</div>
-                            </div>
-                            <div class="community-panel" id="friends-panel">
-                                <form class="community-form" id="friend-form">
-                                    <input type="text" id="friend-name" maxlength="40" placeholder="站点名称" required>
-                                    <input type="url" id="friend-url" maxlength="160" placeholder="https://example.com"
-                                        required>
-                                    <textarea id="friend-description" maxlength="120" rows="3" placeholder="一句简介"
-                                        required></textarea>
-                                    <button type="submit">申请友链</button>
-                                </form>
-                                <div class="friends-list" id="friends-list">加载中...</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+        <div class="featured-work">
+          <article class="project project-featured reveal">
+            <a
+              class="project-media"
+              href="https://github.com/CEJamesW/CheatPilot"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="打开 CheatPilot GitHub 仓库"
+            >
+              <img
+                src="./assets/home/project-cheatpilot.webp"
+                alt="CheatPilot 桌面界面与运行流程"
+                width="1400"
+                height="820"
+                loading="lazy"
+              />
+            </a>
+            <div class="project-body">
+              <p class="project-number">01</p>
+              <h3>
+                <a href="https://github.com/CEJamesW/CheatPilot" target="_blank" rel="noreferrer">
+                  CheatPilot <span aria-hidden="true">↗</span>
+                </a>
+              </h3>
+              <p class="project-summary">
+                用自然语言驱动真实内存操作的 LLM Agent。模型规划工具调用，由 Cheat Engine MCP
+                执行进程附加、扫描、筛选、写入与读回确认。
+              </p>
+              <ul class="project-tech" aria-label="技术栈">
+                <li>Python</li>
+                <li>LLM</li>
+                <li>MCP</li>
+                <li>FastAPI</li>
+              </ul>
             </div>
-        </main>
-        <!-- 版权信息 -->
-        <footer id="footer" class="fixed-bottom footer">
-            <div class="power">
-                Copyright&nbsp;&copy;&nbsp;2020
-                <script>
-                    document.write(' - ' + (new Date()).getFullYear())
-                </script>&nbsp;&amp;&nbsp;
-                Powered&nbsp;by&nbsp;<a href="https://github.com/imsyy" target="_blank">imsyy</a>
-                &nbsp;&amp;&nbsp;
-                <a href="https://github.com/CEJamesW/CEJamesW.github.io" target="_blank">Modified</a>&nbsp;by&nbsp;
-                <a href="https://github.com/CEJamesW" target="_blank">CEJamesW</a>
+          </article>
+
+          <article class="project project-featured project-reverse reveal">
+            <a
+              class="project-media"
+              href="https://github.com/CEJamesW/DLUT-Visualization-Project"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="打开 DLUT Visualization Project GitHub 仓库"
+            >
+              <img
+                src="./assets/home/project-dlut-ar.webp"
+                alt="基于 ArUco、OpenCV 与 OpenGL 的增强现实演示画面"
+                width="1400"
+                height="788"
+                loading="lazy"
+              />
+            </a>
+            <div class="project-body">
+              <p class="project-number">02</p>
+              <h3>
+                <a
+                  href="https://github.com/CEJamesW/DLUT-Visualization-Project"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  AR Visualization <span aria-hidden="true">↗</span>
+                </a>
+              </h3>
+              <p class="project-summary">
+                OpenCV 负责 ArUco 检测与位姿估计，OpenGL 3.3 / GLSL
+                将纹理模型叠加到视频画面，并支持交互拾取与录像。
+              </p>
+              <ul class="project-tech" aria-label="技术栈">
+                <li>C++17</li>
+                <li>OpenCV</li>
+                <li>OpenGL</li>
+                <li>GLSL</li>
+              </ul>
             </div>
-            <div id="lrc"></div>
-        </footer>
-    </section>
-    <!-- noscript -->
+          </article>
+
+          <article class="project project-featured reveal">
+            <a
+              class="project-media"
+              href="https://github.com/CEJamesW/diagramry-skill"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="打开 diagramry-skill GitHub 仓库"
+            >
+              <img
+                src="./assets/home/project-diagramry.webp"
+                alt="图示工坊生成的中文结构化思维导图"
+                width="887"
+                height="577"
+                loading="lazy"
+              />
+            </a>
+            <div class="project-body">
+              <p class="project-number">03</p>
+              <h3>
+                <a
+                  href="https://github.com/CEJamesW/diagramry-skill"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  图示工坊 <span aria-hidden="true">↗</span>
+                </a>
+              </h3>
+              <p class="project-summary">
+                面向中文表达的结构化图示 Skill，由 JSON spec 驱动 SchemDraw，稳定生成
+                SVG/PNG，覆盖流程图、思维导图与技术示意图。
+              </p>
+              <ul class="project-tech" aria-label="技术栈">
+                <li>Python</li>
+                <li>SchemDraw</li>
+                <li>Codex Skill</li>
+                <li>SVG</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="more-work">
+          <article class="project-row reveal">
+            <p class="project-number">04</p>
+            <div>
+              <h3>A* 三维迷宫可视化</h3>
+              <p>真实三维网格迷宫与 A* 搜索动画，展示开放集、关闭集和最终路径。</p>
+            </div>
+            <p class="project-stack">C++20 · OpenGL · Win32</p>
+            <a
+              href="https://github.com/CEJamesW/AStar-3D-Maze-Visualization"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="打开 A* 三维迷宫可视化项目"
+            >↗</a>
+          </article>
+
+          <article class="project-row reveal">
+            <p class="project-number">05</p>
+            <div>
+              <h3>DUTCTF 2026 Writeup</h3>
+              <p>第一届大连理工大学网络安全竞赛校赛的个人题解归档。</p>
+            </div>
+            <p class="project-stack">CTF · Markdown · PDF</p>
+            <a
+              href="https://github.com/CEJamesW/DUTCTF-2026-Writeup"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="打开 DUTCTF 2026 Writeup"
+            >↗</a>
+          </article>
+
+          <article class="project-row reveal">
+            <p class="project-number">06</p>
+            <div>
+              <h3>ctf-skills-zh</h3>
+              <p>ljagiello/ctf-skills 的简体中文翻译与整理版，面向学习与赛中查阅。</p>
+            </div>
+            <p class="project-stack">Agent Skills · CTF · 中文本地化</p>
+            <a
+              href="https://github.com/CEJamesW/ctf-skills-zh"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="打开 ctf-skills-zh 项目"
+            >↗</a>
+          </article>
+        </div>
+
+        <a
+          class="all-work-link reveal"
+          href="https://github.com/CEJamesW?tab=repositories"
+          target="_blank"
+          rel="noreferrer"
+        >
+          查看全部公开仓库 <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+
+      <section class="focus-section section" id="focus" aria-labelledby="focus-title">
+        <div class="section-heading section-heading-light reveal">
+          <p class="section-index">02 / FOCUS</p>
+          <div>
+            <h2 id="focus-title">三个方向，<br />一个共同问题。</h2>
+            <p>如何让机器执行计划、让空间关系可见、让系统边界可被验证。</p>
+          </div>
+        </div>
+
+        <div class="focus-list">
+          <article class="focus-item reveal">
+            <p class="focus-index">A</p>
+            <h3>AI Agent &amp;<br />Developer Tools</h3>
+            <p>把模型能力接入真实工具链，关注可执行、可观察与可验证的交互闭环。</p>
+            <p class="focus-keywords">LLM · MCP · Codex Skills · Python</p>
+          </article>
+          <article class="focus-item reveal">
+            <p class="focus-index">B</p>
+            <h3>Graphics &amp;<br />Visualization</h3>
+            <p>用实时渲染、视觉检测和空间交互，把抽象算法变成可探索的画面。</p>
+            <p class="focus-keywords">OpenGL · OpenCV · GLSL · C++</p>
+          </article>
+          <article class="focus-item reveal">
+            <p class="focus-index">C</p>
+            <h3>CTF &amp;<br />Security Practice</h3>
+            <p>从题解、工具与知识整理出发，持续理解系统行为与安全边界。</p>
+            <p class="focus-keywords">Web · Reverse · Forensics · Writeups</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section section" id="about" aria-labelledby="about-title">
+        <p class="section-index reveal">03 / ABOUT</p>
+        <div class="about-grid">
+          <div class="about-title-wrap reveal">
+            <p class="about-kicker">About CEJamesW</p>
+            <h2 id="about-title">从好奇出发，<br />用作品回答。</h2>
+          </div>
+          <div class="about-copy reveal">
+            <p class="about-lead">
+              我是王斯民，在大连理工大学学习计算机科学。比起给自己贴上单一标签，我更喜欢在项目里连接不同领域：让 Agent 调用真实工具，让图形算法进入可交互空间，也把安全实践整理成可复用的知识。
+            </p>
+            <p>
+              这里收录的是仍在生长的工作。代码、说明文档和阶段性结果大多公开在 GitHub；如果你对其中某个方向感兴趣，欢迎从仓库或邮件开始交流。
+            </p>
+          </div>
+          <dl class="about-facts reveal">
+            <div>
+              <dt>Location</dt>
+              <dd>中国 · 大连</dd>
+            </div>
+            <div>
+              <dt>Education</dt>
+              <dd>大连理工大学 · 计算机科学</dd>
+            </div>
+            <div>
+              <dt>Current focus</dt>
+              <dd>Agent Skills · 可视化 · CTF</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy reveal">
+          <p class="section-index">04 / CONTACT</p>
+          <h2 id="contact-title">有想法？<br />一起把它<br />做出来。</h2>
+        </div>
+        <div class="contact-actions reveal">
+          <a class="contact-email" href="mailto:cejames@163.com">
+            cejames@163.com <span aria-hidden="true">↗</span>
+          </a>
+          <nav class="social-nav" aria-label="社交链接">
+            <a href="https://github.com/CEJamesW" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="https://space.bilibili.com/527159143" target="_blank" rel="noreferrer">
+              Bilibili ↗
+            </a>
+            <a
+              href="https://github.com/CEJamesW/CEJamesW.github.io"
+              target="_blank"
+              rel="noreferrer"
+            >
+              本站源码 ↗
+            </a>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year>2026</span> 王斯民 / CEJamesW</p>
+      <p>Designed &amp; built in Dalian · <span data-clock>UTC+8</span></p>
+      <a href="#top">回到顶部 ↑</a>
+    </footer>
+
     <noscript>
-        <div class="noscript fixed-top">请开启 JavaScript</div>
+      <p class="noscript">页面内容可以正常浏览；启用 JavaScript 后可获得导航与轻量动效。</p>
     </noscript>
-    <!-- JS -->
-    <script type="text/javascript" src="./js/main.js?v=20260611"></script>
-    <script type="text/javascript" src="./js/time.js"></script>
-    <script type="text/javascript" src="./js/community.js?v=20260611"></script>
-    <script type="text/javascript" src="./js/js.cookie.js"></script>
-    <script type="text/javascript" src="./js/set.js"></script>
-    <script type="text/javascript" src="./js/cursor.js"></script>
-    <script type="text/javascript"
-        src="./js/bootstrap.min.js">
-    </script>
-</body>
-
+    <script src="./js/home.js?v=20260714" defer></script>
+  </body>
 </html>
