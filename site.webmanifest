@@ -1,0 +1,27 @@
+{
+  "id": "/",
+  "name": "王斯民 / CEJamesW",
+  "short_name": "CEJamesW",
+  "description": "王斯民（CEJamesW）的个人主页：AI Agent、图形可视化与 CTF 安全实践。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#080b0f",
+  "theme_color": "#080b0f",
+  "icons": [
+    {
+      "src": "/img/icon/cejamesw-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icon/cejamesw-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

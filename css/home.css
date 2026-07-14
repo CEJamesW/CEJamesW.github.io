@@ -189,9 +189,14 @@ a {
 }
 
 .site-nav a:hover::after,
-.site-nav a:focus-visible::after {
+.site-nav a:focus-visible::after,
+.site-nav a[aria-current="location"]::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+.site-nav a[aria-current="location"] {
+  color: var(--white);
 }
 
 .site-nav a span {
@@ -945,17 +950,83 @@ a {
 }
 
 .noscript {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  z-index: 200;
-  max-width: 25rem;
   margin: 0;
-  padding: 0.8rem 1rem;
-  border: 1px solid var(--line);
+  padding: 0.8rem var(--page-gutter);
+  border-top: 1px solid var(--line);
   background: var(--ink-soft);
   color: var(--white);
   font-size: 0.82rem;
+  text-align: center;
+}
+
+.error-page {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--ink);
+}
+
+.error-page-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 6vw, 7rem) var(--page-gutter);
+}
+
+.error-brand {
+  position: absolute;
+  top: 1.4rem;
+  left: var(--page-gutter);
+}
+
+.error-page .section-index {
+  margin-bottom: 1.5rem;
+  color: var(--blue-light);
+}
+
+.error-page h1 {
+  max-width: 9ch;
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 620;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.error-page-copy > p:not(.section-index) {
+  max-width: 36rem;
+  margin: 2rem 0 0;
+  color: var(--muted);
+}
+
+.error-page-visual {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden;
+  border-left: 1px solid var(--line);
+}
+
+.error-page-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 64% center;
+}
+
+.error-page-visual figcaption {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--line);
+  background: rgb(8 11 15 / 86%);
+  color: var(--muted);
+  font-family: "Barlow Condensed", system-ui, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .reveal.is-visible {
@@ -1198,6 +1269,24 @@ a {
 
   .site-footer p:nth-child(2) {
     display: none;
+  }
+
+  .error-page {
+    grid-template-columns: 1fr;
+  }
+
+  .error-page-copy {
+    min-height: 66vh;
+    min-height: 66svh;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  .error-page-visual {
+    min-height: 50vh;
+    min-height: 50svh;
+    border-top: 1px solid var(--line);
+    border-left: 0;
   }
 }
 

@@ -8,9 +8,11 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#080b0f" />
+    <meta name="application-name" content="CEJamesW" />
+    <meta name="apple-mobile-web-app-title" content="CEJamesW" />
     <meta
       name="description"
-      content="王斯民（CEJamesW）的个人主页，记录 AI Agent 与开发工具、OpenGL/OpenCV 可视化和 CTF 安全实践。"
+      content="王斯民（CEJamesW）的个人作品集，聚焦 AI Agent 与开发工具、基于 OpenGL/OpenCV 的图形可视化，以及 CTF 安全实践。"
     />
     <meta
       name="keywords"
@@ -19,6 +21,7 @@
     <meta name="author" content="王斯民 / Wang Simin" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="CEJamesW" />
     <meta property="og:title" content="王斯民 / CEJamesW — AI Agent、图形可视化与 CTF" />
     <meta
       property="og:description"
@@ -29,17 +32,33 @@
       property="og:image"
       content="https://w.91svip.icu/assets/home/hero-cejamesw.webp"
     />
+    <meta property="og:image:width" content="1672" />
+    <meta property="og:image:height" content="941" />
+    <meta property="og:image:alt" content="几何迷宫、发光路径与结构节点组成的技术场景" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="王斯民 / CEJamesW — AI Agent、图形可视化与 CTF" />
+    <meta
+      name="twitter:description"
+      content="在代码、图形与安全之间，构建可见、可用的系统。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://w.91svip.icu/assets/home/hero-cejamesw.webp"
+    />
     <link rel="canonical" href="https://w.91svip.icu/" />
-    <link rel="icon" href="./img/icon/favicon.ico" />
-    <link rel="apple-touch-icon" href="./img/icon/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" href="/img/icon/cejamesw-mark.svg" type="image/svg+xml" />
+    <link rel="icon" href="/img/icon/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="apple-touch-icon" href="/img/icon/apple-touch-icon.png" sizes="180x180" />
     <link
       rel="preload"
       href="./assets/home/hero-cejamesw.webp"
       as="image"
       type="image/webp"
+      media="(min-width: 901px)"
+      fetchpriority="high"
     />
-    <link rel="stylesheet" href="./css/home.css?v=20260714" />
+    <link rel="stylesheet" href="./css/home.css?v=20260714-2" />
     <title>王斯民 / CEJamesW — AI Agent、图形可视化与 CTF</title>
 
     <script type="application/ld+json">
@@ -49,7 +68,6 @@
         "name": "王斯民",
         "alternateName": ["Wang Simin", "CEJamesW"],
         "url": "https://w.91svip.icu/",
-        "email": "mailto:cejames@163.com",
         "affiliation": {
           "@type": "CollegeOrUniversity",
           "name": "Dalian University of Technology"
@@ -101,10 +119,10 @@
         <div class="hero-copy">
           <p class="eyebrow reveal">Computer Science · Dalian</p>
           <h1 id="hero-title" class="reveal">
-            让复杂系统，<br />变得<span>可见、可用。</span>
+            让复杂系统<br />变得<span>可见、可用。</span>
           </h1>
           <p class="hero-lede reveal">
-            我是王斯民（CEJamesW），大连理工大学计算机科学方向开发者。关注 AI Agent
+            我是王斯民（CEJamesW），在大连理工大学学习计算机科学。关注 AI Agent
             与开发工具、图形可视化，以及 CTF 安全实践。
           </p>
           <div class="hero-actions reveal">
@@ -158,7 +176,7 @@
         <div class="section-heading reveal">
           <p class="section-index">01 / SELECTED WORK</p>
           <div>
-            <h2 id="work-title">把想法做成<br />可以运行的东西。</h2>
+            <h2 id="work-title" tabindex="-1">把想法做成<br />可以运行的东西。</h2>
             <p>从自然语言驱动的系统，到可交互的三维空间与面向实践的知识工具。</p>
           </div>
         </div>
@@ -188,8 +206,8 @@
                 </a>
               </h3>
               <p class="project-summary">
-                用自然语言驱动真实内存操作的 LLM Agent。模型规划工具调用，由 Cheat Engine MCP
-                执行进程附加、扫描、筛选、写入与读回确认。
+                用自然语言编排目标进程内存操作的 LLM Agent。模型负责规划工具调用，由 Cheat
+                Engine MCP 执行进程附加、扫描、筛选、写入与读回确认。
               </p>
               <ul class="project-tech" aria-label="技术栈">
                 <li>Python</li>
@@ -224,7 +242,7 @@
                   target="_blank"
                   rel="noreferrer"
                 >
-                  AR Visualization <span aria-hidden="true">↗</span>
+                  ArUco AR Demo <span aria-hidden="true">↗</span>
                 </a>
               </h3>
               <p class="project-summary">
@@ -268,8 +286,8 @@
                 </a>
               </h3>
               <p class="project-summary">
-                面向中文表达的结构化图示 Skill，由 JSON spec 驱动 SchemDraw，稳定生成
-                SVG/PNG，覆盖流程图、思维导图与技术示意图。
+                面向中文表达的结构化图示 Skill，以 JSON 规范描述结构、由 SchemDraw
+                渲染，可复现地输出 SVG 和 PNG，覆盖流程图、思维导图与技术示意图。
               </p>
               <ul class="project-tech" aria-label="技术栈">
                 <li>Python</li>
@@ -286,7 +304,7 @@
             <p class="project-number">04</p>
             <div>
               <h3>A* 三维迷宫可视化</h3>
-              <p>真实三维网格迷宫与 A* 搜索动画，展示开放集、关闭集和最终路径。</p>
+              <p>在三维网格迷宫中演示 A* 搜索过程，呈现开放集、关闭集和最终路径。</p>
             </div>
             <p class="project-stack">C++20 · OpenGL · Win32</p>
             <a
@@ -301,7 +319,7 @@
             <p class="project-number">05</p>
             <div>
               <h3>DUTCTF 2026 Writeup</h3>
-              <p>第一届大连理工大学网络安全竞赛校赛的个人题解归档。</p>
+              <p>大连理工大学首届网络安全竞赛（校赛）的个人题解归档。</p>
             </div>
             <p class="project-stack">CTF · Markdown · PDF</p>
             <a
@@ -342,7 +360,7 @@
         <div class="section-heading section-heading-light reveal">
           <p class="section-index">02 / FOCUS</p>
           <div>
-            <h2 id="focus-title">三个方向，<br />一个共同问题。</h2>
+            <h2 id="focus-title" tabindex="-1">三个方向，<br />一个共同问题。</h2>
             <p>如何让机器执行计划、让空间关系可见、让系统边界可被验证。</p>
           </div>
         </div>
@@ -374,7 +392,7 @@
         <div class="about-grid">
           <div class="about-title-wrap reveal">
             <p class="about-kicker">About CEJamesW</p>
-            <h2 id="about-title">从好奇出发，<br />用作品回答。</h2>
+            <h2 id="about-title" tabindex="-1">从好奇出发，<br />用作品回答。</h2>
           </div>
           <div class="about-copy reveal">
             <p class="about-lead">
@@ -404,7 +422,7 @@
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="contact-copy reveal">
           <p class="section-index">04 / CONTACT</p>
-          <h2 id="contact-title">有想法？<br />一起把它<br />做出来。</h2>
+          <h2 id="contact-title" tabindex="-1">有想法？<br />一起把它<br />做出来。</h2>
         </div>
         <div class="contact-actions reveal">
           <a class="contact-email" href="mailto:cejames@163.com">
@@ -436,6 +454,6 @@
     <noscript>
       <p class="noscript">页面内容可以正常浏览；启用 JavaScript 后可获得导航与轻量动效。</p>
     </noscript>
-    <script src="./js/home.js?v=20260714" defer></script>
+    <script src="./js/home.js?v=20260714-2" defer></script>
   </body>
 </html>
