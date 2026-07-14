@@ -8,6 +8,7 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#080b0f" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="application-name" content="CEJamesW" />
     <meta name="apple-mobile-web-app-title" content="CEJamesW" />
     <meta
@@ -30,11 +31,19 @@
     <meta property="og:url" content="https://w.91svip.icu/" />
     <meta
       property="og:image"
-      content="https://w.91svip.icu/assets/home/hero-cejamesw.webp"
+      content="https://w.91svip.icu/assets/home/social-card-cejamesw.jpg"
     />
-    <meta property="og:image:width" content="1672" />
-    <meta property="og:image:height" content="941" />
-    <meta property="og:image:alt" content="几何迷宫、发光路径与结构节点组成的技术场景" />
+    <meta
+      property="og:image:secure_url"
+      content="https://w.91svip.icu/assets/home/social-card-cejamesw.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="王斯民 / CEJamesW 个人作品集：让复杂系统变得可见、可用"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="王斯民 / CEJamesW — AI Agent、图形可视化与 CTF" />
     <meta
@@ -43,7 +52,11 @@
     />
     <meta
       name="twitter:image"
-      content="https://w.91svip.icu/assets/home/hero-cejamesw.webp"
+      content="https://w.91svip.icu/assets/home/social-card-cejamesw.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="王斯民 / CEJamesW 个人作品集：让复杂系统变得可见、可用"
     />
     <link rel="canonical" href="https://w.91svip.icu/" />
     <link rel="manifest" href="/site.webmanifest" />
@@ -58,23 +71,47 @@
       media="(min-width: 901px)"
       fetchpriority="high"
     />
-    <link rel="stylesheet" href="./css/home.css?v=20260714-2" />
+    <link rel="stylesheet" href="./css/home.css?v=20260714-3" />
     <title>王斯民 / CEJamesW — AI Agent、图形可视化与 CTF</title>
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "王斯民",
-        "alternateName": ["Wang Simin", "CEJamesW"],
-        "url": "https://w.91svip.icu/",
-        "affiliation": {
-          "@type": "CollegeOrUniversity",
-          "name": "Dalian University of Technology"
-        },
-        "sameAs": [
-          "https://github.com/CEJamesW",
-          "https://space.bilibili.com/527159143"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://w.91svip.icu/#website",
+            "url": "https://w.91svip.icu/",
+            "name": "王斯民 / CEJamesW",
+            "alternateName": "CEJamesW",
+            "description": "王斯民（CEJamesW）的个人作品集，聚焦 AI Agent 与开发工具、基于 OpenGL/OpenCV 的图形可视化，以及 CTF 安全实践。",
+            "inLanguage": "zh-CN",
+            "dateModified": "2026-07-14",
+            "mainEntity": { "@id": "https://w.91svip.icu/#person" },
+            "creator": { "@id": "https://w.91svip.icu/#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://w.91svip.icu/#person",
+            "name": "王斯民",
+            "alternateName": ["Wang Simin", "CEJamesW"],
+            "url": "https://w.91svip.icu/",
+            "affiliation": {
+              "@type": "CollegeOrUniversity",
+              "name": "Dalian University of Technology"
+            },
+            "knowsAbout": [
+              "AI agents",
+              "Developer tools",
+              "Computer graphics",
+              "Computer vision",
+              "Capture the flag"
+            ],
+            "sameAs": [
+              "https://github.com/CEJamesW",
+              "https://space.bilibili.com/527159143"
+            ]
+          }
         ]
       }
     </script>
@@ -85,7 +122,14 @@
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="返回首页顶部">
-        <span class="brand-mark" aria-hidden="true">CEJ</span>
+        <img
+          class="brand-mark"
+          src="/img/icon/cejamesw-mark.svg"
+          alt=""
+          width="512"
+          height="512"
+          aria-hidden="true"
+        />
         <span class="brand-name">王斯民 / CEJamesW</span>
       </a>
 
@@ -282,7 +326,7 @@
                   target="_blank"
                   rel="noreferrer"
                 >
-                  图示工坊 <span aria-hidden="true">↗</span>
+                  图示工坊.skill <span aria-hidden="true">↗</span>
                 </a>
               </h3>
               <p class="project-summary">
@@ -318,15 +362,15 @@
           <article class="project-row reveal">
             <p class="project-number">05</p>
             <div>
-              <h3>DUTCTF 2026 Writeup</h3>
-              <p>大连理工大学首届网络安全竞赛（校赛）的个人题解归档。</p>
+              <h3>Typora Resume Theme</h3>
+              <p>面向简历与文档写作的 Typora 双主题，提供清爽的浅色与深色版本。</p>
             </div>
-            <p class="project-stack">CTF · Markdown · PDF</p>
+            <p class="project-stack">CSS · HTML · Typora</p>
             <a
-              href="https://github.com/CEJamesW/DUTCTF-2026-Writeup"
+              href="https://github.com/CEJamesW/typora-resume-theme"
               target="_blank"
               rel="noreferrer"
-              aria-label="打开 DUTCTF 2026 Writeup"
+              aria-label="打开 Typora Resume Theme 项目"
             >↗</a>
           </article>
 
