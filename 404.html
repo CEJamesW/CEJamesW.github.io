@@ -7,7 +7,7 @@
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/img/icon/cejamesw-mark.svg" type="image/svg+xml" />
     <link rel="icon" href="/img/icon/favicon.ico" sizes="16x16 32x32 48x48" />
-    <link rel="stylesheet" href="/css/home.css?v=20260714-3" />
+    <link rel="stylesheet" href="/css/home.css?v=20260714-4" />
     <title>页面未找到 — CEJamesW</title>
   </head>
   <body>
@@ -36,12 +36,21 @@
         </div>
       </div>
       <figure class="error-page-visual">
-        <img
-          src="/assets/home/hero-cejamesw.webp"
-          alt="抽象几何迷宫中一条发光路径通向远处"
-          width="1672"
-          height="941"
-        />
+        <picture>
+          <source
+            media="(max-width: 900px)"
+            srcset="/assets/home/hero-cejamesw-mobile.webp"
+            type="image/webp"
+            width="900"
+            height="507"
+          />
+          <img
+            src="/assets/home/hero-cejamesw.webp"
+            alt="抽象几何迷宫中一条发光路径通向远处"
+            width="1672"
+            height="941"
+          />
+        </picture>
         <figcaption>Route not found · Return to origin</figcaption>
       </figure>
     </main>

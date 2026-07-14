@@ -71,7 +71,7 @@
       media="(min-width: 901px)"
       fetchpriority="high"
     />
-    <link rel="stylesheet" href="./css/home.css?v=20260714-3" />
+    <link rel="stylesheet" href="./css/home.css?v=20260714-4" />
     <title>王斯民 / CEJamesW — AI Agent、图形可视化与 CTF</title>
 
     <script type="application/ld+json">
@@ -197,12 +197,21 @@
         </div>
 
         <figure class="hero-visual reveal">
-          <img
-            src="./assets/home/hero-cejamesw.webp"
-            alt="由几何迷宫、发光路径和结构节点组成的抽象技术场景"
-            width="1672"
-            height="941"
-          />
+          <picture>
+            <source
+              media="(max-width: 900px)"
+              srcset="./assets/home/hero-cejamesw-mobile.webp"
+              type="image/webp"
+              width="900"
+              height="507"
+            />
+            <img
+              src="./assets/home/hero-cejamesw.webp"
+              alt="由几何迷宫、发光路径和结构节点组成的抽象技术场景"
+              width="1672"
+              height="941"
+            />
+          </picture>
           <figcaption>
             <span>Plan</span>
             <span>Render</span>

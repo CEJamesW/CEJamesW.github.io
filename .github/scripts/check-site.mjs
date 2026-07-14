@@ -184,50 +184,64 @@ for (const relativePath of htmlFiles) {
 let localReferenceCount = 0;
 let internalAnchorCount = 0;
 
+function tagReferences(tag) {
+  const references = ["href", "src"].flatMap((attributeName) =>
+    allAttributes(tag, attributeName).map((value) => ({ attributeName, value })),
+  );
+
+  for (const srcset of allAttributes(tag, "srcset")) {
+    for (const candidate of srcset.split(",")) {
+      const parts = candidate.trim().split(/\s+/).filter(Boolean);
+      check(parts.length > 0, `<${tag.name}> contains an empty srcset candidate`);
+      if (parts.length > 0) references.push({ attributeName: "srcset", value: parts[0] });
+    }
+  }
+
+  return references;
+}
+
 for (const document of documents.values()) {
   for (const tag of document.tags) {
-    for (const attributeName of ["href", "src"]) {
-      for (const value of allAttributes(tag, attributeName)) {
+    for (const { attributeName, value } of tagReferences(tag)) {
+      check(
+        value.trim().length > 0,
+        `${document.relativePath}: <${tag.name}> has an empty ${attributeName} attribute`,
+      );
+      if (!value.trim()) continue;
+
+      const reference = resolveReference(value, document.relativePath);
+      if (reference.kind !== "local") continue;
+
+      localReferenceCount += 1;
+      if (document.relativePath === "404.html") {
         check(
-          value.trim().length > 0,
-          `${document.relativePath}: <${tag.name}> has an empty ${attributeName} attribute`,
+          value.startsWith("/") || value.startsWith(siteOrigin),
+          `404.html: local ${attributeName} must be root-absolute for deep error paths: ${value}`,
         );
-        if (!value.trim()) continue;
+      }
+      check(
+        existsSync(reference.absolutePath),
+        `${document.relativePath}: local ${attributeName} target does not exist: ${value} (${reference.relativePath})`,
+      );
 
-        const reference = resolveReference(value, document.relativePath);
-        if (reference.kind !== "local") continue;
+      if ((tag.name === "a" || tag.name === "area") && reference.fragment) {
+        internalAnchorCount += 1;
+        if (reference.fragment.startsWith(":~:text=")) continue;
 
-        localReferenceCount += 1;
-        if (document.relativePath === "404.html") {
-          check(
-            value.startsWith("/") || value.startsWith(siteOrigin),
-            `404.html: local ${attributeName} must be root-absolute for deep error paths: ${value}`,
-          );
+        const targetExtension = extname(reference.relativePath).toLowerCase();
+        if (targetExtension !== ".html" && targetExtension !== ".htm") continue;
+
+        let targetDocument = documents.get(reference.relativePath);
+        if (!targetDocument && existsSync(reference.absolutePath)) {
+          const targetSource = readFileSync(reference.absolutePath, "utf8").replace(/^\uFEFF/, "");
+          targetDocument = parseHtml(reference.relativePath, targetSource);
+          documents.set(reference.relativePath, targetDocument);
         }
+
         check(
-          existsSync(reference.absolutePath),
-          `${document.relativePath}: local ${attributeName} target does not exist: ${value} (${reference.relativePath})`,
+          Boolean(targetDocument?.ids.has(reference.fragment)),
+          `${document.relativePath}: anchor "${value}" has no matching id in ${reference.relativePath}`,
         );
-
-        if ((tag.name === "a" || tag.name === "area") && reference.fragment) {
-          internalAnchorCount += 1;
-          if (reference.fragment.startsWith(":~:text=")) continue;
-
-          const targetExtension = extname(reference.relativePath).toLowerCase();
-          if (targetExtension !== ".html" && targetExtension !== ".htm") continue;
-
-          let targetDocument = documents.get(reference.relativePath);
-          if (!targetDocument && existsSync(reference.absolutePath)) {
-            const targetSource = readFileSync(reference.absolutePath, "utf8").replace(/^\uFEFF/, "");
-            targetDocument = parseHtml(reference.relativePath, targetSource);
-            documents.set(reference.relativePath, targetDocument);
-          }
-
-          check(
-            Boolean(targetDocument?.ids.has(reference.fragment)),
-            `${document.relativePath}: anchor "${value}" has no matching id in ${reference.relativePath}`,
-          );
-        }
       }
     }
   }

@@ -447,6 +447,13 @@ a {
   pointer-events: none;
 }
 
+.hero-visual picture,
+.error-page-visual picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .hero-visual img {
   width: 100%;
   height: 100%;
